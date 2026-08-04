@@ -1,0 +1,6 @@
+[submodule "Anthropic-Cybersecurity-Skills"]
+	path = Anthropic-Cybersecurity-Skills
+	url = https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+[submodule "agent-native"]
+	path = agent-native
+	url = https://github.com/BuilderIO/agent-native.git

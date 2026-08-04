@@ -1,0 +1,112 @@
+# Skill Archive Manifest
+# Created: 2026-05-24T12:41:14.942864+00:00
+# Author: Claude Code session (init/audit/archive)
+# Reason: 92 od-* catalogue stubs (SKILL.md only, contains 'install the upstream
+#         bundle' / 'advertises the skill' / 'catalogue entry' language) + 1
+#         loader-breaking duplicate (ckm-design collides with `design` via
+#         identical frontmatter name + byte-identical SKILL.md content).
+# Verified: zero functional references across ~/.claude/{agents,hooks,skills,
+#         commands,plugins,projects/.../memory} and ~/.agents on local + vmi.
+#
+# Restore command (PowerShell):
+#   foreach ($line in (Get-Content 'C:\Users\user\.claude\skills-archive\2026-05-24-od-stubs-and-ckm-design\MANIFEST.txt' | Where-Object { $_ -notmatch '^#' -and $_ })) {
+#     Move-Item -Path 'C:\Users\user\.claude\skills-archive\2026-05-24-od-stubs-and-ckm-design\' + $line -Destination 'C:\Users\user\.claude\skills\' + $line
+#   }
+#
+# Restore command (bash):
+#   while read f; do [[ "$f" =~ ^# ]] && continue; [[ -z "$f" ]] && continue; mv "C:\Users\user\.claude\skills-archive\2026-05-24-od-stubs-and-ckm-design/$f" "C:\Users\user\.claude\skills/$f"; done < C:\Users\user\.claude\skills-archive\2026-05-24-od-stubs-and-ckm-design/MANIFEST.txt
+#
+# Skills archived (one per line):
+od-ad-creative
+od-ai-music-album
+od-algorithmic-art
+od-apple-hig
+od-artifacts-builder
+od-brainstorming
+od-brand-guidelines
+od-canvas-design
+od-color-expert
+od-competitive-ads-extractor
+od-copywriting
+od-creative-director
+od-d3-visualization
+od-design-consultation
+od-design-md
+od-design-review
+od-doc
+od-docx
+od-domain-name-brainstormer
+od-enhance-prompt
+od-fal-3d
+od-fal-generate
+od-fal-image-edit
+od-fal-kling-o3
+od-fal-lip-sync
+od-fal-realtime
+od-fal-restore
+od-fal-train
+od-fal-tryon
+od-fal-upscale
+od-fal-video-edit
+od-fal-vision
+od-figma-code-connect-components
+od-figma-create-design-system-rules
+od-figma-create-new-file
+od-figma-generate-design
+od-figma-generate-library
+od-figma-implement-design
+od-figma-use
+od-flutter-animating-apps
+od-frontend-design
+od-frontend-dev
+od-frontend-skill
+od-frontend-slides
+od-full-page-screenshot
+od-gif-sticker-maker
+od-gsap-core
+od-gsap-react
+od-gsap-scrolltrigger
+od-gsap-timeline
+od-hand-drawn-diagrams
+od-image-enhancer
+od-imagegen
+od-imagen
+od-marketing-psychology
+od-minimax-docx
+od-minimax-pdf
+od-nanobanana-ppt
+od-paywall-upgrade-cro
+od-pdf
+od-pixelbin-media
+od-plan-design-review
+od-platform-design
+od-pptx
+od-pptx-generator
+od-remotion
+od-replicate
+od-screenshot
+od-screenshots-marketing
+od-shadcn-ui
+od-shader-dev
+od-slack-gif-creator
+od-slides
+od-sora
+od-speech
+od-stitch-loop
+od-swiftui-design
+od-taste-skill
+od-theme-factory
+od-threejs
+od-ui-skills
+od-ui-ux-pro-max
+od-venice-audio-music
+od-venice-audio-speech
+od-venice-image-edit
+od-venice-image-generate
+od-venice-video
+od-video-downloader
+od-web-artifacts-builder
+od-web-design-guidelines
+od-wpds
+od-youtube-clipper
+ckm-design

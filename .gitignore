@@ -11,6 +11,22 @@ _projects/web-mirrors/
 !skills/**
 !skills-extra/
 !skills-extra/**
+!skills-adal/
+!skills-adal/**
+!skills-archive/
+!skills-archive/**
+!Anthropic-Cybersecurity-Skills/
+!Anthropic-Cybersecurity-Skills/**
+!agent-native/
+!agent-native/**
+!plugins/
+!plugins/**
+!agents/
+!agents/**
+!agents-root/
+!agents-root/**
+!commands/
+!commands/**
 
 # --- router + agent config ---
 !SKILL_ROUTER.md
@@ -25,7 +41,14 @@ _projects/web-mirrors/
 !scripts/
 !scripts/**
 
+# --- machine config (system won't run elsewhere without it) ---
+!settings.json
+
 # --- never, even inside the includes above ---
+# .mcp.json stays out: it carries a live API key in plaintext.
+# skill-usage.jsonl stays out: it holds prompt text, same rule as transcripts.
+.mcp.json
+skill-usage.jsonl
 .credentials.json
 *.key
 *.pem

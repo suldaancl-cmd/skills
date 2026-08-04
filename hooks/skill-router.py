@@ -144,8 +144,8 @@ def build(prompt: str) -> str:
         parts.append(esc)
 
     parts.append(
-        "LONG TAIL — the chain above is a starting point, not the library. Only ~110 of 1611 "
-        "skills sit in chains. If the task reaches past them, run "
+        "LONG TAIL — the chain above is a starting point, not the library. Most of the 1600+ "
+        "skills on disk sit in no chain at all. If the task reaches past them, run "
         "`python ~/.claude/scripts/skill_find.py \"<keywords>\"` (searches every skill on disk) "
         "or invoke `skill-swarm` for exhaustive coverage. For MCP/connector tools, ToolSearch "
         "with the same keywords before saying a capability is unavailable."

@@ -1,0 +1,27 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "C:\\Users\\user\\.claude\\plugins\\marketplaces\\claude-plugins-official",
+    "lastUpdated": "2026-07-31T22:39:51.669Z"
+  },
+  "ponytail": {
+    "source": {
+      "source": "github",
+      "repo": "DietrichGebert/ponytail"
+    },
+    "installLocation": "C:\\Users\\user\\.claude\\plugins\\marketplaces\\ponytail",
+    "lastUpdated": "2026-07-11T01:21:09.713Z"
+  },
+  "supabase-community-supabase-plugin": {
+    "source": {
+      "source": "github",
+      "repo": "supabase-community/supabase-plugin"
+    },
+    "installLocation": "C:\\Users\\user\\.claude\\plugins\\marketplaces\\supabase-community-supabase-plugin",
+    "lastUpdated": "2026-07-31T22:39:51.235Z",
+    "autoUpdate": true
+  }
+}

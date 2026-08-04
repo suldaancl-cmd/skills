@@ -1,0 +1,158 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Read(//c/Users/user/AppData/Local/Temp/claude/c--Users-user-kia/ae079c62-5f5b-43f4-988c-7f7f9b835f15/tasks/**)",
+      "Bash(npx skills:*)",
+      "Bash(curl -sS -o /tmp/page.html -w \"HTTP:%{http_code} SIZE:%{size_download}\\\\n\" http://localhost:3000/)",
+      "Read(//tmp/**)",
+      "Bash(curl -sS -o /dev/null -w \"logo:%{http_code} 1.webp:\" http://localhost:3000/logo.png)",
+      "Bash(curl -sS -o /dev/null -w \"%{http_code} 2.webp:\" http://localhost:3000/1.webp)",
+      "Bash(curl -sS -o /dev/null -w \"%{http_code} 3.webp:\" http://localhost:3000/2.webp)",
+      "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/3.webp)",
+      "Bash(curl -sS -o /dev/null -w \"logo:%{http_code} 1:%{http_code} \" http://localhost:3000/logo.png)",
+      "Bash(curl -sS -o /dev/null -w \"1.webp:%{http_code} \" http://localhost:3000/1.webp)",
+      "Bash(curl -sS -o /dev/null -w \"2.webp:%{http_code} \" http://localhost:3000/2.webp)",
+      "Bash(curl -sS -o /dev/null -w \"3.webp:%{http_code}\\\\n\" http://localhost:3000/3.webp)",
+      "Bash(curl -sS -o /dev/null -w \"page:%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -sS http://localhost:3000/)",
+      "Bash(grep -oE 'globalError=\\\\[[^]]*\\\\]|\"message\":\"[^\"]*\"|\"stack\":\"[^\"]{0,300}\"')",
+      "Bash(curl -sS -o /dev/null http://localhost:3000/)",
+      "Bash(curl -sS -o /dev/null -w \"HTTP:%{http_code}\\\\n\" http://localhost:3000/)",
+      "Read(//c/Users/user/.claude/skills/3d-animation-web-designer/**)",
+      "Read(//c/Users/user/.claude/skills/video-prompt-builder/references/**)",
+      "Read(//c/Users/user/.claude/skills/**)",
+      "Read(//c/Users/user/.claude/**)",
+      "WebFetch(domain:github.com)",
+      "Bash(claude mcp *)",
+      "Bash(npx @anthropic-ai/claude-code --version)",
+      "Bash(python C:/Users/user/.claude/skills/planmap/scripts/planmap_scaffold.py:*)",
+      "Bash(python C:/Users/user/.claude/scripts/topic_workspace.py:*)"
+    ],
+    "deny": [
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/secrets)",
+      "Read(**/secrets.*)",
+      "Read(**/credentials)",
+      "Read(**/credentials.*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(**/id_rsa)",
+      "Read(**/id_rsa.*)",
+      "Read(**/id_dsa)",
+      "Read(**/id_ecdsa)",
+      "Read(**/id_ed25519)",
+      "Read(**/id_ed25519.*)",
+      "Read(**/.ssh/**)",
+      "Read(**/.aws/credentials)",
+      "Read(**/.npmrc)",
+      "Read(**/.netrc)",
+      "Read(**/.pgpass)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\user\\calaf\\calaf-app\\backend",
+      "C:\\Users\\user\\calaf\\calaf-app"
+    ]
+  },
+  "model": "opus[1m]",
+  "env": {
+    "MCP_TIMEOUT": "60000"
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/user/.claude/hooks/skill-router.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/user/.claude/hooks/skill-stop-check.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/user/.claude/hooks/precompact-snapshot.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/user/.claude/hooks/session-start-prime.py",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/user/.claude/hooks/skill-quality-gate.py",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "cmd /c start /B \"\" \"C:\\Users\\user\\.claude\\mirror.bat\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/user/.claude/hooks/session-end-stage.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "claude-code-setup@claude-plugins-official": true,
+    "agent-sdk-dev@claude-plugins-official": true,
+    "asana@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "ai-plugins@claude-plugins-official": true,
+    "vercel@claude-plugins-official": true,
+    "ponytail@ponytail": true,
+    "supabase@supabase-community-supabase-plugin": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    }
+  },
+  "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
+  "autoMemoryEnabled": true,
+  "autoMemoryDirectory": "C:\\Users\\user\\.claude\\projects\\C--Users-user--claude-skills\\memory",
+  "skipWorkflowUsageWarning": true,
+  "theme": "dark",
+  "switchModelsOnFlag": true,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "effortLevel": "xhigh"
+}

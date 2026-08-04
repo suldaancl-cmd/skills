@@ -1,6 +1,15 @@
-import json, os, re
+import importlib.util, json, os, re
+
+# Reuse topic_workspace's description parser — a one-line regex captures just "|"
+# for the ~700 SKILL.md files that use YAML block scalars, scoring them at zero.
+_TW = os.path.join(os.path.dirname(os.path.abspath(__file__)), "topic_workspace.py")
+_spec = importlib.util.spec_from_file_location("topic_workspace", _TW)
+_tw = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_tw)
+parse_description = _tw.parse_description
 
 ROOTS = [
+    (r"C:\Users\user\.adal\skills", "adal", False),
     (r"C:\Users\user\.claude\skills", "claude", False),
     (r"C:\Users\user\.agents\skills", "agents", False),
     (r"C:\Users\user\.claude\skills-archive", "archive", True),
@@ -14,11 +23,13 @@ def parse(path):
     fm, body = {}, t
     m = re.match(r"^---\n(.*?)\n---\n", t, re.S)
     if m:
+        head = m.group(1)
         body = t[m.end():]
-        for line in m.group(1).split("\n"):
+        for line in head.split("\n"):
             k = re.match(r"^([a-zA-Z_-]+):\s*(.*)$", line)
             if k:
                 fm[k.group(1).lower()] = k.group(2).strip().strip('"\'')
+        fm["description"] = parse_description(head)
     h = next((l.lstrip("# ").strip() for l in body.split("\n") if l.startswith("#")), "")
     return fm, h, len(t)
 

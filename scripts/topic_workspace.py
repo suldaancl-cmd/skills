@@ -58,9 +58,28 @@ def load_skills():
                     head = fh.read(2000)
             except OSError:
                 continue
-            desc = re.search(r"^description:\s*(.+)$", head, re.M)
-            out[name] = (desc.group(1).strip().strip('"\'') if desc else "", label)
+            out[name] = (parse_description(head), label)
     return out
+
+
+def parse_description(head):
+    """Frontmatter description, including YAML block scalars (`description: |`).
+
+    ~400 skills use the block form; a plain one-line regex captures just "|" and
+    silently scores them at zero against every query.
+    """
+    m = re.search(r"^description:\s*(.*)$", head, re.M)
+    if not m:
+        return ""
+    first = m.group(1).strip()
+    if first not in ("|", ">", "|-", ">-", "|+", ">+"):
+        return first.strip("\"'")
+    body = []
+    for line in head[m.end():].splitlines()[1:]:
+        if line.strip() and not line[:1].isspace():
+            break  # next top-level key ends the block
+        body.append(line.strip())
+    return " ".join(b for b in body if b).strip()
 
 
 VAULT_DIR = os.path.join(CLAUDE, "projects", "C--Users-user--claude-skills", "memory")

@@ -1,0 +1,12 @@
+interface:
+  display_name: "Mobbin Design Research"
+  short_description: "Search, analyze, and export Mobbin references"
+  default_prompt: "Use $mobbin-design-research to find and export relevant iOS or web design references."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mobbin"
+      description: "Search Mobbin screens, website sections, and flows"
+      transport: "streamable_http"
+      url: "https://api.mobbin.com/mcp"

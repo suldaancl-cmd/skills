@@ -1,0 +1,38 @@
+# rclone bisync filter — generic project folders (~/<proj> <-> vmi:/root/<proj>)
+
+# build/cache artifacts
+- node_modules/**
+- __pycache__/**
+- *.pyc
+- .next/**
+- .nuxt/**
+- dist/**
+- build/**
+- .turbo/**
+- .svelte-kit/**
+- target/**
+- .venv/**
+- venv/**
+- .gradle/**
+
+# git internals (.git/objects can be huge); keep .git/ for branch info
+- .git/objects/**
+- .git/lfs/**
+
+# logs/temp
+- *.log
+- *.tmp
+- *.lock
+- *.swp
+- .DS_Store
+- Thumbs.db
+- desktop.ini
+
+# editor
+- .vscode/.history/**
+- .idea/**
+
+# rclone bisync state (don't recurse on itself)
+- .rclone-bisync/**
+
++ **

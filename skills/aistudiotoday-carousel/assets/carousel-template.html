@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Studio Today — Carousel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   AI STUDIO TODAY — brand tokens (from aistudiotoday.com)
+   ============================================================ */
+:root{
+  --bg-primary:#0B0712;
+  --bg-elevated:#150E22;
+  --bg-navy:#0E2138;
+  --card-bg:rgba(10,10,12,0.72);
+  --border:rgba(255,255,255,0.10);
+  --text-primary:#F0EBFA;
+  --text-secondary:#C2B9D4;
+  --text-muted:#A99FC2;
+  --text-on-navy:#B8C3DC;
+  --accent:#8B5CF6;
+  --accent-bright:#A855F7;
+  --accent-deep:#6D28D9;
+  --gradient-brand:linear-gradient(120deg,#6D28D9,#8B5CF6 50%,#A855F7);
+  --glow-accent:0 0 28px rgba(139,92,246,0.28);
+  --glow-magenta:0 0 24px rgba(168,85,247,0.22);
+  --font-display:"Anton","Arial Black","Helvetica Neue",sans-serif;
+  --font-body:"Inter",-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SF Mono",monospace;
+
+  /* ---- TWEAK PANEL vars (the live-editable knobs) ---- */
+  --tw-display:1;     /* headline size multiplier */
+  --tw-body:1;        /* body size multiplier     */
+  --tw-dot:0.55;      /* background dot opacity    */
+  --tw-tilt:0;        /* card tilt, degrees        */
+  --tw-pad:96;        /* slide inner padding, px   */
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#05030a;color:var(--text-primary);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+body{display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px 0 120px}
+
+/* ============================================================
+   SLIDE FRAME — 1080 x 1350 (4:5)
+   ============================================================ */
+.slide{
+  position:relative;width:1080px;height:1350px;overflow:hidden;
+  background:var(--bg-primary);
+  padding:calc(var(--tw-pad) * 1px);
+  display:flex;flex-direction:column;
+  border-radius:8px;            /* screen only; export crops the element box */
+  isolation:isolate;
+}
+/* Background motifs ----------------------------------------- */
+.slide::before{ /* particle dot field */
+  content:"";position:absolute;inset:0;z-index:0;opacity:var(--tw-dot);
+  background-image:radial-gradient(rgba(139,92,246,0.55) 1.4px,transparent 1.5px);
+  background-size:46px 46px;background-position:0 0;
+  -webkit-mask-image:radial-gradient(120% 90% at 70% 18%,#000 0%,transparent 75%);
+          mask-image:radial-gradient(120% 90% at 70% 18%,#000 0%,transparent 75%);
+}
+.slide::after{ /* soft violet bloom */
+  content:"";position:absolute;z-index:0;width:760px;height:760px;right:-180px;top:-200px;
+  background:radial-gradient(circle,rgba(139,92,246,0.30),transparent 62%);filter:blur(8px);
+}
+.slide[data-bg="grid"]::before{
+  background-image:radial-gradient(rgba(184,195,220,0.18) 1.2px,transparent 1.3px);
+  background-size:34px 34px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 90%);
+          mask-image:linear-gradient(180deg,#000,transparent 90%);
+}
+.slide[data-bg="plain"]::before{display:none}
+.slide > *{position:relative;z-index:1}
+
+/* Shared atoms --------------------------------------------- */
+.kicker{
+  font-family:var(--font-mono);font-weight:500;text-transform:uppercase;
+  letter-spacing:0.16em;color:var(--accent);
+  font-size:calc(22px * var(--tw-body));
+}
+.pill{
+  display:inline-flex;align-items:center;gap:10px;align-self:flex-start;
+  background:var(--bg-navy);color:var(--text-on-navy);
+  border:1px solid var(--border);border-radius:999px;
+  padding:12px 22px;font-family:var(--font-mono);font-size:calc(20px * var(--tw-body));
+  letter-spacing:0.06em;box-shadow:var(--glow-accent);
+}
+.grad{background:var(--gradient-brand);-webkit-background-clip:text;background-clip:text;color:transparent}
+.spacer{flex:1 1 auto}
+
+h1.display{
+  font-family:var(--font-display);font-weight:400;line-height:0.92;letter-spacing:-0.005em;
+  font-size:calc(150px * var(--tw-display));color:var(--text-primary);text-wrap:balance;
+}
+h2.headline{
+  font-family:var(--font-display);font-weight:400;line-height:0.96;letter-spacing:-0.005em;
+  font-size:calc(84px * var(--tw-display));color:var(--text-primary);text-wrap:balance;
+}
+p.lead{
+  font-family:var(--font-body);font-weight:400;line-height:1.34;color:var(--text-secondary);
+  font-size:calc(32px * var(--tw-body));max-width:80%;
+}
+.ghost-num{
+  position:absolute;right:40px;bottom:-40px;z-index:0;
+  font-family:var(--font-display);font-size:calc(360px * var(--tw-display));
+  color:rgba(139,92,246,0.12);line-height:1;pointer-events:none;
+}
+.footer{
+  display:flex;align-items:center;gap:12px;color:var(--text-muted);
+  font-family:var(--font-mono);font-size:calc(20px * var(--tw-body));letter-spacing:0.04em;
+}
+.footer .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:var(--glow-accent)}
+.swipe{margin-left:auto;color:var(--text-secondary)}
+
+/* Card / data ---------------------------------------------- */
+.card{
+  background:var(--card-bg);border:1px solid var(--border);border-radius:24px;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:var(--glow-accent);padding:48px;
+  transform:rotate(calc(var(--tw-tilt) * 1deg));transform-origin:center;
+}
+.metric-row{display:flex;justify-content:space-between;align-items:baseline;
+  padding:22px 0;border-bottom:1px solid var(--border);font-family:var(--font-mono)}
+.metric-row:last-child{border-bottom:0}
+.metric-row .label{color:var(--text-secondary);font-size:calc(26px * var(--tw-body))}
+.metric-row .value{color:var(--text-primary);font-size:calc(34px * var(--tw-body));font-weight:600}
+.metric-row .value.up{color:var(--accent-bright)}
+.term{font-family:var(--font-mono);background:#07040d;border:1px solid var(--border);
+  border-radius:16px;padding:34px;color:var(--text-secondary);font-size:calc(25px * var(--tw-body));line-height:1.7}
+.term .prompt{color:var(--accent)}
+.term .ok{color:#7CE2B0}
+
+/* Image slot ----------------------------------------------- */
+.img-slot{
+  width:100%;border-radius:24px;border:1px solid var(--border);overflow:hidden;
+  background:var(--bg-elevated) center/cover no-repeat;box-shadow:var(--glow-accent);
+}
+.img-slot img{width:100%;display:block}
+
+/* CTA slide ------------------------------------------------ */
+.slide--cta{background:radial-gradient(120% 90% at 50% 30%,#1B1030,#0B0712 70%)}
+.btn{
+  align-self:flex-start;display:inline-flex;align-items:center;gap:14px;
+  background:var(--gradient-brand);color:#fff;font-family:var(--font-body);font-weight:600;
+  font-size:calc(34px * var(--tw-body));padding:26px 44px;border-radius:16px;
+  box-shadow:var(--glow-magenta);
+}
+
+/* Cover slide (HTML cover over an AI image) ---------------- */
+.slide--cover{justify-content:flex-end}
+.slide--cover[data-cover]{background:var(--bg-primary)}
+.cover-img{position:absolute;inset:0;z-index:0;background:var(--cover-img,none) center/cover no-repeat}
+.slide--cover .scrim{position:absolute;inset:0;z-index:0;
+  background:linear-gradient(180deg,rgba(11,7,18,0.1) 0%,rgba(11,7,18,0.55) 55%,rgba(11,7,18,0.95) 100%)}
+
+/* ============================================================
+   TWEAK PANEL (hidden when ?export=1)
+   ============================================================ */
+.tweak{
+  position:fixed;top:0;right:0;height:100vh;width:300px;z-index:99;
+  background:rgba(8,5,16,0.94);border-left:1px solid var(--border);
+  backdrop-filter:blur(14px);padding:22px;overflow-y:auto;
+  font-family:var(--font-body);color:var(--text-secondary);
+}
+.tweak h3{font-family:var(--font-mono);color:var(--accent);font-size:13px;letter-spacing:0.12em;
+  text-transform:uppercase;margin-bottom:16px}
+.tweak label{display:block;font-size:13px;margin:18px 0 6px;color:var(--text-primary)}
+.tweak input[type=range]{width:100%;accent-color:var(--accent)}
+.tweak select,.tweak textarea,.tweak button{
+  width:100%;background:var(--bg-elevated);color:var(--text-primary);
+  border:1px solid var(--border);border-radius:10px;padding:10px;font-family:var(--font-mono);font-size:12px}
+.tweak .val{float:right;color:var(--accent-bright);font-family:var(--font-mono)}
+.tweak button{margin-top:12px;cursor:pointer;background:var(--gradient-brand);border:0;font-weight:600;
+  font-family:var(--font-body);padding:12px}
+.tweak textarea{height:120px;margin-top:10px;resize:vertical}
+.tweak .hint{font-size:11px;color:var(--text-muted);margin-top:14px;line-height:1.5}
+body.export .tweak{display:none}
+body.export{padding:0;gap:0}
+body.export .slide{border-radius:0}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     SLIDE 1 — COVER  (use as HTML cover over the AI image, OR
+     delete this section if your cover is a finished AI PNG)
+     Set the image:  style="--cover-img:url('cover/chosen.png')"
+     ============================================================ -->
+<section class="slide slide--cover" data-bg="plain" style="--cover-img:none">
+  <div class="cover-img"></div>
+  <div class="scrim"></div>
+  <span class="kicker">AI STUDIO TODAY</span>
+  <div class="spacer"></div>
+  <h1 class="display">5 Claude Code<br>plugins that <span class="grad">actually ship</span></h1>
+  <p class="lead" style="margin-top:24px">The ones we run every day — and what each one saves you.</p>
+  <div style="height:30px"></div>
+  <div class="footer"><span class="dot"></span><span>@aistudiotoday</span><span class="swipe">swipe →</span></div>
+</section>
+
+<!-- SLIDE 2 — VALUE (the workhorse) -->
+<section class="slide slide--value" data-bg="dots">
+  <div class="pill">PLUGIN&nbsp;#1 · caveman mode</div>
+  <div class="spacer"></div>
+  <h2 class="headline">It stops Claude from<br><span class="grad">over-engineering.</span></h2>
+  <p class="lead" style="margin-top:28px">Forces minimal, surgical diffs. Less code, fewer bugs, faster reviews — the default we wish shipped in the box.</p>
+  <div class="spacer"></div>
+  <div class="footer"><span class="dot"></span><span>@aistudiotoday</span><span class="swipe">swipe →</span></div>
+  <span class="ghost-num">01</span>
+</section>
+
+<!-- SLIDE 3 — DATA / PROOF (glass card + mono metrics) -->
+<section class="slide slide--data" data-bg="grid">
+  <span class="kicker">RESULTS · LAST 30 DAYS</span>
+  <h2 class="headline" style="font-size:calc(64px * var(--tw-display));margin-top:18px">The numbers,<br>not the vibes.</h2>
+  <div class="spacer"></div>
+  <div class="card">
+    <div class="metric-row"><span class="label">Lead → booked call</span><span class="value up">+34%</span></div>
+    <div class="metric-row"><span class="label">Avg. response time</span><span class="value">2.6 min</span></div>
+    <div class="metric-row"><span class="label">Cost per booked customer</span><span class="value up">−41%</span></div>
+    <div class="metric-row"><span class="label">Build → live</span><span class="value">30 days</span></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="footer"><span class="dot"></span><span>@aistudiotoday</span><span class="swipe">swipe →</span></div>
+</section>
+
+<!-- SLIDE 4 — DATA / TERMINAL variant (swap in for a "how it works" slide) -->
+<section class="slide" data-bg="dots">
+  <div class="pill">PLUGIN&nbsp;#2 · codex</div>
+  <h2 class="headline" style="font-size:calc(60px * var(--tw-display));margin-top:24px">One command,<br>whole feature.</h2>
+  <div class="spacer"></div>
+  <div class="term">
+    <div><span class="prompt">$</span> claude /codex "add Stripe checkout"</div>
+    <div style="opacity:.7">→ scaffolding routes, webhook, portal…</div>
+    <div><span class="ok">✓</span> 7 files written · tests passing</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="footer"><span class="dot"></span><span>@aistudiotoday</span><span class="swipe">swipe →</span></div>
+  <span class="ghost-num">02</span>
+</section>
+
+<!-- SLIDE 5 — CTA / OUTRO -->
+<section class="slide slide--cta" data-bg="plain">
+  <span class="kicker">AI STUDIO TODAY</span>
+  <div class="spacer"></div>
+  <h2 class="headline">Your traffic is<br>leaking. <span class="grad">We fix that.</span></h2>
+  <p class="lead" style="margin-top:26px">Sites, WhatsApp automation, and dashboards that turn the traffic you already have into booked customers — in 30 days.</p>
+  <div style="height:36px"></div>
+  <a class="btn" href="#">Book a free AI audit →</a>
+  <div class="spacer"></div>
+  <div class="footer"><span class="dot"></span><span>@aistudiotoday · aistudiotoday.com</span></div>
+</section>
+
+<!-- ============================================================
+     TWEAK PANEL — live design controls (auto-hidden on export)
+     ============================================================ -->
+<aside class="tweak">
+  <h3>Tweak · AI Studio Today</h3>
+
+  <label>Headline size <span class="val" id="v-display">1.00×</span></label>
+  <input type="range" id="t-display" min="0.7" max="1.4" step="0.02" value="1">
+
+  <label>Body size <span class="val" id="v-body">1.00×</span></label>
+  <input type="range" id="t-body" min="0.8" max="1.3" step="0.02" value="1">
+
+  <label>Dot-field opacity <span class="val" id="v-dot">0.55</span></label>
+  <input type="range" id="t-dot" min="0" max="1" step="0.05" value="0.55">
+
+  <label>Card tilt <span class="val" id="v-tilt">0°</span></label>
+  <input type="range" id="t-tilt" min="-6" max="6" step="0.5" value="0">
+
+  <label>Slide padding <span class="val" id="v-pad">96px</span></label>
+  <input type="range" id="t-pad" min="56" max="140" step="4" value="96">
+
+  <button id="export-tweaks">Export tweaks → copy JSON</button>
+  <textarea id="tweak-json" placeholder="Exported JSON appears here. Paste a saved JSON and click Apply to restore."></textarea>
+  <button id="apply-tweaks">Apply pasted JSON</button>
+
+  <p class="hint">Nudge the sliders, click <b>Export tweaks</b>, paste the JSON back to Claude — it
+  writes the values into <code>:root</code> so they stick. Open with <code>?export=1</code> to hide
+  this panel before screenshotting.</p>
+</aside>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var params=new URLSearchParams(location.search);
+  if(params.get('export')==='1'){document.body.classList.add('export');}
+
+  var knobs=[
+    {id:'display',varName:'--tw-display',fmt:function(v){return (+v).toFixed(2)+'×'}},
+    {id:'body',   varName:'--tw-body',   fmt:function(v){return (+v).toFixed(2)+'×'}},
+    {id:'dot',    varName:'--tw-dot',    fmt:function(v){return (+v).toFixed(2)}},
+    {id:'tilt',   varName:'--tw-tilt',   fmt:function(v){return (+v)+'°'}},
+    {id:'pad',    varName:'--tw-pad',    fmt:function(v){return v+'px'}}
+  ];
+  function apply(k,v){root.style.setProperty(k.varName,v);
+    var lbl=document.getElementById('v-'+k.id); if(lbl)lbl.textContent=k.fmt(v);}
+  knobs.forEach(function(k){
+    var el=document.getElementById('t-'+k.id); if(!el)return;
+    el.addEventListener('input',function(){apply(k,el.value);});
+    apply(k,el.value);
+  });
+
+  var ex=document.getElementById('export-tweaks');
+  var ta=document.getElementById('tweak-json');
+  if(ex)ex.addEventListener('click',function(){
+    var out={}; knobs.forEach(function(k){out[k.varName]=getComputedStyle(root).getPropertyValue(k.varName).trim();});
+    var json=JSON.stringify(out,null,2);
+    if(ta)ta.value=json;
+    if(navigator.clipboard)navigator.clipboard.writeText(json).catch(function(){});
+  });
+  var ap=document.getElementById('apply-tweaks');
+  if(ap)ap.addEventListener('click',function(){
+    try{var o=JSON.parse(ta.value);
+      knobs.forEach(function(k){ if(o[k.varName]!==undefined){
+        var raw=(''+o[k.varName]).replace(/[^0-9.\-]/g,'');
+        root.style.setProperty(k.varName,o[k.varName]);
+        var el=document.getElementById('t-'+k.id); if(el)el.value=raw;
+        var lbl=document.getElementById('v-'+k.id); if(lbl)lbl.textContent=k.fmt(raw);
+      }});
+    }catch(e){alert('Invalid JSON: '+e.message);}
+  });
+})();
+</script>
+</body>
+</html>

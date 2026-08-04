@@ -1,0 +1,172 @@
+# User Preferences
+
+## Working with Fable 5 (`claude-fable-5`) — apply every time the active model is Fable 5
+
+**Source:** Nate Herk, ["How Anthropic Engineers Actually Prompt Fable 5"](https://www.youtube.com/watch?v=vcU85OrwuV0) (2026-07-01), distilling Anthropic's official *Prompting Claude Fable 5* best-practices doc. Pricing/promo/model-hierarchy figures below are **as stated in that third-party video** — re-verify against Anthropic's own docs before making spend decisions. The *prompting habits* are durable; the *pricing/promo window* is time-boxed.
+
+**Why this exists:** Fable 5 is the strongest but priciest model — per video ~2× Opus at `$10`/M input, `$50`/M output. The no-extra-cost promo is capped at **50% of weekly limits and ends ~July 7 2026**; after that it's usage credits. So every Fable 5 turn: maximize output, waste no tokens, avoid silent downgrades.
+
+**Model-selection discipline (prevents the #1 misuse — token burn):**
+- Don't reach for Fable 5 for everything — that's ~100% overkill. Realistically only **~5–15% of tasks** need it; routine work → cheaper model / lower effort.
+- Match effort to task: **`high` = default**, **`xhigh` = only the most capability-sensitive workloads**, **`medium`/`low` = routine**. Fable 5 on `low` ≈ Opus 4.8 on `xhigh`/`max` but cheaper (per video's chart).
+
+**The 6 prompting habits (use when prompting Fable 5):**
+1. **Give it the WHY.** State intent + who it's for + what they need, then the ask — not a bare "write the email." Lets Fable pull the right context (incl. second-brain / AIOS files) instead of guessing. *(any model)*
+2. **Negative-prompt — say what NOT to do.** e.g. "the deliverable is your assessment; report what you find and stop. Don't fix, send, edit, or delete anything until I say go." Plus don't-add-features / do-the-simplest-thing-that-works. *(any model; works well on Fable)*
+3. **Let it act once it has enough — stop over-planning.** Prefer "when you have enough information to act, then act" over "research everything and make a full plan first." Plan mode is often unnecessary now. *(any model)*
+4. **Make it prove it (most important).** Bake verification into skills/agents/CLAUDE.md, not the tail of each prompt: "Before you say it's done, point to the result that proves it. Only report work you can show evidence for. If something isn't verified, say so plainly instead of guessing." *(any model)*
+5. **Do NOT ask Fable 5 to "show/explain its reasoning" — especially in a system prompt.** *(Fable-specific — the big misunderstanding trap.)* A standing "explain your reasoning" line can trip a safety refusal and **silently route the task to Opus 4.8** (see handoff note).
+6. **Say less, not more.** A short instruction now steers as well as naming every rule — "lead with the outcome, keep it simple, pause only when the work truly needs me." Not a contradiction with #1: give the why without bloat. *(Fable-leaning)*
+
+**Silent Opus handoff — understand this so you don't misread output:** before answering, Fable 5 runs a safety check; if a request looks like hacking, dangerous biology, or asking the model to reveal its own private reasoning, it can **silently route to Opus 4.8** (no visible notice — only the API surfaces that it was Opus). Avoid triggering it: don't inject "reveal your reasoning" instructions, and don't phrase benign work so it reads as malicious. The fallback is cheaper Opus, so a downgrade won't spike cost — but you lose Fable's capability without being told.
+
+## Skill usage — be proactive
+
+The user has ~148 curated top-level skills in `~/.claude/skills/` (pruned from 285 on 2026-05-14 — see *Skill library state* below), plus plugin-namespaced skills and standalone tools. They want every skill to pull its weight.
+
+**Rule:** Before doing any task, scan the available skills list for anything topically relevant, and invoke matching skills via the Skill tool rather than answering from general knowledge alone. Prefer to **use too many skills than too few** — the user has explicitly asked for this.
+
+Concretely:
+- Any marketing/content task → check `marketing:*`, `marketing-*`, `cold-email`, `copywriting`, `content-*`, `brand-voice:*`, etc.
+- Any engineering task → check `engineering:*`, `senior-*`, `code-reviewer`, `tdd-guide`, `focused-fix`, etc.
+- Any sales task → check `sales:*`, `apollo:*`, `common-room:*`, `cold-email`.
+- Any design/UI task → check `design:*`, `design-taste-frontend`, `frontend-design`, `ui-design-system`, `minimalist-ui`, `high-end-visual-design`, `apple-hig-expert`, etc.
+- Any data/analytics task → check `data:*`, `statistical-analyst`, `financial-analyst`, `analytics-tracking`.
+- Any C-suite / strategy task → check `c-level-advisor`, `cfo-advisor`, `ceo-advisor`, `coo-advisor`, `chief-of-staff`, `executive-mentor`, `board-meeting`, etc.
+- Any regulatory / healthtech / QMS task → check `ra-qm-team`, `fda-consultant-specialist`, `mdr-745-specialist`, `qms-audit-expert`, `iso*`, `gdpr-dsgvo-expert`.
+- Any medical / bio task → check `bio-research:*`, the ClinicalTrials / bioRxiv / ChEMBL MCP tools.
+- **Any social-media or video URL** in the user message (TikTok, Instagram, YouTube, X/Twitter, Facebook, Reddit, Vimeo, direct `.mp4`/`.webm`/`.m3u8`) → invoke `read-link` BEFORE answering. It uses `yt-dlp` + `ffmpeg` to download the media + captions locally AND runs the mandatory 4-phase Deep Dive Analysis (Who → Full transcript → Business model deconstruction → Actionable for Karim with revenue estimate). Don't fall back to "I can't access that" — `read-link` can. Don't stop at extraction — analysis is the deliverable.
+
+**Don't just acknowledge skills exist — invoke them.** If a skill is named `cto-advisor` and the user is asking a CTO-level question, call it. If they ask for a marketing campaign, call `marketing:campaign-plan`. If they ask for UX copy, call `design:ux-copy`.
+
+**Multi-skill tasks:** When a request spans domains (e.g. "launch a product"), invoke multiple relevant skills in parallel and synthesize results rather than picking just one.
+
+**Fully automatic — no announcement.** Do NOT say "I'm going to use skills X, Y, Z" before acting. Just invoke the relevant skills silently and deliver the synthesized answer. The user does not want meta-commentary about which skills are being used — only the final result. Exception: if the user explicitly asks which skills you used, then list them.
+
+**`using-superpowers` AND `karpathy-coder` first, every turn.** On any non-trivial turn (anything beyond a one-word answer or pure file action), the FIRST two skill invocations MUST be `using-superpowers` (obra) and `karpathy-coder`. `using-superpowers` establishes the skill-chaining workflow; `karpathy-coder` enforces Karpathy's discipline (surface assumptions, keep it simple, surgical changes, verifiable goals) on the output. Then invoke domain-specific skills. Both hooks (UserPromptSubmit reminder + Stop blocker) enforce this.
+
+## Karpathy coding principles (forrestchang/andrej-karpathy-skills)
+
+These 4 principles apply to ALL coding output — writing new code, editing, reviewing, refactoring. The local `karpathy-coder` skill enforces them per-turn; this section makes them load every session at the system-prompt level. Cloned for reference at `C:\Users\user\andrej-karpathy-skills\`. Companion skill at `~/.claude/skills/karpathy-guidelines/`.
+
+**1. Think before coding.** State assumptions explicitly. If multiple interpretations exist, present them — don't pick silently. If something is unclear, stop and name what's confusing. Push back when warranted.
+
+**2. Simplicity first.** Minimum code that solves the problem. No features beyond what was asked. No abstractions for single-use code. No "flexibility" or "configurability" that wasn't requested. No error handling for impossible scenarios. If you wrote 200 lines and it could be 50, rewrite it.
+
+**3. Surgical changes.** Touch only what you must. When editing existing code: don't "improve" adjacent code/comments/formatting, don't refactor things that aren't broken, match existing style even if you'd do it differently. If you notice unrelated dead code, mention it — don't delete it. Every changed line should trace directly to the user's request.
+
+**4. Goal-driven execution.** Define success criteria before writing code. Transform tasks into verifiable goals: "add validation" → "write tests for invalid inputs, then make them pass". For multi-step tasks, state a brief plan with verify-checkpoints. Strong success criteria let you loop independently.
+
+These guidelines bias toward caution over speed. For trivial tasks, use judgment.
+
+## Infra the user owns
+
+- **Server vmi3164498** (37.60.243.30) — Ubuntu 24.04 KVM VPS, root access via `ssh vmi` (key auth configured). Runs Docker + social-media automation scripts. ~148 skills + 4 Claude Code plugins mirrored from local.
+- Local skills live in `C:\Users\user\.claude\skills\` (~148, curated 2026-05-14) plus plugin-namespaced skills injected at session start.
+- Memory index: `C:\Users\user\.claude\projects\C--Users-user--claude-skills\memory\MEMORY.md`.
+
+## Cross-session level-up loop
+
+Every chat compounds via this 5-step loop. Hooks do most of the work; one consent gate is human:
+
+| Stage | When | What happens | Where |
+|---|---|---|---|
+| **Prime** | session start | SessionStart hook injects: today's date, MEMORY.md, 3 most-recent feedback titles, latest precompact snapshot (≤7d), MCP/hook health line | `~/.claude/hooks/session-start-prime.py` |
+| **Enforce** | every prompt + every turn end | UserPromptSubmit runs the SKILL ROUTER (`skill-router.py` + `skill-routes.json`): matches the prompt to a domain and injects the ranked best-fit skill chain, hard rule, and vault playbooks to read first. Stop hook blocks turns that finished without invoking a Skill/Agent/mcp__ tool (with brief-action and trivial-msg exemptions) AND appends per-turn skill usage to `~/.claude/skill-usage.jsonl` | `skill-router.py` + `skill-stop-check.py` |
+| **Snapshot** | before context compaction | PreCompact hook writes current task + active todos + recent files + last 10 prompts to `~/.claude/snapshots/precompact_<session>.md` | `precompact-snapshot.py` |
+| **Stage** | session end | SessionEnd hook walks transcript, drafts candidate `feedback_*.md` / `reference_*.md` / `playbook_*.md` notes into `~/.claude/snapshots/staged_writes/<session-id>/` — **never auto-writes to vault** | `session-end-stage.py` |
+| **Promote** | next session, on user request | Say `review staged drafts` → invokes `review-staged-drafts` skill → consent gate offers per-draft (a) promote, (b) edit-then-promote, (c) discard, (d) skip | `~/.claude/skills/review-staged-drafts/` |
+
+**Periodic curation** (manual, weekly-ish): run `/si:review` (from `self-improving-agent` skill) to promote MEMORY.md patterns → CLAUDE.md or `.claude/rules/`, dedupe with `consolidate-memory`.
+
+## Skill routing system (added 2026-07-11)
+
+Skill enforcement is now *routed*, not just mandated. Three files:
+
+- `~/.claude/skill-routes.json` — curated routing table: ~22 domains covering every major topic (design, video/UGC, coding, mobile, research, marketing, slides, SaaS, Figma, 3D/WebGL, image-gen, audio/voice, documents, security, agents/automation, data, planning, vmi, …), each with keywords, a **ranked** best-fit skill chain, the vault playbooks/memory notes to read first, and the hard rule for that domain (deck-first, Verification Lock, MERGE-never-replace, …).
+- `~/.claude/hooks/skill-router.py` (UserPromptSubmit) — scores each prompt against the table and injects the top-2 domains' chains + rules + playbook paths. Falls back to the generic "scan available skills" instruction when nothing matches. The mandatory pair (`using-superpowers` + `karpathy-coder`) is always line 0.
+- `~/.claude/skill-usage.jsonl` — appended by the Stop hook every turn (prompt head, skills/agents used, blocked flag). This is the learning-loop data.
+
+**Closing the loop:** invoke the `skill-router-tune` skill ("tune the router") weekly-ish or during `/si:review`. It mines skill-usage.jsonl for misses/winning-chains/dead-weight, cross-checks new playbooks in MEMORY.md, and proposes diffs to skill-routes.json (user-confirmed, verified by re-running the router on sample prompts). New playbook in the vault → attach it to its domain here, so every future matching prompt reads it automatically.
+
+**Step gates:** `~/.claude/AGENTS.md` is the binding restrict system for every agent (Claude Code main loop, subagents, Codex personas). Six gates per unit of work: G0 ROUTE (obey the skill router) → G1 KNOW (second brain before general knowledge) → G2 THINK (Karpathy law, extended to 8 principles — see the "Karim extensions" section in `skills/karpathy-coder/SKILL.md`) → G3 ACT (hard restrictions: destructive-op confirmation, deck-first, Arabic-first, Verification Lock, secrets, throttling) → G4 VERIFY (proof or say "unverified") → G5 LEARN (stage learnings, feed the router). Subagent dispatches must carry the relevant gate lines in the prompt — subagents don't inherit AGENTS.md automatically.
+
+**Maintenance:** invoke `system-maintain` ("maintain the system") weekly — 9-point scorecard: hook smoke tests, router drift, usage mining, new-knowledge routing, bloat delta, staged-drafts backlog, memory hygiene, vmi sync spot-check, stale counts. Scorecards land in `~/.claude/snapshots/maintenance_<date>.md`.
+
+**Vault writes are user-gated.** No auto-commit. The staging dir is the buffer; promotion to `~/.claude/projects/.../memory/` is always per-draft consent.
+
+## Design / frontend stack (default reach order — added 2026-05-17)
+
+When the user asks for design / web / landing / UI / animation work, **default to this killer-combo** unless a specialist below clearly fits better:
+
+0. **`premium-design-laws`** → load FIRST (the source of truth, added 2026-06-22 after a 20-agent skill-library audit). Standing law for typography, color, gradients, and symbol hygiene; EXTENDS the *Default fonts ban* + *Colors & Fonts deck FIRST* rules, never replaces them. Hard rule: no `//`-comment section labels, `-----`/`=====` ASCII rules, box-drawing, or decorative slash/pipe/dot separators in rendered output — those are valid ONLY as real code comments / YAML frontmatter / markdown. Use the curated token sets in `skills/premium-design-laws/audit/`, not ad-hoc fonts/colors.
+1. **`ui-ux-pro-max`** → lock the design system first. `python3 ~/.claude/skills/ui-ux-pro-max/scripts/search.py "<keywords>" --design-system --persist -p "<Project>" [--page "<page>"]`. Writes `design-system/MASTER.md` + per-page overrides. 161 palettes / 57 font pairings / 99 UX rules with WCAG / Apple HIG / Material citations.
+2. **`frontend-design`** → write the code against the locked design system. Anti-AI-slop aesthetic, production React/Next/HTML.
+3. **`impeccable`** → audit / polish / critique pass before shipping. 23 commands (`craft`, `shape`, `polish`, `audit`, `critique`, `bolder`, `quieter`, `distill`, etc.). Needs `npm install -g impeccable` for full CLI power.
+
+**Standing rule — `img2threejs` on every site build with an object image (added 2026-07-22):** whenever a site/landing build involves an image of a product or object that should appear in 3D (hero prop, product showcase, scroll effect), invoke `img2threejs` FIRST to rebuild it as a code-only procedural Three.js model — do NOT reach for GLB downloads, photogrammetry, or hand-modeled meshes as the default. Output is a diffable TypeScript factory + JSON spec; respect its quality gates (a "can't reach fidelity from this image" stop is a valid outcome, fall back to other 3D routes only then). Best on hard-surface objects; single image = hidden sides mirrored, not ground truth. Installed at `~/.claude/skills/img2threejs` (MIT, hoainho/img2threejs).
+
+**Specialist overrides** (use instead of the combo when matching):
+- `hyliox-landing` — cinematic AirPods scroll-scrub, 9-section editorial, Vite + React + Tailwind v4
+- `3d-animation-web-designer` — dark-luxury WebGL / Three.js cinematic site
+- `papaya-smoke-hero` — F1 / McLaren / Pavel Dobryakov fluid-smoke hero
+- `landing-page-generator` — full landing + copy + SEO + Next.js production
+- `gsap` + 8 official GSAP subskills (`gsap-core` / `gsap-frameworks` / `gsap-performance` / `gsap-plugins` / `gsap-react` / `gsap-scrolltrigger` / `gsap-timeline` / `gsap-utils`) — animation deep tuning
+- `web-designer` — router only (defers to specialist)
+
+**Aesthetic packs** (from `Leonxlnx/taste-skill` — invoke when the user names the aesthetic): `brutalist-skill` (industrial-brutalist-ui), `minimalist-skill` (minimalist-ui editorial), `soft-skill` (high-end-visual-design), `brandkit`, `image-to-code-skill`, `imagegen-frontend-{web,mobile}`, `redesign-skill`, `output-skill`, `gpt-tasteskill`.
+
+**Anthropic UI/UX pack** (from `nextlevelbuilder/ui-ux-pro-max-skill`): `ui-ux-pro-max` + sibling `banner-design`, `brand`, `design`, `design-system`, `slides`, `ui-styling` — use the siblings for branded artifacts.
+
+**External tools (CLIs, not skills):**
+- `skillui <url>` — reverse-engineers any website's design system into a Claude-ready skill (zero AI, pure static analysis). `npm install -g skillui` already done.
+- `npx playwright codegen <url>` + `npx playwright test` — visual test loop for forms / interactions. Browsers need one-time `npx playwright install chromium`.
+
+**Full playbook with project workflow:** vault `memory/playbook_design_killer_combo.md`.
+
+## Skill library state (curated 2026-05-14, expanded 2026-05-17)
+
+- Top-level skills: **171** (up from 148 baseline; +23 net new from 4 installs on 2026-05-17 — see Design stack section above).
+- Top-level skills pruned 285 → 148 baseline. Archived (not deleted) in `~/.claude/skills-archive/`; restore any via the `MANIFEST-*.txt` restore command in that dir. Keep-list: `~/.claude/skills-keep.txt`. If a skill seems missing, check the archive before reinstalling.
+- The skill-name examples in *Skill usage* above predate this prune — some named skills (`coo-advisor`, `ra-qm-team`, `qms-audit-expert`) are now archived. The category-scan rule still holds; expect some named examples to have moved.
+- New skills installed (all security-audited clean): `cc-config-init` / `cc-config-optimize` (Claude Code config audits), `codebase-insight` (persist architecture analysis across sessions — use on `calaf-app`), `ultraplan`, `bughunter`, `thinkback`, `supabase-postgres-best-practices`, `figma-implement-design`.
+- `figma-implement-design` is inert until the Figma MCP is connected (the Figma Claude plugin bundles both).
+- For future trims prefer `skillOverrides: name-only`/`off` in settings over archiving folders; run `/doctor` to check skill-listing budget overflow.
+
+## Karim standing rules (added 2026-07-18)
+
+Four rules Karim stated on 2026-07-18. They EXTEND existing rules (never replace); full note with verbatim source: vault `memory/feedback_standing_rules_2026-07-18.md`.
+
+1. **Bilingual EN+AR output — every substantive answer.** Karim finds deep tech hard in English alone; this is why the rule exists. Every substantive explanation ships in BOTH languages: English section LTR (starts from the left), Arabic section RTL (starts from the right), same meaning — not a word-for-word mirror. All layout laws in `feedback_arabic_english_format` still bind (one direction per block, tech tokens in inline code, single-language tables, Latin numerals). Delta vs the old skip rule: technical *prose* now gets an Arabic section too; only raw code/commands/paths/logs stay English-only.
+2. **Maximum skills + auto-install missing ones.** Extends "prefer too many skills than too few": use the maximum topically relevant skills every session. If the best-fit skill isn't installed, check `~/.claude/skills-archive/` first, then find and install it (GitHub, skills.sh) via the existing pipeline (`feedback_skill_installs`: security-audit, rename dup frontmatter names, mirror to vmi, don't ask). Continuously improve weak skills — Karim named design, writing, animation, research — rather than working around them.
+3. **Per-session CLAUDE.md + AGENTS.md, grounded in the second brain.** For each working session/project, produce session-scoped `CLAUDE.md` (purpose of this chat + the maximum skills this topic needs) and `AGENTS.md` (agent roster + skill assignments + gates). Ground them in the Obsidian second brain (Brain/HOME topic hubs) FIRST; Notion or Google Docs when the task's knowledge lives there.
+4. **Verify — less hallucination, pro quality.** Extends the Verification Lock and karpathy-coder "Prove it": every claim traces to evidence, done means pointing to the artifact that proves it, anything unproven is labeled "unverified" — never padded or guessed. Act at practitioner level on every topic.
+
+## Shared-link protocol (added 2026-07-23)
+
+Whenever Karim shares ANY link (article, video, thread, tool, repo, product), run all three steps — EXTENDS the `read-link` rule and the bilingual rule, never replaces them:
+
+1. **Knowledge → explain in Arabic.** If the link carries knowledge (tutorial, video, article, thread), the deliverable is a full Arabic explanation (RTL block, layout laws from `feedback_arabic_english_format` bind) alongside the English section — not a one-line summary. Social/video URLs still go through `read-link` first (download + 4-phase Deep Dive).
+2. **Brain check → store it.** Ask "can our brain system benefit from this?" If yes, distill it into a vault note (`reference_*` / `playbook_*` in `~/.claude/projects/C--Users-user--claude-skills/memory/`) linked from MEMORY.md and the matching Brain/ topic hub. This standing rule IS Karim's consent for link-derived notes — write them directly, MERGE never replace. Raw URLs are auto-harvested hourly into vault `Brain/Links/` by `build_second_brain.py`; the manual note is for the *distilled learning*, not the URL.
+3. **Tool → playbook or skill, stored.** If the link is a tool/service our AI stack needs, create a playbook note (usage, pricing, when-to-reach) or install/build a skill via the existing pipeline (`feedback_skill_installs`: security-audit → rename dup frontmatter → mirror to vmi, don't ask), then attach it to its domain in `skill-routes.json` so the router surfaces it.
+
+## Chat intake (added 2026-07-24)
+
+Every chat that introduces new work gets classified before any work happens — the `session-intake` skill, injected on every prompt by `skill-router.py`. Three lanes: **link** → the shared-link protocol above; **build** and **study/download/research** → open a workspace with
+
+```
+python ~/.claude/scripts/topic_workspace.py --topic "<topic>" --kind build|study|link --prompt "<his message>"
+```
+
+which creates `_projects/<slug>/` with `README.md`, `CLAUDE.md` (purpose + the domain's hard rules + playbooks to read), `AGENTS.md` (roster + gates to paste into dispatches), `NOTES.md`, `sources/`, and the two files that must be read before any output:
+
+- **`BRAIN.md`** — every matching file across the whole second brain (~3400 vault files: Brain topic hubs, curated notes, App-Building Kit, past chats, intel runs, reports, Notion, Hermes knowledge, fleet output). The brain outranks general knowledge; when they disagree, say so.
+- **`SKILLS.md`** — every skill on disk ranked against the topic (~1600 scanned across `skills/`, `.agents/skills/`, `skills-archive/`), top 25 with descriptions plus a long-tail list, `skill-routes.json` chain pinned on top.
+
+Work inside that folder; regenerate both after installing skills or adding vault notes. Skip intake for one-liners and work already in flight.
+
+# Skill routing
+
+Before any task, read `C:\Users\user\.claude\SKILL_ROUTER.md`, identify the job domain, and follow ONLY that playbook. Skills outside the active playbook are off-limits unless a handoff rule invokes them.
+
+This complements the existing `skill-router.py` hook rather than replacing it: the hook injects per-prompt skill suggestions at UserPromptSubmit time, while `SKILL_ROUTER.md` is the standing dispatcher — it carries the domain playbooks, the NEVER-USE lists, the handoff rules, and the conflict law that decide what actually loads.

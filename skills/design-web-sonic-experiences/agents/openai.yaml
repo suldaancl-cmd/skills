@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Sonic Experience Designer"
+  short_description: "Design optional, accessible sound for immersive sites"
+  default_prompt: "Use $design-web-sonic-experiences to design a consent-based web soundscape synchronized with interaction and scroll."

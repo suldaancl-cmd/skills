@@ -1,0 +1,150 @@
+{
+  "note": "Curated premium color + gradient system for Karim/Calaf — quality over volume. Dark + light foundations, AI violet/blue/cyan accent system, warm-luxury alt, WCAG-aware CTA contrast.",
+  "generated": "design-system-symbol-typography-audit workflow",
+  "count": 10,
+  "palettes": [
+    {
+      "name": "Obsidian AI — dark foundation",
+      "mode": "dark",
+      "role": "foundation",
+      "hexes": [
+        "#0A0A0F",
+        "#12121A",
+        "#1A1A26",
+        "#262633",
+        "#ECECF2",
+        "#9A9AAD"
+      ],
+      "gradient": "none — flat accent-tinted near-black; depth via lighter surfaces, not shadows",
+      "contrastNote": "#ECECF2 on #0A0A0F ≈ 16.8:1 (AAA). #9A9AAD on #0A0A0F ≈ 6.1:1 (AA body PASS).",
+      "usage": "Default dark base for AI/futuristic builds. Cool near-black harmonizes with violet accent; never #121212, never #000."
+    },
+    {
+      "name": "Warm Paper — light foundation",
+      "mode": "light",
+      "role": "foundation",
+      "hexes": [
+        "#FAFAF8",
+        "#FFFFFF",
+        "#E8E7E5",
+        "#0E0E0D",
+        "#6B6A66",
+        "#9E9C96"
+      ],
+      "gradient": "none — flat warm off-white, no aurora/mesh behind type",
+      "contrastNote": "#0E0E0D on #FAFAF8 ≈ 18.5:1 (AAA). #6B6A66 on #FAFAF8 ≈ 5.4:1 (AA PASS).",
+      "usage": "Promoted from od-tpl-orbit-general. Default clean light base for dashboards/editorial. Whitespace is the only atmosphere."
+    },
+    {
+      "name": "Spectrum Accent — violet/blue/cyan family",
+      "mode": "both",
+      "role": "accent",
+      "hexes": [
+        "#7C5CFF",
+        "#4D7CFF",
+        "#38E1D8",
+        "#6B4AE6"
+      ],
+      "gradient": "linear-gradient(90deg, #7C5CFF 0%, #4D7CFF 50%, #38E1D8 100%) — small decorative strokes/rules ONLY",
+      "contrastNote": "Chrome commits to ONE stop (violet #7C5CFF). Cyan is hover/live-only. Light mode uses #6B4AE6 for AA on white.",
+      "usage": "The AI identity. Full sweep lives only in gradients/glows; one stop drives all interactive chrome."
+    },
+    {
+      "name": "Primary CTA — tonal violet fill",
+      "mode": "dark",
+      "role": "cta",
+      "hexes": [
+        "#8B6BFF",
+        "#6B4AE6",
+        "#FFFFFF"
+      ],
+      "gradient": "linear-gradient(180deg, #8B6BFF 0%, #6B4AE6 100%)",
+      "contrastNote": "White ink verified against the DARKEST stop #6B4AE6 ≈ 4.9:1 (AA PASS). Same-hue ramp gives depth without slop.",
+      "usage": "One primary CTA per viewport. Secondary actions are ghost/outline. Focus ring 2px violet + glow halo."
+    },
+    {
+      "name": "Aurora Hero Wash",
+      "mode": "dark",
+      "role": "gradient",
+      "hexes": [
+        "#7C5CFF",
+        "#38E1D8",
+        "#0A0A0F"
+      ],
+      "gradient": "radial-gradient(120% 80% at 20% 0%, #7C5CFF26 0%, transparent 60%), radial-gradient(100% 70% at 90% 20%, #38E1D81F 0%, transparent 55%), #0A0A0F",
+      "contrastNote": "Low-chroma (15-26% alpha) field BEHIND type only. Text sits on near-opaque base region; verify ≥4.5:1 where text lands.",
+      "usage": "Hero background field. Same-family glow, scoped to one surface. Never put text on the bright zones."
+    },
+    {
+      "name": "Frosted Glass Card",
+      "mode": "dark",
+      "role": "surface",
+      "hexes": [
+        "#FFFFFF0F",
+        "#FFFFFF05",
+        "#FFFFFF1A"
+      ],
+      "gradient": "linear-gradient(180deg, #FFFFFF0F 0%, #FFFFFF05 100%); backdrop-filter: blur(12px); border:1px solid #FFFFFF1A",
+      "contrastNote": "Decorative depth only — never the contrast surface for body text. Place text on --surface-1 instead.",
+      "usage": "Cinematic frosted nav/card over dark or imagery. Premium depth without a drop shadow."
+    },
+    {
+      "name": "Scoped Launch Hero (Binance pattern)",
+      "mode": "dark",
+      "role": "gradient",
+      "hexes": [
+        "#7C5CFF",
+        "#1A1A26",
+        "#0A0A0F"
+      ],
+      "gradient": "linear-gradient(160deg, #7C5CFF 0%, #1A1A26 70%, #0A0A0F 100%)",
+      "contrastNote": "Named one-off token. White headline on the violet third ≈ 3.4:1 — use large/bold (≥24px) only, or shift text to the dark third.",
+      "usage": "A single named launch/announcement surface. Explicitly prohibited from generalizing across the product."
+    },
+    {
+      "name": "Atelier Gold — warm-luxury foundation+accent",
+      "mode": "dark",
+      "role": "foundation",
+      "hexes": [
+        "#14100C",
+        "#1F1813",
+        "#34291F",
+        "#F2EBE0",
+        "#C9A86A",
+        "#8A7245"
+      ],
+      "gradient": "radial-gradient(90% 60% at 50% 30%, #C9A86A26 0%, #FFB47714 40%, transparent 70%) — warm radial only, never linear",
+      "contrastNote": "#F2EBE0 on #14100C ≈ 15.9:1 (AAA). Champagne #C9A86A on #14100C ≈ 7.8:1 — accent/heading, not body.",
+      "usage": "The non-AI brief: luxury/editorial/hospitality. Desaturated champagne gold, never #FFD700. One cool utility secondary max."
+    },
+    {
+      "name": "Espresso CTA — gold on dark",
+      "mode": "dark",
+      "role": "cta",
+      "hexes": [
+        "#C9A86A",
+        "#8A7245",
+        "#14100C"
+      ],
+      "gradient": "linear-gradient(180deg, #C9A86A 0%, #8A7245 100%)",
+      "contrastNote": "Dark ink #14100C on gold #C9A86A ≈ 7.2:1 (AAA) — luxury CTAs use DARK ink on gold, not white.",
+      "usage": "Primary action for the warm-luxury system. Dark-ink-on-gold reads premium; white-on-gold fails and looks cheap."
+    },
+    {
+      "name": "Status Signals — brand-independent semantics",
+      "mode": "both",
+      "role": "semantic",
+      "hexes": [
+        "#2FB36B",
+        "#E0A93A",
+        "#E5564B",
+        "#2E7D5B",
+        "#C9982E",
+        "#C0473A"
+      ],
+      "gradient": "none — flat semantic fills, explicit hex (no rgba alpha-stacking)",
+      "contrastNote": "Dark trio (#2FB36B/#E0A93A/#E5564B) on #0A0A0F all ≥4.6:1. Light trio on #FAFAF8 all ≥3.6:1 (use dark ink for body).",
+      "usage": "success/warn/danger kept OUTSIDE the violet spectrum so danger never reads as accent. Derive once, reuse as tokens."
+    }
+  ]
+}

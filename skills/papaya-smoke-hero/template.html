@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>__HEADLINE__</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Smoke shader, fixed behind everything -->
+<div id="smoke"><canvas></canvas></div>
+
+<!-- Top corner telemetry HUD -->
+<header class="hud">
+  <div class="hud-left">
+    <span class="dot"></span>
+    <span class="hud-label">__TELEMETRY__</span>
+  </div>
+  <div class="hud-right">
+    <span class="hud-label">LAP <em data-counter>00</em>/58</span>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">SECTOR 03 · BRAKE POINT</p>
+    <h1 class="display">__HEADLINE__</h1>
+    <div class="accent-line"></div>
+    <p class="lede">__SUBHEAD__</p>
+    <a class="cta" href="#next">
+      <span>__CTA__</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<section id="next" class="spacer"></section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+<script src="smoke.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

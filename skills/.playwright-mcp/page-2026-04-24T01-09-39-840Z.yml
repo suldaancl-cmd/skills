@@ -1,0 +1,832 @@
+- generic [ref=e1]:
+  - generic [ref=e49]:
+    - generic:
+      - generic:
+        - generic: Desktop
+        - generic: Affects all resolutions
+    - iframe [ref=e56]:
+      - generic [ref=f3e3]:
+        - generic:
+          - generic:
+            - img "Logo Icon"
+            - generic: Conicorn
+        - banner [ref=f3e5]:
+          - generic [ref=f3e6]:
+            - link "Logo Icon" [ref=f3e7] [cursor=pointer]:
+              - /url: /
+              - img "Logo Icon" [ref=f3e8]
+            - generic [ref=f3e9]:
+              - generic [ref=f3e15] [cursor=pointer]: Menu
+              - link "Get this Template" [ref=f3e16] [cursor=pointer]:
+                - /url: https://webflow.com/templates/html/conicorn-website-template
+                - generic [ref=f3e19]: Get this Template
+        - generic [ref=f3e20]:
+          - generic [ref=f3e24]:
+            - generic [ref=f3e25]:
+              - generic [ref=f3e26]:
+                - generic [ref=f3e27]:
+                  - img [ref=f3e29]
+                  - generic [ref=f3e33]: Unicorn AI Partner
+                - heading "Intelligent Automation for Modern Teams" [level=1] [ref=f3e34]:
+                  - text: Intelligent Automation
+                  - text: for Modern Teams
+              - paragraph [ref=f3e35]: We build AI-powered automation systems that eliminate manual work, reduce costs, and multiply your business performance.
+            - generic [ref=f3e36]:
+              - link "Get this Template" [ref=f3e37] [cursor=pointer]:
+                - /url: https://webflow.com/templates/html/conicorn-website-template
+                - generic [ref=f3e38]:
+                  - generic [ref=f3e40]: Get this Template
+                  - img [ref=f3e43]
+              - link "avatar avatar Work with Us" [ref=f3e47] [cursor=pointer]:
+                - /url: "#CTA-Form"
+                - generic [ref=f3e48]:
+                  - generic [ref=f3e49]:
+                    - img "avatar" [ref=f3e50]
+                    - img "avatar" [ref=f3e51]
+                  - generic [ref=f3e53]: Work with Us
+          - generic [ref=f3e62]:
+            - generic [ref=f3e63]:
+              - img "logo" [ref=f3e64]
+              - img "logo" [ref=f3e65]
+              - img "logo" [ref=f3e66]
+              - img "logo" [ref=f3e67]
+              - img "logo" [ref=f3e68]
+              - img "logo" [ref=f3e69]
+              - img "logo" [ref=f3e70]
+            - generic [ref=f3e71]:
+              - img "logo" [ref=f3e72]
+              - img "logo" [ref=f3e73]
+              - img "logo" [ref=f3e74]
+              - img "logo" [ref=f3e75]
+              - img "logo" [ref=f3e76]
+              - img "logo" [ref=f3e77]
+              - img "logo" [ref=f3e78]
+        - generic [ref=f3e82]:
+          - generic [ref=f3e83]:
+            - generic [ref=f3e84]:
+              - generic [ref=f3e85]: "001"
+              - generic [ref=f3e88]: who we are
+            - generic [ref=f3e89]: We helps startups, SMEs & enterprises design and deploy intelligent automation systems that streamline operations and unlock scalable growth.
+          - generic [ref=f3e90]:
+            - link [ref=f3e93] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=f3e96]
+            - generic [ref=f3e99]:
+              - generic [ref=f3e100]:
+                - generic [ref=f3e101]:
+                  - generic [ref=f3e102]: 500+
+                  - generic [ref=f3e103]: saved hours
+                - generic [ref=f3e104]:
+                  - generic [ref=f3e105]: 80%
+                  - generic [ref=f3e106]: productivity boost
+                - generic [ref=f3e107]:
+                  - generic [ref=f3e108]: 5x
+                  - generic [ref=f3e109]: faster response
+              - generic [ref=f3e110]:
+                - generic [ref=f3e111]:
+                  - generic [ref=f3e112]: 500+
+                  - generic [ref=f3e113]: saved hours
+                - generic [ref=f3e114]:
+                  - generic [ref=f3e115]: 80%
+                  - generic [ref=f3e116]: productivity boost
+                - generic [ref=f3e117]:
+                  - generic [ref=f3e118]: 5x
+                  - generic [ref=f3e119]: faster response
+        - generic [ref=f3e123]:
+          - generic [ref=f3e124]:
+            - generic [ref=f3e125]:
+              - generic [ref=f3e126]: "002"
+              - generic [ref=f3e129]: values
+            - generic [ref=f3e130]:
+              - heading "Why Choose Us?" [level=2] [ref=f3e131]
+              - paragraph [ref=f3e132]: We build AI-powered automation systems that eliminate manual work, reduce costs, and multiply your business performance.
+          - generic [ref=f3e133]:
+            - generic [ref=f3e134]:
+              - generic [ref=f3e135]:
+                - img [ref=f3e140]
+                - generic [ref=f3e145]: "01"
+              - generic [ref=f3e146]:
+                - generic [ref=f3e147]: Business-First AI Strategy
+                - generic [ref=f3e148]: We design solutions aligned with your revenue goals.
+            - generic [ref=f3e149]:
+              - generic [ref=f3e150]:
+                - img [ref=f3e155]
+                - generic [ref=f3e164]: "02"
+              - generic [ref=f3e165]:
+                - generic [ref=f3e166]: End-to-End Implementation
+                - generic [ref=f3e167]: From strategy to development, followed by deployment.
+            - generic [ref=f3e168]:
+              - generic [ref=f3e169]:
+                - img [ref=f3e174]
+                - generic [ref=f3e179]: "03"
+              - generic [ref=f3e180]:
+                - generic [ref=f3e181]: Custom-Built Automation
+                - generic [ref=f3e182]: No templates. Every workflow is tailored to your unique operations.
+        - generic [ref=f3e186]:
+          - generic [ref=f3e187]:
+            - generic [ref=f3e188]:
+              - generic [ref=f3e189]: "003"
+              - generic [ref=f3e192]: Capabilities
+            - heading "Our AI-Driven Services" [level=2] [ref=f3e194]
+          - generic [ref=f3e195]:
+            - generic [ref=f3e196]:
+              - generic [ref=f3e198]:
+                - paragraph [ref=f3e199]: AI Workflow Automation. Automate repetitive tasks across departments using intelligent triggers and decision logic.
+                - generic [ref=f3e200]:
+                  - generic [ref=f3e201]:
+                    - img [ref=f3e203]
+                    - generic [ref=f3e205]: Workflow mapping
+                  - generic [ref=f3e206]:
+                    - img [ref=f3e208]
+                    - generic [ref=f3e210]: Real-time system integration.
+                  - generic [ref=f3e211]:
+                    - img [ref=f3e213]
+                    - generic [ref=f3e215]: Validated output
+              - paragraph [ref=f3e219]: AI Chatbots & Conversational Agents. 24/7 customer support, lead qualification, booking systems, and AI sales reps.
+              - paragraph [ref=f3e222]: AI Data & Reporting Systems. Automated dashboards, business intelligence, performance forecasting.
+              - paragraph [ref=f3e225]: CRM & Sales Automation. Pipeline automation, AI lead scoring, follow-ups, predictive insights.
+              - paragraph [ref=f3e228]: Marketing Automation. Email sequences, personalization engines, AI-generated content systems.
+            - generic [ref=f3e229]:
+              - generic [ref=f3e230]:
+                - generic [ref=f3e231]:
+                  - generic [ref=f3e232]:
+                    - img "avatar" [ref=f3e233]
+                    - img [ref=f3e236]
+                  - generic [ref=f3e240]:
+                    - generic [ref=f3e241]: Not sure what to automate first?
+                    - paragraph [ref=f3e242]: Book a free 30-minute AI strategy session. We’ll analyze your current workflows and identify the highest-ROI automation opportunities for your business.
+                - link "Schedule a Session" [ref=f3e243] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f3e244]:
+                    - generic [ref=f3e246]: Schedule a Session
+                    - img [ref=f3e249]
+              - generic [ref=f3e253]:
+                - generic [ref=f3e254]: Your Data. Protected. Always.
+                - generic [ref=f3e255]:
+                  - generic [ref=f3e256]:
+                    - img "Icon" [ref=f3e258]
+                    - generic [ref=f3e259]: End-to-End Encryption
+                  - generic [ref=f3e260]:
+                    - img "Icon" [ref=f3e262]
+                    - generic [ref=f3e263]: Secure API Integrations
+                  - generic [ref=f3e264]:
+                    - img "Icon" [ref=f3e266]
+                    - generic [ref=f3e267]: Role-Based Access Control
+                  - generic [ref=f3e268]:
+                    - img "Icon" [ref=f3e270]
+                    - generic [ref=f3e271]: Data Minimization
+        - generic [ref=f3e275]:
+          - generic [ref=f3e276]:
+            - generic [ref=f3e277]:
+              - generic [ref=f3e278]: "004"
+              - generic [ref=f3e281]: process
+            - generic [ref=f3e282]:
+              - heading "How We Work" [level=2] [ref=f3e283]
+              - paragraph [ref=f3e284]: A proven process designed to transform complex workflows into scalable AI-powered systems — efficiently and strategically.
+          - generic [ref=f3e285]:
+            - generic [ref=f3e286]:
+              - generic [ref=f3e288]:
+                - img [ref=f3e291]
+                - generic [ref=f3e294]: "01"
+              - generic [ref=f3e301]:
+                - generic [ref=f3e302]: Discovery & Audit
+                - generic [ref=f3e303]: We analyze your workflows, bottlenecks, and revenue opportunities.
+            - generic [ref=f3e304]:
+              - generic [ref=f3e306]:
+                - generic [ref=f3e307]: Automation Blueprint
+                - generic [ref=f3e308]: We design a detailed automation architecture aligned with KPIs.
+              - generic [ref=f3e313]:
+                - generic [ref=f3e314]: "02"
+                - img [ref=f3e317]
+            - generic [ref=f3e319]:
+              - generic [ref=f3e321]:
+                - img [ref=f3e324]
+                - generic [ref=f3e326]: "03"
+              - generic [ref=f3e331]:
+                - generic [ref=f3e332]: Build & Integration
+                - generic [ref=f3e333]: Our engineers implement AI systems and integrate with your existing tools.
+            - generic [ref=f3e334]:
+              - generic [ref=f3e336]:
+                - generic [ref=f3e337]: Testing & Optimization
+                - generic [ref=f3e338]: Performance testing, data validation, refinement.
+              - generic [ref=f3e343]:
+                - generic [ref=f3e344]: "04"
+                - img [ref=f3e347]
+            - generic [ref=f3e349]:
+              - generic [ref=f3e351]:
+                - img [ref=f3e354]
+                - generic [ref=f3e358]: "05"
+              - generic [ref=f3e364]:
+                - generic [ref=f3e365]: Deployment & Scaling
+                - generic [ref=f3e366]: Launch, monitor, and continuously optimize for growth.
+        - generic [ref=f3e371]:
+          - generic [ref=f3e372]:
+            - generic [ref=f3e373]:
+              - generic [ref=f3e374]: "005"
+              - generic [ref=f3e377]: Case studies
+            - heading "What We’ve Built" [level=2] [ref=f3e379]
+          - generic [ref=f3e381]:
+            - generic [ref=f3e382]:
+              - generic [ref=f3e385]:
+                - img "casestudy image" [ref=f3e387]
+                - generic [ref=f3e388]:
+                  - generic [ref=f3e390]:
+                    - generic [ref=f3e391]:
+                      - generic [ref=f3e392]: AI Workflow Automation for SaaS Company
+                      - paragraph [ref=f3e393]: We analyze your workflows, bottlenecks, and revenue opportunities.
+                    - link "Read More" [ref=f3e394] [cursor=pointer]:
+                      - /url: https://webflow.com
+                      - generic [ref=f3e395]:
+                        - generic [ref=f3e397]: Read More
+                        - img [ref=f3e400]
+                  - generic [ref=f3e404]:
+                    - generic [ref=f3e405]:
+                      - generic [ref=f3e406]: +40%
+                      - generic [ref=f3e407]: Demo Booking
+                    - generic [ref=f3e408]:
+                      - generic [ref=f3e409]: +25%
+                      - generic [ref=f3e410]: Closing Rate
+                    - generic [ref=f3e411]:
+                      - generic [ref=f3e412]: 3x
+                      - generic [ref=f3e413]: Engagement
+              - generic [ref=f3e415]:
+                - img "casestudy" [ref=f3e417]
+                - generic [ref=f3e418]:
+                  - generic [ref=f3e420]:
+                    - generic [ref=f3e421]:
+                      - generic [ref=f3e422]: AI Project Management Automation for Creative Teams
+                      - paragraph [ref=f3e423]: Streamlining project coordination and task assignments for faster delivery and smoother collaboration.
+                    - link "Read More" [ref=f3e424] [cursor=pointer]:
+                      - /url: https://webflow.com
+                      - generic [ref=f3e425]:
+                        - generic [ref=f3e427]: Read More
+                        - img [ref=f3e430]
+                  - generic [ref=f3e434]:
+                    - generic [ref=f3e435]:
+                      - generic [ref=f3e436]: +38%
+                      - generic [ref=f3e437]: Faster Delivery
+                    - generic [ref=f3e438]:
+                      - generic [ref=f3e439]: "-62%"
+                      - generic [ref=f3e440]: Admin Work
+                    - generic [ref=f3e441]:
+                      - generic [ref=f3e442]: 4x
+                      - generic [ref=f3e443]: Productivity
+              - generic [ref=f3e445]:
+                - img "casestudy" [ref=f3e447]
+                - generic [ref=f3e448]:
+                  - generic [ref=f3e450]:
+                    - generic [ref=f3e451]:
+                      - generic [ref=f3e452]: AI Property Inquiry Chatbot for Real Estate Firms
+                      - paragraph [ref=f3e453]: An intelligent chatbot that qualifies property inquiries, answers buyer questions, and schedules property viewings automatically.
+                    - link "Read More" [ref=f3e454] [cursor=pointer]:
+                      - /url: https://webflow.com
+                      - generic [ref=f3e455]:
+                        - generic [ref=f3e457]: Read More
+                        - img [ref=f3e460]
+                  - generic [ref=f3e464]:
+                    - generic [ref=f3e465]:
+                      - generic [ref=f3e466]: 3x
+                      - generic [ref=f3e467]: Lead Response
+                    - generic [ref=f3e468]:
+                      - generic [ref=f3e469]: +40%
+                      - generic [ref=f3e470]: Viewing Bookings
+                    - generic [ref=f3e471]:
+                      - generic [ref=f3e472]: 24/7
+                      - generic [ref=f3e473]: Engagement
+            - img [ref=f3e476] [cursor=pointer]
+            - img [ref=f3e481] [cursor=pointer]
+        - generic [ref=f3e485]:
+          - generic [ref=f3e488]:
+            - generic [ref=f3e489]:
+              - generic [ref=f3e490]: "006"
+              - generic [ref=f3e493]: integrations
+            - heading "Technology Ecosystem" [level=2] [ref=f3e495]
+          - generic [ref=f3e496]:
+            - generic [ref=f3e497]:
+              - link "Try with Conicorn" [ref=f3e500] [cursor=pointer]:
+                - /url: https://webflow.com
+                - img [ref=f3e502]
+                - generic [ref=f3e516]: Try with Conicorn
+              - generic [ref=f3e518]:
+                - generic [ref=f3e519]:
+                  - generic [ref=f3e520]:
+                    - generic [ref=f3e522]: HubSpot
+                    - generic [ref=f3e524]: Salesforce
+                    - generic [ref=f3e526]: Zoho
+                    - generic [ref=f3e528]: Mailchimp
+                    - generic [ref=f3e530]: ActiveCampaign
+                    - generic [ref=f3e532]: Zapier
+                    - generic [ref=f3e534]: OpenAI
+                    - generic [ref=f3e536]: Cloud AI
+                    - generic [ref=f3e538]: Make
+                    - generic [ref=f3e540]: Custom APIs
+                  - generic [ref=f3e541]:
+                    - generic [ref=f3e543]: HubSpot
+                    - generic [ref=f3e545]: Salesforce
+                    - generic [ref=f3e547]: Zoho
+                    - generic [ref=f3e549]: Mailchimp
+                    - generic [ref=f3e551]: ActiveCampaign
+                    - generic [ref=f3e553]: Zapier
+                    - generic [ref=f3e555]: OpenAI
+                    - generic [ref=f3e557]: Cloud AI
+                    - generic [ref=f3e559]: Make
+                    - generic [ref=f3e561]: Custom APIs
+                - generic [ref=f3e562]:
+                  - generic [ref=f3e563]:
+                    - generic [ref=f3e565]: Pipedrive
+                    - generic [ref=f3e567]: Monday
+                    - generic [ref=f3e569]: Copper
+                    - generic [ref=f3e571]: Close
+                    - generic [ref=f3e573]: Klaviyo
+                    - generic [ref=f3e575]: Marketo
+                    - generic [ref=f3e577]: Brevo
+                    - generic [ref=f3e579]: ConvertKit
+                    - generic [ref=f3e581]: N8N
+                    - generic [ref=f3e583]: Customerio
+                  - generic [ref=f3e584]:
+                    - generic [ref=f3e586]: Pipedrive
+                    - generic [ref=f3e588]: Monday
+                    - generic [ref=f3e590]: Copper
+                    - generic [ref=f3e592]: Close
+                    - generic [ref=f3e594]: Klaviyo
+                    - generic [ref=f3e596]: Marketo
+                    - generic [ref=f3e598]: Brevo
+                    - generic [ref=f3e600]: ConvertKit
+                    - generic [ref=f3e602]: N8N
+                    - generic [ref=f3e604]: Customerio
+                - generic [ref=f3e605]:
+                  - generic [ref=f3e606]:
+                    - generic [ref=f3e608]: Pabbly
+                    - generic [ref=f3e610]: Workato
+                    - generic [ref=f3e612]: Anthropic
+                    - generic [ref=f3e614]: Vertex
+                    - generic [ref=f3e616]: Azure
+                    - generic [ref=f3e618]: Hugging
+                    - generic [ref=f3e620]: Intercom
+                    - generic [ref=f3e622]: Drift
+                    - generic [ref=f3e624]: Crisp
+                    - generic [ref=f3e626]: LiveChat
+                  - generic [ref=f3e627]:
+                    - generic [ref=f3e629]: Pabbly
+                    - generic [ref=f3e631]: Workato
+                    - generic [ref=f3e633]: Anthropic
+                    - generic [ref=f3e635]: Vertex
+                    - generic [ref=f3e637]: Azure
+                    - generic [ref=f3e639]: Hugging
+                    - generic [ref=f3e641]: Intercom
+                    - generic [ref=f3e643]: Drift
+                    - generic [ref=f3e645]: Crisp
+                    - generic [ref=f3e647]: LiveChat
+            - paragraph [ref=f3e649]: Our automation architecture connects data, workflows, and platforms into a secure, high-performance system that grows with you.
+        - generic [ref=f3e651]:
+          - generic [ref=f3e654]:
+            - generic [ref=f3e655]:
+              - generic [ref=f3e656]: "007"
+              - generic [ref=f3e659]: testimonial
+            - heading "What They’re Saying" [level=2] [ref=f3e661]
+          - generic [ref=f3e662]:
+            - generic [ref=f3e663]:
+              - generic [ref=f3e665]:
+                - link [ref=f3e666] [cursor=pointer]:
+                  - /url: https://www.youtube.com/watch?v=OxoOCp24Ojk
+                  - img [ref=f3e668]
+                - generic [ref=f3e671]:
+                  - img "logo" [ref=f3e672]
+                  - generic [ref=f3e673]: How Puno Automated 80% of Lead Handling
+                - img "avatar" [ref=f3e674]
+              - generic [ref=f3e676]:
+                - generic [ref=f3e677]:
+                  - img "avatar" [ref=f3e678]
+                  - generic [ref=f3e679]:
+                    - generic [ref=f3e680]: Daniel Kim
+                    - generic [ref=f3e681]: Founder, ScaleLabs Education
+                  - img [ref=f3e683]
+                - paragraph [ref=f3e685]:
+                  - text: Our enrollment process used to require manual follow-ups and spreadsheet tracking. Now, AI handles lead qualification, scheduling, reminders, and CRM updates automatically.
+                  - text: We’ve increased enrollment conversion by 35% in just one quarter.
+              - generic [ref=f3e687]:
+                - generic [ref=f3e688]:
+                  - img "avatar" [ref=f3e689]
+                  - generic [ref=f3e690]:
+                    - generic [ref=f3e691]: Alex Johnson
+                    - generic [ref=f3e692]: Head of Operations, Finovate Consulting
+                  - img [ref=f3e694]
+                - paragraph [ref=f3e696]: Security and compliance were major concerns for us. They designed an automation architecture that was not only efficient but enterprise-grade secure.
+            - generic [ref=f3e697]:
+              - generic [ref=f3e699]:
+                - generic [ref=f3e700]:
+                  - img "avatar" [ref=f3e701]
+                  - generic [ref=f3e702]:
+                    - generic [ref=f3e703]: David Lee
+                    - generic [ref=f3e704]: Founder, Atodio Studio
+                  - img [ref=f3e706]
+                - paragraph [ref=f3e708]: We were spending hours on repetitive tasks. Their automation system saved us 30+ hours per week and dramatically improved our sales performance.
+              - generic [ref=f3e710]:
+                - generic [ref=f3e711]:
+                  - img "avatar" [ref=f3e712]
+                  - generic [ref=f3e713]:
+                    - generic [ref=f3e714]: Sarah Mitchell
+                    - generic [ref=f3e715]: COO, BrightPath SaaS
+                  - img [ref=f3e717]
+                - paragraph [ref=f3e719]:
+                  - text: We struggled with inconsistent lead follow-ups and slow response times. Their AI automation blueprint gave us clarity first, then execution.
+                  - text: Now, our CRM runs intelligently, leads are scored automatically, and follow-ups happen without manual effort. We’ve increased demo bookings by 40% while reducing operational friction.
+              - generic [ref=f3e721]:
+                - generic [ref=f3e722]:
+                  - img "avatar" [ref=f3e723]
+                  - generic [ref=f3e724]:
+                    - generic [ref=f3e725]: Jonathan Reed
+                    - generic [ref=f3e726]: Managing Director, Nexora Digital Agency
+                  - img [ref=f3e728]
+                - paragraph [ref=f3e730]:
+                  - text: We were scaling fast but drowning in manual workflows. Their automation system connected our CRM, email marketing, and reporting into one intelligent flow.
+                  - text: The result? 30+ hours saved per week and complete visibility across our pipeline.
+            - generic [ref=f3e731]:
+              - generic [ref=f3e733]:
+                - generic [ref=f3e734]:
+                  - img "avatar" [ref=f3e735]
+                  - generic [ref=f3e736]:
+                    - generic [ref=f3e737]: Michael Tran
+                    - generic [ref=f3e738]: Founder & CEO, Skyline Realty Group
+                  - img [ref=f3e740]
+                - paragraph [ref=f3e742]: We reduced admin work by nearly 50% and doubled our qualified appointment bookings. The ROI was faster than we expected — and the system continues to scale with us.
+              - generic [ref=f3e744]:
+                - link [ref=f3e745] [cursor=pointer]:
+                  - /url: https://www.youtube.com/watch?v=OxoOCp24Ojk
+                  - img [ref=f3e747]
+                - generic [ref=f3e750]:
+                  - img "logo" [ref=f3e751]
+                  - generic [ref=f3e752]: Scaling SaaS Operations with AI Automation
+                - img "avatar" [ref=f3e753]
+              - generic [ref=f3e755]:
+                - generic [ref=f3e756]:
+                  - img "avatar" [ref=f3e757]
+                  - generic [ref=f3e758]:
+                    - generic [ref=f3e759]: Laura Martinez
+                    - generic [ref=f3e760]: CMO, Elevate Commerce Co.
+                  - img [ref=f3e762]
+                - paragraph [ref=f3e764]:
+                  - text: Marketing automation always felt fragmented — too many tools, not enough cohesion.
+                  - text: They unified everything into one intelligent ecosystem. Campaign triggers, abandoned cart flows, segmentation — all automated with precision.
+        - generic [ref=f3e768]:
+          - generic [ref=f3e769]:
+            - generic [ref=f3e770]:
+              - generic [ref=f3e771]: "008"
+              - generic [ref=f3e774]: pricing
+            - generic [ref=f3e775]:
+              - heading "Built for Growth at Every Stage" [level=2] [ref=f3e776]
+              - paragraph [ref=f3e777]: Whether you're starting small or scaling fast, we have an automation plan that fits.
+          - generic [ref=f3e778]:
+            - generic [ref=f3e779]:
+              - generic [ref=f3e780]:
+                - generic [ref=f3e782] [cursor=pointer]: MONTHLY
+                - generic [ref=f3e786] [cursor=pointer]: ANNUALLY (SAVE 10%)
+              - generic [ref=f3e791]:
+                - generic [ref=f3e792]:
+                  - generic [ref=f3e793]:
+                    - generic [ref=f3e796]:
+                      - generic [ref=f3e797]: Starter Automation
+                      - generic [ref=f3e798]: For small teams beginning their journey
+                    - generic [ref=f3e799]:
+                      - generic [ref=f3e800]: $499.00
+                      - generic [ref=f3e801]: /Month
+                  - generic [ref=f3e803]:
+                    - generic [ref=f3e804]:
+                      - generic [ref=f3e805]: "What’s included:"
+                      - generic [ref=f3e806]:
+                        - img [ref=f3e808]
+                        - generic [ref=f3e810]: Workflow setup (1–3 systems)
+                      - generic [ref=f3e811]:
+                        - img [ref=f3e813]
+                        - generic [ref=f3e815]: Basic AI chatbot
+                      - generic [ref=f3e816]:
+                        - img [ref=f3e818]
+                        - generic [ref=f3e820]: CRM integration
+                    - link "Get Starter Package" [ref=f3e821] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f3e824]: Get Starter Package
+                - generic [ref=f3e825]:
+                  - generic [ref=f3e826]:
+                    - generic [ref=f3e828]:
+                      - generic [ref=f3e829]: Growth Automation
+                      - generic [ref=f3e830]: For scaling businesses
+                    - generic [ref=f3e831]:
+                      - generic [ref=f3e832]: $1199.00
+                      - generic [ref=f3e833]: /Month
+                    - generic [ref=f3e835]:
+                      - img [ref=f3e837]
+                      - generic [ref=f3e840]: Most Popular
+                  - generic [ref=f3e841]:
+                    - generic [ref=f3e842]:
+                      - generic [ref=f3e843]: "Included everything in Starter, plus:"
+                      - generic [ref=f3e844]:
+                        - img [ref=f3e846]
+                        - generic [ref=f3e848]: Advanced workflow automation
+                      - generic [ref=f3e849]:
+                        - img [ref=f3e851]
+                        - generic [ref=f3e853]: Multi-channel AI chatbot
+                      - generic [ref=f3e854]:
+                        - img [ref=f3e856]
+                        - generic [ref=f3e858]: Sales & marketing automation
+                      - generic [ref=f3e859]:
+                        - img [ref=f3e861]
+                        - generic [ref=f3e863]: Dashboard & reporting
+                    - link "Get Growth Package" [ref=f3e864] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f3e867]: Get Growth Package
+            - generic [ref=f3e868]:
+              - generic [ref=f3e869]:
+                - generic [ref=f3e870]:
+                  - img "avatar" [ref=f3e871]
+                  - img [ref=f3e874]
+                - generic [ref=f3e878]:
+                  - generic [ref=f3e879]: Not sure which plan is right for you?
+                  - paragraph [ref=f3e880]: Book a free 30-minute AI strategy session.
+              - link "Book a Free Consultation" [ref=f3e881] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=f3e882]:
+                  - generic [ref=f3e884]: Book a Free Consultation
+                  - img [ref=f3e887]
+        - generic [ref=f3e894]:
+          - generic [ref=f3e895]:
+            - generic [ref=f3e896]:
+              - generic [ref=f3e897]: "009"
+              - generic [ref=f3e900]: team
+            - heading "Meet the Conicorn’s Minds" [level=2] [ref=f3e902]
+          - generic [ref=f3e904]:
+            - generic [ref=f3e905]:
+              - generic [ref=f3e907]:
+                - generic [ref=f3e908]:
+                  - generic [ref=f3e909]:
+                    - link [ref=f3e910] [cursor=pointer]:
+                      - /url: https://facebook.com
+                      - img [ref=f3e912]
+                    - link [ref=f3e914] [cursor=pointer]:
+                      - /url: https://linkedin.com
+                      - img [ref=f3e916]
+                    - link [ref=f3e918] [cursor=pointer]:
+                      - /url: https://x.com
+                      - img [ref=f3e920]
+                  - img "team image" [ref=f3e922]
+                - generic [ref=f3e923]:
+                  - generic [ref=f3e924]: Taylor Jones
+                  - generic [ref=f3e925]: (Founder of Conicorn)
+              - generic [ref=f3e927]:
+                - generic [ref=f3e928]:
+                  - generic [ref=f3e929]:
+                    - link [ref=f3e930] [cursor=pointer]:
+                      - /url: https://facebook.com
+                      - img [ref=f3e932]
+                    - link [ref=f3e934] [cursor=pointer]:
+                      - /url: https://linkedin.com
+                      - img [ref=f3e936]
+                    - link [ref=f3e938] [cursor=pointer]:
+                      - /url: https://x.com
+                      - img [ref=f3e940]
+                  - img "team image" [ref=f3e942]
+                - generic [ref=f3e943]:
+                  - generic [ref=f3e944]: Leo Martin
+                  - generic [ref=f3e945]: (CEO of Conicorn)
+              - generic [ref=f3e947]:
+                - generic [ref=f3e948]:
+                  - generic [ref=f3e949]:
+                    - link [ref=f3e950] [cursor=pointer]:
+                      - /url: https://facebook.com
+                      - img [ref=f3e952]
+                    - link [ref=f3e954] [cursor=pointer]:
+                      - /url: https://linkedin.com
+                      - img [ref=f3e956]
+                    - link [ref=f3e958] [cursor=pointer]:
+                      - /url: https://x.com
+                      - img [ref=f3e960]
+                  - img "team image" [ref=f3e962]
+                - generic [ref=f3e963]:
+                  - generic [ref=f3e964]: Minh Nguyen
+                  - generic [ref=f3e965]: (Design Lead)
+              - generic [ref=f3e967]:
+                - generic [ref=f3e968]:
+                  - generic [ref=f3e969]:
+                    - link [ref=f3e970] [cursor=pointer]:
+                      - /url: https://facebook.com
+                      - img [ref=f3e972]
+                    - link [ref=f3e974] [cursor=pointer]:
+                      - /url: https://linkedin.com
+                      - img [ref=f3e976]
+                    - link [ref=f3e978] [cursor=pointer]:
+                      - /url: https://x.com
+                      - img [ref=f3e980]
+                  - img "team image" [ref=f3e982]
+                - generic [ref=f3e983]:
+                  - generic [ref=f3e984]: Aisha Rahman
+                  - generic [ref=f3e985]: (Marketing Manager)
+              - generic [ref=f3e987]:
+                - generic [ref=f3e988]:
+                  - generic [ref=f3e989]:
+                    - link [ref=f3e990] [cursor=pointer]:
+                      - /url: https://facebook.com
+                      - img [ref=f3e992]
+                    - link [ref=f3e994] [cursor=pointer]:
+                      - /url: https://linkedin.com
+                      - img [ref=f3e996]
+                    - link [ref=f3e998] [cursor=pointer]:
+                      - /url: https://x.com
+                      - img [ref=f3e1000]
+                  - img "team image" [ref=f3e1002]
+                - generic [ref=f3e1003]:
+                  - generic [ref=f3e1004]: Arjun Lim
+                  - generic [ref=f3e1005]: (Video Editor)
+            - img [ref=f3e1011] [cursor=pointer]
+            - img [ref=f3e1016] [cursor=pointer]
+        - generic [ref=f3e1022]:
+          - generic [ref=f3e1023]:
+            - generic [ref=f3e1024]:
+              - generic [ref=f3e1025]: "010"
+              - generic [ref=f3e1028]: FAQs
+            - heading "Common Questions" [level=2] [ref=f3e1030]
+          - generic [ref=f3e1031]:
+            - generic [ref=f3e1032]:
+              - generic [ref=f3e1034]:
+                - generic [ref=f3e1035] [cursor=pointer]:
+                  - generic [ref=f3e1036]:
+                    - generic [ref=f3e1037]: "1"
+                    - generic [ref=f3e1038]: What industries do you work with?
+                  - img [ref=f3e1042]
+                - navigation [ref=f3e1045]:
+                  - paragraph [ref=f3e1048]: Project timelines typically range from 2 to 6 weeks, depending on complexity.Smaller automation systems — such as AI chatbots with CRM integration — can often be deployed within 2–3 weeks.More advanced projects involving multi-platform integrations, custom AI logic, internal workflow automation, and reporting dashboards may take 4–6 weeks or longer.
+              - generic [ref=f3e1051]:
+                - generic [ref=f3e1052] [cursor=pointer]:
+                  - generic [ref=f3e1053]:
+                    - generic [ref=f3e1054]: "2"
+                    - generic [ref=f3e1055]: How long does implementation take?
+                  - img [ref=f3e1059]
+                - navigation [ref=f3e1062]:
+                  - paragraph [ref=f3e1065]: Project timelines typically range from 2 to 6 weeks, depending on complexity.Smaller automation systems — such as AI chatbots with CRM integration — can often be deployed within 2–3 weeks.More advanced projects involving multi-platform integrations, custom AI logic, internal workflow automation, and reporting dashboards may take 4–6 weeks or longer.
+              - generic [ref=f3e1068]:
+                - generic [ref=f3e1069] [cursor=pointer]:
+                  - generic [ref=f3e1070]:
+                    - generic [ref=f3e1071]: "3"
+                    - generic [ref=f3e1072]: Do we need technical knowledge to work with you?
+                  - img [ref=f3e1076]
+                - navigation [ref=f3e1079]:
+                  - paragraph [ref=f3e1082]: Project timelines typically range from 2 to 6 weeks, depending on complexity.Smaller automation systems — such as AI chatbots with CRM integration — can often be deployed within 2–3 weeks.More advanced projects involving multi-platform integrations, custom AI logic, internal workflow automation, and reporting dashboards may take 4–6 weeks or longer.
+              - generic [ref=f3e1085]:
+                - generic [ref=f3e1086] [cursor=pointer]:
+                  - generic [ref=f3e1087]:
+                    - generic [ref=f3e1088]: "4"
+                    - generic [ref=f3e1089]: Is AI automation secure?
+                  - img [ref=f3e1093]
+                - navigation [ref=f3e1096]:
+                  - paragraph [ref=f3e1099]: Project timelines typically range from 2 to 6 weeks, depending on complexity.Smaller automation systems — such as AI chatbots with CRM integration — can often be deployed within 2–3 weeks.More advanced projects involving multi-platform integrations, custom AI logic, internal workflow automation, and reporting dashboards may take 4–6 weeks or longer.
+              - generic [ref=f3e1102]:
+                - generic [ref=f3e1103] [cursor=pointer]:
+                  - generic [ref=f3e1104]:
+                    - generic [ref=f3e1105]: "5"
+                    - generic [ref=f3e1106]: What kind of ROI can we expect?
+                  - img [ref=f3e1110]
+                - navigation [ref=f3e1113]:
+                  - paragraph [ref=f3e1116]: Project timelines typically range from 2 to 6 weeks, depending on complexity.Smaller automation systems — such as AI chatbots with CRM integration — can often be deployed within 2–3 weeks.More advanced projects involving multi-platform integrations, custom AI logic, internal workflow automation, and reporting dashboards may take 4–6 weeks or longer.
+            - generic [ref=f3e1118]:
+              - generic [ref=f3e1119]: Have any other questions?
+              - link "Contact Us" [ref=f3e1120] [cursor=pointer]:
+                - /url: "#CTA-Form"
+                - generic [ref=f3e1121]:
+                  - generic [ref=f3e1123]: Contact Us
+                  - img [ref=f3e1126]
+        - contentinfo [ref=f3e1130]:
+          - generic [ref=f3e1133]:
+            - generic [ref=f3e1135]:
+              - generic [ref=f3e1137]:
+                - heading "Your Competitors Are Automating. Are you?" [level=2] [ref=f3e1138]:
+                  - text: Your Competitors Are Automating.
+                  - text: Are you?
+                - paragraph [ref=f3e1139]: Stop wasting time on manual processes. Start building a self-running business.
+              - generic [ref=f3e1141]:
+                - textbox "Your name*" [ref=f3e1142]
+                - textbox "Your company name*" [ref=f3e1143]
+                - textbox "Your business email*" [ref=f3e1144]
+                - textbox "Message" [ref=f3e1145]
+                - button "Send Your Request!" [ref=f3e1147] [cursor=pointer]
+            - generic [ref=f3e1148]:
+              - generic [ref=f3e1149]:
+                - generic [ref=f3e1150]:
+                  - link "LinkedIn" [ref=f3e1151] [cursor=pointer]:
+                    - /url: https://www.linkedin.com
+                    - img [ref=f3e1154]
+                    - generic [ref=f3e1156]: LinkedIn
+                    - img [ref=f3e1158]
+                  - link "Instagram" [ref=f3e1160] [cursor=pointer]:
+                    - /url: https://www.instagram.com/
+                    - img [ref=f3e1163]
+                    - generic [ref=f3e1165]: Instagram
+                    - img [ref=f3e1167]
+                  - link "Facebook" [ref=f3e1169] [cursor=pointer]:
+                    - /url: https://www.facebook.com/
+                    - img [ref=f3e1172]
+                    - generic [ref=f3e1174]: Facebook
+                    - img [ref=f3e1176]
+                  - link "Twitter X" [ref=f3e1178] [cursor=pointer]:
+                    - /url: https://www.x.com
+                    - img [ref=f3e1181]
+                    - generic [ref=f3e1183]: Twitter X
+                    - img [ref=f3e1185]
+                - generic [ref=f3e1187]:
+                  - link "About" [ref=f3e1188] [cursor=pointer]:
+                    - /url: "#about-section"
+                  - link "Services" [ref=f3e1189] [cursor=pointer]:
+                    - /url: "#service-section"
+                  - link "Projects" [ref=f3e1190] [cursor=pointer]:
+                    - /url: "#project-section"
+                  - link "Pricing" [ref=f3e1191] [cursor=pointer]:
+                    - /url: "#pricing-section"
+                  - link "FAQs" [ref=f3e1192] [cursor=pointer]:
+                    - /url: "#FAQ-section"
+              - generic [ref=f3e1194]:
+                - generic [ref=f3e1195]:
+                  - text: © Conicorn 2026 |
+                  - link "License" [ref=f3e1196] [cursor=pointer]:
+                    - /url: /license
+                  - text: "| Powered by"
+                  - link "Webflow" [ref=f3e1197] [cursor=pointer]:
+                    - /url: https://webflow.com
+                - generic [ref=f3e1199]:
+                  - text: Designed by
+                  - link "NinhStudio" [ref=f3e1200] [cursor=pointer]:
+                    - /url: https://dribbble.com/ninhstudio
+  - iframe [ref=e45]:
+    
+  - generic [ref=e58]:
+    - generic:
+      - generic:
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - button [ref=e62] [cursor=pointer]:
+              - img [ref=e64]
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - button [ref=e70]:
+                  - generic [ref=e73]:
+                    - img [ref=e75]
+                    - generic [ref=e82]: Design
+                - button [ref=e84]:
+                  - generic [ref=e87]:
+                    - img [ref=e89]
+                    - generic [ref=e94]: CMS
+                - button [ref=e96]:
+                  - generic [ref=e99]:
+                    - img [ref=e101]
+                    - generic [ref=e106]: Insights
+              - button [ref=e110]:
+                - generic [ref=e111]:
+                  - img [ref=e113]
+                  - generic [ref=e118]: Home
+                  - img [ref=e120]
+              - generic [ref=e123]:
+                - button [pressed] [ref=e125]:
+                  - img [ref=e129]
+                - button [ref=e133]:
+                  - button [ref=e134]:
+                    - generic [ref=e135]:
+                      - generic [ref=e136]: Publish
+                      - img [ref=e138]
+          - button [ref=e141] [cursor=pointer]:
+            - img [ref=e143]
+        - generic [ref=e146]:
+          - generic [ref=e150]:
+            - button [ref=e153]:
+              - generic [ref=e154]:
+                - generic [ref=e156]: 1018px
+                - img [ref=e159]
+            - generic [ref=e162]:
+              - button [ref=e163]:
+                - img [ref=e167]
+              - button [ref=e170]:
+                - img [ref=e174]
+              - button [ref=e177]:
+                - img [ref=e181]
+              - button [pressed] [ref=e184]:
+                - img [ref=e188]
+              - button [ref=e193]:
+                - img [ref=e197]
+              - button [ref=e202]:
+                - img [ref=e206]
+              - button [ref=e211]:
+                - img [ref=e215]
+          - generic [ref=e221]:
+            - img [ref=e223]
+            - button [expanded] [ref=e226]:
+              - switch [ref=e228]
+              - generic [ref=e230]: Enable custom code?
+            - dialog "Client management Custom code in Preview Callout" [ref=e238]:
+              - img
+              - img
+              - img
+              - generic [ref=e240]:
+                - generic [ref=e241]:
+                  - heading "New! Custom code in Preview" [level=3] [ref=e242]
+                  - button "Close" [active] [ref=e243]:
+                    - img [ref=e247]
+                - paragraph [ref=e250]: Run your custom code directly in Preview without having to publish your site.
+        - generic [ref=e254]:
+          - generic [ref=e255]: This site was made in Webflow.
+          - generic [ref=e256]: Try it out for your next project
+          - button [ref=e257] [cursor=pointer]: Sign up for free

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Five things I read this week · /html-everything</title>
+<meta name="description" content="A short editorial digest — rendered by /html-everything from the matching Markdown demo input." />
+<meta name="generator" content="/html-everything · https://github.com/iharnoor/html-everything" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+<style>
+  :root {
+    --ground: #FFFFFF;
+    --ink: #0A0A0A;
+    --accent: #0029FF;
+    --mute: #6B6B6B;
+    --hair: #E5E5E5;
+    --panel: #F7F7F5;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--ground); color: var(--ink); }
+  body { font-family: 'Inter Tight', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 80px 64px; display: flex; flex-direction: column; gap: 56px; }
+  .eyebrow { display: flex; align-items: center; gap: 12px; font-weight: 500; font-size: 11px; letter-spacing: 0.2em; color: var(--mute); text-transform: uppercase; }
+  .eyebrow .dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; display: inline-block; }
+  h1.display { font-family: 'Archivo Black', system-ui, sans-serif; font-size: 96px; line-height: 92px; letter-spacing: -0.03em; margin: 0; max-width: 18ch; }
+  h2 { font-family: 'Archivo Black', system-ui, sans-serif; font-size: 36px; line-height: 42px; letter-spacing: -0.02em; margin: 0 0 16px 0; }
+  h3 { font-family: 'Archivo Black', system-ui, sans-serif; font-size: 22px; line-height: 26px; letter-spacing: -0.01em; margin: 0 0 8px 0; }
+  p { font-size: 16px; line-height: 24px; margin: 0 0 16px 0; max-width: 70ch; }
+  ul, ol { padding-left: 24px; }
+  li { font-size: 16px; line-height: 24px; margin-bottom: 8px; }
+  code, .mono { font-family: 'JetBrains Mono', monospace; font-size: 14px; }
+  pre { background: var(--panel); padding: 16px 20px; overflow-x: auto; font-size: 13px; line-height: 20px; }
+  blockquote { border-left: 4px solid var(--accent); padding: 4px 20px; margin: 16px 0; color: var(--mute); font-style: normal; }
+  .thesis { display: flex; gap: 0; }
+  .thesis .strip { width: 6px; background: var(--accent); flex-shrink: 0; }
+  .thesis .body { padding: 20px 28px; flex: 1; }
+  .section { padding-top: 24px; border-top: 1px solid var(--hair); }
+  .card { padding: 24px 0; border-top: 1px solid var(--ink); display: flex; flex-direction: column; gap: 12px; }
+  .meta-row { display: flex; gap: 24px; align-items: baseline; flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--mute); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  footer { padding-top: 32px; border-top: 2px solid var(--ink); font-size: 13px; color: var(--mute); display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  @media (max-width: 640px) { .wrap { padding: 40px 24px; gap: 32px; } h1.display { font-size: 56px; line-height: 56px; } .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span>Editorial digest · /html-everything demo</span>
+    <span style="margin-left:auto;color:var(--mute);">Mood · Editorial</span>
+  </div>
+
+  <h1 class="display">Five things I read this week</h1>
+
+  <p>A short editorial digest. Each item has a one-line take and a link. The <code>/html-everything</code> skill turns this exact Markdown into the page you're reading.</p>
+
+  <section class="section">
+    <h2>The picks</h2>
+
+    <article class="card">
+      <h3>1. The AI coding agent maintenance bar</h3>
+      <p>James Shore reframes the question: writing code is the easy part — agents have to lower the long-tail maintenance cost or they're a net liability. The Hacker News thread (347 pts, 101 comments) read like a memo to every dev-tool founder.</p>
+      <blockquote>"An AI coding agent, used to write code, needs to reduce your maintenance costs."</blockquote>
+      <p>Read it: <a href="https://www.jamesshore.com/v2/blog/2026/you-need-ai-that-reduces-your-maintenance-costs">jamesshore.com/v2/blog/2026/you-need-ai-that-reduces-your-maintenance-costs</a></p>
+    </article>
+
+    <article class="card">
+      <h3>2. Claude Code shipped "Agent View"</h3>
+      <p>One screen, every running session, blocked agents float to the top. The reframe is bigger than the feature — Anthropic is positioning Claude Code as a <b>command center</b>, not a coding assistant.</p>
+      <p class="meta-row">Source · <a href="https://x.com/k1rallik/status/2053946261246459950">x.com/k1rallik/status/2053946261246459950</a></p>
+    </article>
+
+    <article class="card">
+      <h3>3. 9router · 40+ provider proxy</h3>
+      <p>Unlimited free AI coding via auto-fallback across 40+ backends, with 40% token savings. 942 stars in a day. Infrastructure for heavy agent users.</p>
+      <p class="meta-row">Source · <a href="https://x.com/conradlotz/status/2053973472150257811">x.com/conradlotz/status/2053973472150257811</a></p>
+    </article>
+
+    <article class="card">
+      <h3>4. The counter-narrative · "Stop building AI agents"</h3>
+      <p>r/AI_Agents thread of the week. Top comment: "Loom video shows the happy path; nobody shows the 3 am Slack when the agent starts approving wrong invoices." Practitioner reality check.</p>
+      <p class="meta-row">Source · <a href="https://www.reddit.com/r/AI_Agents/comments/1taei9m/stop_building_ai_agents/">reddit.com/r/AI_Agents/comments/1taei9m/stop_building_ai_agents</a></p>
+    </article>
+
+    <article class="card">
+      <h3>5. Codex as a business operating system</h3>
+      <p>The agent-as-COO meme is fully formed on TikTok. Creators wiring Codex into Google Workspace, notetakers, and CRM — running their businesses end-to-end. "10× output without adding any headcount."</p>
+      <p class="meta-row">Source · <a href="https://www.tiktok.com/@taki.gpt/video/7637923987321785601">tiktok.com/@taki.gpt/video/7637923987321785601</a></p>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>Why it matters</h2>
+    <p>The interesting layer right now is <b>above</b> the model. Routers, dashboards, .agent/ folders, harness frameworks. The agents are the platform; the orchestrators are the new IDE.</p>
+  </section>
+
+  <footer>
+    <span>Generated by <a href="https://github.com/iharnoor/html-everything">/html-everything</a> · demo · 2026-05-11</span>
+    <span class="mono">type: markdown · sections: 2 · cards: 5</span>
+  </footer>
+
+</main>
+</body>
+</html>

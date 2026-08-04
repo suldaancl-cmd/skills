@@ -1,0 +1,12 @@
+interface:
+  display_name: "Mobbin Motion Research"
+  short_description: "Analyze Mobbin flows into usable motion specs"
+  default_prompt: "Use $mobbin-motion-research to study a Mobbin flow and produce an implementation-ready motion specification."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mobbin"
+      description: "Search Mobbin iOS and web flow sequences"
+      transport: "streamable_http"
+      url: "https://api.mobbin.com/mcp"

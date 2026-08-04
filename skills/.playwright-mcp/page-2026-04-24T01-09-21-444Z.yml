@@ -1,0 +1,102 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - img [ref=e4]
+    - generic [ref=e11]:
+      - img [ref=e12]
+      - img [ref=e17]
+      - img [ref=e21]
+      - img [ref=e25]
+      - img [ref=e29]
+      - img [ref=e34]
+      - img [ref=e39]
+  - iframe [ref=e45]:
+    - generic [active] [ref=f1e1]:
+      - generic [ref=f1e3]:
+        - generic [ref=f1e4]:
+          - link "Webflow Logo" [ref=f1e5] [cursor=pointer]:
+            - /url: https://webflow.com/
+            - img "Webflow Logo" [ref=f1e6]
+          - paragraph [ref=f1e7]: "404"
+        - generic [ref=f1e8]:
+          - heading "This is not the page you were looking for. . . ." [level=1] [ref=f1e9]
+          - paragraph [ref=f1e10]: And that’s on us.
+        - link "Go back home" [ref=f1e12] [cursor=pointer]:
+          - /url: https://webflow.com/
+          - img [ref=f1e13]
+          - generic [ref=f1e14]: Go back home
+      - contentinfo [ref=f1e15]:
+        - generic [ref=f1e16]:
+          - generic [ref=f1e17]:
+            - generic [ref=f1e18]:
+              - heading "Product" [level=5] [ref=f1e19]
+              - link "Designer" [ref=f1e20] [cursor=pointer]:
+                - /url: https://webflow.com/designer
+              - link "CMS" [ref=f1e21] [cursor=pointer]:
+                - /url: https://webflow.com/cms
+              - link "Hosting" [ref=f1e22] [cursor=pointer]:
+                - /url: https://webflow.com/hosting
+              - link "Editor" [ref=f1e23] [cursor=pointer]:
+                - /url: https://webflow.com/editor
+              - link "Interactions" [ref=f1e24] [cursor=pointer]:
+                - /url: https://webflow.com/interactions-animations
+              - link "Customers" [ref=f1e25] [cursor=pointer]:
+                - /url: https://webflow.com/customers
+              - link "Pricing" [ref=f1e26] [cursor=pointer]:
+                - /url: https://webflow.com/pricing
+              - link "Templates" [ref=f1e27] [cursor=pointer]:
+                - /url: https://webflow.com/templates
+              - link "Feature Index" [ref=f1e28] [cursor=pointer]:
+                - /url: https://webflow.com/features
+              - link "Webflow vs. WordPress" [ref=f1e29] [cursor=pointer]:
+                - /url: https://webflow.com/vs/wordpress
+            - generic [ref=f1e30]:
+              - heading "Company" [level=5] [ref=f1e31]
+              - link "About" [ref=f1e32] [cursor=pointer]:
+                - /url: https://webflow.com/about
+              - link "Blog" [ref=f1e33] [cursor=pointer]:
+                - /url: https://webflow.com/blog
+              - link "Careers" [ref=f1e34] [cursor=pointer]:
+                - /url: https://webflow.com/about#jobs
+              - link "Terms of Service" [ref=f1e35] [cursor=pointer]:
+                - /url: https://webflow.com/legal/terms
+              - link "Privacy Policy" [ref=f1e36] [cursor=pointer]:
+                - /url: https://webflow.com/legal/privacy
+              - link "Sitemap" [ref=f1e37] [cursor=pointer]:
+                - /url: https://webflow.com/sitemap
+              - link "Events" [ref=f1e38] [cursor=pointer]:
+                - /url: https://webflow.com/events
+              - link "Become an Affiliate" [ref=f1e39] [cursor=pointer]:
+                - /url: https://webflow.com/affiliates
+            - generic [ref=f1e40]:
+              - heading "Learn & Support" [level=5] [ref=f1e41]
+              - link "Webflow University" [ref=f1e42] [cursor=pointer]:
+                - /url: https://university.webflow.com
+              - link "Courses" [ref=f1e43] [cursor=pointer]:
+                - /url: https://help.webflow.com/videos
+              - link "Ebooks" [ref=f1e44] [cursor=pointer]:
+                - /url: https://ebooks.webflow.com/
+              - link "Forum" [ref=f1e45] [cursor=pointer]:
+                - /url: https://community.webflow.com/
+              - link "Service Status" [ref=f1e46] [cursor=pointer]:
+                - /url: http://status.webflow.com/
+              - link "Contact Support" [ref=f1e47] [cursor=pointer]:
+                - /url: https://help.webflow.com/contact
+              - link "Feature Wishlist" [ref=f1e48] [cursor=pointer]:
+                - /url: https://wishlist.webflow.com/
+              - link "Hire an Expert" [ref=f1e49] [cursor=pointer]:
+                - /url: https://experts.webflow.com/
+            - generic [ref=f1e50]:
+              - heading "Social" [level=5] [ref=f1e51]
+              - link [ref=f1e52] [cursor=pointer]:
+                - /url: https://webflow.com/made-in-webflow
+              - link [ref=f1e53] [cursor=pointer]:
+                - /url: https://www.youtube.com/webflow
+              - link [ref=f1e54] [cursor=pointer]:
+                - /url: https://twitter.com/webflow
+              - link [ref=f1e55] [cursor=pointer]:
+                - /url: https://www.facebook.com/webflow/
+              - link [ref=f1e56] [cursor=pointer]:
+                - /url: https://www.instagram.com/webflowapp/
+              - link [ref=f1e57] [cursor=pointer]:
+                - /url: https://plus.google.com/+Webflow
+          - paragraph [ref=f1e59]: © 2026, Webflow, Inc. All Rights Reserved.

@@ -1,0 +1,43 @@
+{
+  "skill_name": "arabic-typography",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a luxury Arabic perfume logo reading عطر السكون. I like Diwani and Thuluth. Choose the better direction, recommend actual production options, and tell me whether a Google Font is enough.",
+      "expected_output": "A concise style direction that distinguishes calligraphic tradition from font family, compares Diwani and Thuluth using visual and functional criteria, and recommends custom or properly licensed specialist lettering when authenticity matters.",
+      "files": [],
+      "expectations": [
+        "The answer explicitly distinguishes a script tradition from a digital font family.",
+        "The answer does not falsely label a generic Google Font as authentic Diwani or Thuluth.",
+        "The answer recommends testing the exact Arabic words and retaining editable source artwork.",
+        "The answer includes a license verification step for any production font."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Build me a bilingual Arabic/English web type recipe for a fintech dashboard. I need an Arabic body font, a restrained display font, CSS stacks, RTL implementation notes, and a QA checklist.",
+      "expected_output": "A small bilingual type system suitable for dense UI, with actual Arabic-capable families, semantic RTL markup, logical CSS, shaping-safe rules, and cross-platform QA.",
+      "files": [],
+      "expectations": [
+        "The answer proposes no more than two primary font families plus fallbacks.",
+        "The HTML guidance includes lang=ar and dir=rtl.",
+        "The CSS uses logical properties or explicitly recommends them.",
+        "The answer warns against letter-spacing connected Arabic text and per-letter animation.",
+        "The QA checklist covers diacritics, mixed Arabic/Latin content, fallback, and small sizes."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "From a style picker I see خط النسخ، خط الثلث، خط الديواني، خط الرقعة، التعليق الفارسي، الفاطمي المورق، الكوفي الحديث، عتيق، خط اليد، خط الخاتم، متوازن عمودي، وإنسيابي عمودي. Explain what each category really is and map each to a usable font or production approach.",
+      "expected_output": "An accurate taxonomy that identifies established traditions separately from historical descriptions, moods, and compositions, then maps each to fonts or custom lettering without inventing families.",
+      "files": [],
+      "expectations": [
+        "All twelve supplied labels are covered.",
+        "Antique, hand-drawn, seal, balanced vertical, and flowing vertical are not misrepresented as canonical historical scripts.",
+        "Thuluth, Diwani, foliated Fatimid Kufi, and seal work are allowed to require custom lettering.",
+        "The mapping includes open-source starting points for Naskh, Ruqah, Nastaliq, and modern Kufi.",
+        "The answer includes language-specific caution for Persian or Urdu Nastaliq."
+      ]
+    }
+  ]
+}

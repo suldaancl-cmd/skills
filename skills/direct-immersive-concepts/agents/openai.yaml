@@ -1,0 +1,4 @@
+interface:
+  display_name: "Immersive Concept Director"
+  short_description: "Turn brand meaning into one memorable web concept"
+  default_prompt: "Use $direct-immersive-concepts to develop an original, award-tier central idea before choosing effects or technology."

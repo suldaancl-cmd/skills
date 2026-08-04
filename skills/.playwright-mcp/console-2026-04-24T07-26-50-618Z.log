@@ -1,0 +1,84 @@
+[    2667ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2 @ https://www.xshack.app/:238
+[    5978ms] [LOG] load fbq @ https://storage.googleapis.com/builder-preview/iframe/pixel.js:1
+[    6360ms] [WARNING] GSAP target .phone-graphic not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6376ms] [WARNING] Element not found: .trigger-1 @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js:9
+[    6382ms] [WARNING] GSAP target .phone-graphic not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6382ms] [WARNING] Element not found: .trigger-2 @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js:9
+[    6383ms] [WARNING] GSAP target .spline-hold not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6385ms] [WARNING] Element not found: .trigger-1 @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js:9
+[    6386ms] [WARNING] GSAP target .spline-hold not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6390ms] [WARNING] Element not found: .trigger-2 @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js:9
+[    6430ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6432ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6433ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6434ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6435ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6436ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6438ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6442ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6442ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6443ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6446ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6447ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6448ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6448ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6449ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6450ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6451ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6452ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6452ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6453ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6459ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6460ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6460ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6461ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6462ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6463ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6464ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6464ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6465ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[    6466ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   11297ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2 @ https://www.xshack.app/:207
+[   12148ms] [WARNING] GSAP target .phone-graphic not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12167ms] [WARNING] Element not found: .trigger-1 @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js:9
+[   12168ms] [WARNING] GSAP target .phone-graphic not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12169ms] [WARNING] Element not found: .trigger-2 @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js:9
+[   12175ms] [WARNING] GSAP target .spline-hold not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12177ms] [WARNING] Element not found: .trigger-1 @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js:9
+[   12178ms] [WARNING] GSAP target .spline-hold not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12179ms] [WARNING] Element not found: .trigger-2 @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js:9
+[   12190ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12190ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12191ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12192ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12193ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12194ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12194ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12195ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12195ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12197ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12198ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12199ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12200ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12201ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12202ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12206ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12207ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12208ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12209ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12209ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12210ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12211ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12212ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12212ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12213ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12213ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12213ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12214ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12214ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   12214ms] [WARNING] GSAP target [object Object] not found. https://greensock.com @ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js:9
+[   27564ms] [LOG] load fbq @ https://storage.googleapis.com/builder-preview/iframe/pixel.js:1
+[   39689ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2 @ https://api.leadconnectorhq.com/widget/form/Y7xsg7BJXBJ8KnS9GFH5:0
+[   87993ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2 @ https://api.leadconnectorhq.com/widget/form/Y7xsg7BJXBJ8KnS9GFH5:0
+[  196797ms] [LOG] load fbq @ https://storage.googleapis.com/builder-preview/iframe/pixel.js:1
+[  210458ms] [WARNING] Deprecated API for given entry type. @ https://stcdn.leadconnectorhq.com/_preview/DHSTTrd6.js:0

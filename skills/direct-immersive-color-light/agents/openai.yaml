@@ -1,0 +1,4 @@
+interface:
+  display_name: "Immersive Color and Light Director"
+  short_description: "Shape palette, light, depth, and color over time"
+  default_prompt: "Use $direct-immersive-color-light to build a cinematic palette and lighting arc that evolves across the website."

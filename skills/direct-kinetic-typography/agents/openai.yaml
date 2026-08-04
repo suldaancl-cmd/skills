@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kinetic Typography Director"
+  short_description: "Create expressive, readable typography in motion"
+  default_prompt: "Use $direct-kinetic-typography to design an expressive type system and safe scroll-driven typographic choreography."

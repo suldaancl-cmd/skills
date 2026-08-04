@@ -1,0 +1,37 @@
+{
+  "skill_name": "higgsfield-motion-design",
+  "evals": [
+    {
+      "id": 1,
+      "name": "explicit-higgsfield-motion-ask",
+      "prompt": "I just saw the Higgsfield motion design demo on X — the samurai one with the Claude Code + Higgsfield MCP pipeline. Make me one but for 'the discipline of a craftsman', 9:16 for IG, with the 6 lines you think work best. Save everything to ~/.claude/outputs and tell me when the final mp4 is ready.",
+      "expected_output": "Skill creates ~/.claude/outputs/motion-design/discipline-of-a-craftsman-<ts>/ with references/, storyboard/scene_1..6.png, video/final.mp4 (or final_url.txt), lines.txt with 6 lines, and MANIFEST.md. Final delivery is one line + path, no JSON dump.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "name": "vague-motion-ad-ask",
+      "prompt": "build me a scroll-stop motion ad about saving money for my IG. arabic version too if u can.",
+      "expected_output": "Skill triggers, picks the money-mindset theme pack from themes-library.md, runs the full pipeline once in English (9:16) and once in Arabic with RTL prompts. Delivers two final mp4s with clear labels.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "name": "user-supplies-own-lines",
+      "prompt": "Motion design video for my fitness brand. 6 scenes. The lines must be exactly: 'PAIN IS DATA' / 'ONE MORE REP' / 'NO REST DAYS FROM SHOWING UP' / 'THE BODY OBEYS THE MIND' / 'BECOME UNRECOGNIZABLE' / 'SHOW UP'. Theme: monastic gym aesthetic. Aspect 9:16.",
+      "expected_output": "Skill uses the user's 6 lines verbatim (does NOT invent new ones), generates the storyboard with the monastic gym style anchors, animates with Seedance, returns final mp4 path. lines.txt matches the user's text exactly.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 4,
+      "name": "near-miss-should-not-trigger",
+      "prompt": "Animate this single PNG of my product into a 5-second image-to-video clip with a slow push-in. Just one shot, no storyboard nonsense.",
+      "expected_output": "Skill does NOT trigger. The task is a single-clip image-to-video, which belongs to higgsfield-generate. Motion-design pipeline would be overkill and the user explicitly said 'no storyboard'.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}

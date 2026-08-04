@@ -1,0 +1,23 @@
+[
+  {"query": "can you make me an instagram carousel about our top 5 ai automations for aistudiotoday? like 6 swipeable slides", "should_trigger": true},
+  {"query": "i need a linkedin swipe post breaking down how we cut a client's whatsapp response time, in our brand style", "should_trigger": true},
+  {"query": "turn this blog post on lead leakage into a carousel for aistudiotoday — dark violet look like our site", "should_trigger": true},
+  {"query": "make a cover slide plus body slides for an IG post about our 30-day growth system, on brand and ready to post", "should_trigger": true},
+  {"query": "we need a 7-slide carousel on '5 reasons your site isnt converting', aistudio today colors", "should_trigger": true},
+  {"query": "build me a swipeable post — the hybrid thing with an AI-generated cover and html body slides", "should_trigger": true},
+  {"query": "design a tiktok carousel about the ai dashboards we build, needs to stop the scroll and match aistudiotoday.com", "should_trigger": true},
+  {"query": "whip up a branded multi-slide instagram post and export the 1080x1350 pngs for me", "should_trigger": true},
+  {"query": "our next post is a carousel about why funnels leak customers — make it look like our purple-glow brand", "should_trigger": true},
+  {"query": "can you do an on-brand swipe post for linkedin, topic is 'stop replying in hours, reply in minutes'", "should_trigger": true},
+
+  {"query": "build the actual carousel COMPONENT in React for the aistudiotoday homepage, with autoplay and arrow nav", "should_trigger": false},
+  {"query": "make a full pptx deck for our investor pitch next week", "should_trigger": false},
+  {"query": "write me 5 punchy instagram captions for our upcoming posts", "should_trigger": false},
+  {"query": "generate a single hero image for our landing page with nano banana", "should_trigger": false},
+  {"query": "redesign the aistudiotoday.com pricing page, it feels cluttered", "should_trigger": false},
+  {"query": "create a youtube thumbnail for our new video about ai agents", "should_trigger": false},
+  {"query": "i need a proper brand style guide document for aistudiotoday with logo usage and color rules", "should_trigger": false},
+  {"query": "turn this footage into a reels video with auto captions", "should_trigger": false},
+  {"query": "draft a twitter/x thread about our growth playbook, like 8 tweets", "should_trigger": false},
+  {"query": "build a notion dashboard to track our content calendar", "should_trigger": false}
+]

@@ -1,0 +1,124 @@
+# rclone bisync filter — ~/.claude <-> vmi:/root/.claude-shared
+# Order: deny rules first, then allow everything else.
+# Syntax: '- pattern' = exclude, '+ pattern' = include, last line is fallback.
+
+# --- per-machine state — NEVER sync ---
+- /agent-memory/**
+- /mcp-needs-auth-cache.json
+- /mcp-servers/**
+- /.credentials.json
+- /.mcp.json
+- /settings.local.json
+- /launch.json
+- /session-env/**
+- /file-history/**
+- /shell-snapshots/**
+- /telemetry/**
+- /sessions/**
+- /tasks/**
+- /paste-cache/**
+
+# --- caches / transient (regenerate on demand) ---
+- /cache/**
+- /.cache/**
+- /Cache/**
+- /Code Cache/**
+- /GPUCache/**
+- /backups/**
+- /claude-backups/**
+- /debug/**
+- /downloads/**
+- /ide/**
+- /plugins/cache/**
+- /plugins/repos/**
+- node_modules/**
+- __pycache__/**
+- .venv/**
+- venv/**
+- .next/**
+- .nuxt/**
+- dist/**
+- build/**
+- target/**
+- .turbo/**
+- .svelte-kit/**
+- *.pyc
+
+# --- under ~/.claude/, anything that looks like a checked-out project (.git inside) is noise.
+# Karim wants project folders mirrored as SEPARATE pairs (karim-site, hyperframes, etc.),
+# not via the .claude bisync. Keep the .claude pair tight to actual Claude Code state.
+- /agentic-video-editor/**
+- /get-shit-done/**
+- /getting-started-todo-app/**
+- /my-project/**
+- /scheduled-tasks/**
+- /a.karim/**
+- /gstack/**
+- /superpowers/**
+- /notion-backup/**
+- /notebooklm-py/**
+- /notebooklm-prompt-styles/**
+
+# --- logs / temp ---
+- *.log
+- *.tmp
+- *.lock
+- *.swp
+- /history.jsonl
+- /ffmpeg-install.log
+- /logs/**
+
+# --- vmi-only fleet data (would pull 14+ GB of paused-agent state to Windows) ---
+- /money-fleet/**
+- /opp-agent/**
+- /remote/**
+- /hermes-import/**
+- /karim web/**
+
+# --- per-machine session JSONLs (vault Sessions/ already gives cross-machine view) ---
+- /projects/**
+
+# --- backup suffixes / trash dirs ---
+- *.backup-*
+- *.backup-*/**
+- *.bak/**
+- /.skills_trash_*/**
+- /plugins.backup.*/**
+- /skills.backup.*/**
+
+# --- OS junk ---
+- .DS_Store
+- Thumbs.db
+- desktop.ini
+
+# --- Windows-only at top level (don't push to vmi) ---
+- /from-vmi/**
+- /bin/**
+- /karim/**
+- /artifacts/**
+- /screenshots/**
+- /karimaballa-*.png
+
+# --- misplaced Linux-style tree (~/.claude/root/.local/...) — landed here from a stray run ---
+- /root/**
+
+# --- pnpm / npm / brew stores (huge content-addressed dirs) ---
+- /.local/share/pnpm/**
+- /.local/share/npm/**
+
+# --- our own sync infra (don't recurse on itself) ---
+- /rclone.conf
+- /sync-excludes.txt
+- /sync-from-vmi.bat
+- /sync-to-vmi.bat
+- /mirror.bat
+- /sync-*.lock
+- /mirror.lock
+- /mirror.lastrun
+- /.rclone-bisync/**
+- /scripts/mirror-filters/**
+- /scripts/cv.ps1
+- /scripts/mirror.ps1
+
+# --- include everything else ---
++ **

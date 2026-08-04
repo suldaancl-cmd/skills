@@ -1,0 +1,169 @@
+:root {
+  --papaya: #FF8000;
+  --papaya-bright: #FF9933;
+  --lando-cyan: #47C7FC;
+  --ink: #0A0A0A;
+  --carbon: #1A1A1A;
+  --graphite: #2D2D2D;
+  --bone: #F5F1E8;
+  --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--ink);
+  color: var(--bone);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ========== SHADER LAYER ========== */
+#smoke {
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: auto;
+  background: radial-gradient(ellipse at 50% 60%, #181612 0%, var(--ink) 70%);
+}
+#smoke canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* ========== HUD (top corners, broadcast-style) ========== */
+.hud {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 22px 32px;
+  pointer-events: none;
+  font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--bone);
+}
+.hud-left, .hud-right {
+  display: flex; align-items: center; gap: 10px;
+}
+.dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--papaya);
+  box-shadow: 0 0 12px var(--papaya), 0 0 24px rgba(255,128,0,0.4);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.85); }
+}
+.hud em {
+  font-style: normal;
+  color: var(--papaya);
+  font-feature-settings: "tnum";
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative; z-index: 5;
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 0 6vw;
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1200px;
+  width: 100%;
+}
+.hero a, .hero button { pointer-events: auto; }
+
+.eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px; letter-spacing: 0.32em; font-weight: 700;
+  color: var(--papaya);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.display {
+  font-family: "Druk Wide", "Arial Black", "Helvetica Neue", system-ui, sans-serif;
+  font-weight: 900;
+  font-stretch: condensed;
+  font-size: clamp(56px, 11vw, 180px);
+  line-height: 0.86;
+  letter-spacing: -0.025em;
+  color: var(--white);
+  text-transform: uppercase;
+  mix-blend-mode: screen;
+}
+.display .word {
+  display: inline-block;
+  overflow: hidden;
+  padding: 0 0.04em;
+  vertical-align: top;
+}
+.display .word > div {
+  display: inline-block;
+  will-change: transform;
+}
+
+.accent-line {
+  width: 240px; height: 4px;
+  background: var(--papaya);
+  box-shadow: 0 0 24px rgba(255,128,0,0.5);
+  margin: 36px 0 32px;
+  transform-origin: left;
+}
+
+.lede {
+  font-size: clamp(15px, 1.4vw, 19px);
+  line-height: 1.55;
+  max-width: 580px;
+  color: rgba(245, 241, 232, 0.78);
+  margin-bottom: 48px;
+}
+
+.cta {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 18px 28px;
+  background: var(--papaya);
+  color: var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px; letter-spacing: 0.28em; font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 0 0 rgba(255,128,0,0);
+}
+.cta:hover {
+  background: var(--papaya-bright);
+  transform: translateX(8px);
+  box-shadow: 0 8px 32px rgba(255,128,0,0.35);
+}
+.cta svg {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cta:hover svg { transform: translateX(4px); }
+
+/* ========== SCROLL SECTIONS ========== */
+.spacer {
+  position: relative; z-index: 5;
+  min-height: 100vh;
+  background: linear-gradient(180deg, transparent 0%, var(--ink) 35%);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .hud { padding: 16px 20px; font-size: 10px; }
+  .hero { padding: 0 24px; }
+  .accent-line { width: 160px; height: 3px; margin: 24px 0 24px; }
+  .cta { padding: 16px 22px; font-size: 12px; }
+}
+
+/* ========== MOTION SAFETY ========== */
+@media (prefers-reduced-motion: reduce) {
+  .dot { animation: none; }
+  .display .word > div { transform: none !important; }
+}

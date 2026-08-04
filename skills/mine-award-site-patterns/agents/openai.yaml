@@ -1,0 +1,4 @@
+interface:
+  display_name: "Award Site Pattern Miner"
+  short_description: "Mine prize-winning sites into reusable patterns"
+  default_prompt: "Use $mine-award-site-patterns to turn recent award-winning references into an evidence-backed design and interaction brief."

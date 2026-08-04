@@ -1,0 +1,950 @@
+{
+  "version": 2,
+  "updated": "2026-08-04",
+  "comment": "Routing table for hooks/skill-router.py. Per domain: keywords matched against the user prompt (lowercase substring), LEAD skills (max 3, first wins ties), the full ranked chain, NEVER-USE skills that conflict, READ-ONLY template families, vault playbooks to read first, and a hard rule. Conflict law lives in AGENTS.md. Tune via the skill-router-tune skill using ~/.claude/skill-usage.jsonl.",
+  "domains": [
+    {
+      "name": "visual-input",
+      "keywords": [
+        "[image:",
+        "screenshot",
+        "screen shot",
+        "this design",
+        "this page looks",
+        "make it look like",
+        "from this image",
+        "recreate this",
+        "match this",
+        "الصورة",
+        "سكرين",
+        "التصميم هذا"
+      ],
+      "skills": [
+        "image-to-code-skill",
+        "premium-design-laws",
+        "design-critique",
+        "frontend-design",
+        "impeccable",
+        "figma-implement-design",
+        "canvas-ui"
+      ],
+      "playbooks": [
+        "playbook_design_killer_combo.md",
+        "feedback_locked_design_spec_enforcement.md",
+        "feedback_karim_web_design_bar.md"
+      ],
+      "rule": "A pasted screenshot is a SPEC, not a mood board: name every element you see before writing code, and re-verify the built page against the image (locked-spec rule). Deck-first + default-fonts ban still bind.",
+      "lead": [
+        "image-to-code-skill",
+        "premium-design-laws",
+        "design-critique"
+      ],
+      "never": [
+        "ui-ux-pro-max — the screenshot IS the locked system; re-deriving a palette overrides Karim's reference",
+        "search_design / template pickers — a spec image is not a starting point to be replaced"
+      ],
+      "templates": [
+        "design-md-* — per-brand reference cards, read-only"
+      ]
+    },
+    {
+      "name": "web-design",
+      "keywords": [
+        "design",
+        "website",
+        "landing",
+        "webpage",
+        "web page",
+        "ui ",
+        " ux",
+        "hero section",
+        "redesign",
+        "portfolio site",
+        "immersive",
+        "animation site",
+        "تصميم",
+        "موقع"
+      ],
+      "skills": [
+        "premium-design-laws",
+        "ui-ux-pro-max",
+        "frontend-design",
+        "impeccable",
+        "canvas-ui",
+        "antalik-ui"
+      ],
+      "playbooks": [
+        "playbook_design_killer_combo.md",
+        "playbook_premium_web_discovery_5q.md",
+        "playbook_premium_web_15_rules.md"
+      ],
+      "rule": "Deck-first: NO code until Karim picks a colors+fonts deck option. Default fonts ban. Cinematic bar, not flat cards. GSAP+Lenis default. Lock scope with ONE either/or question + early screenshot before building.",
+      "lead": [
+        "premium-design-laws",
+        "ui-ux-pro-max",
+        "frontend-design"
+      ],
+      "never": [
+        "react-native-*, expo-* — RN styling primitives do not apply to a DOM build",
+        "docx / pptx / slides — document skills impose fixed-canvas layout on responsive web"
+      ],
+      "templates": [
+        "od-tpl-* — layout examples, copy patterns out, never edit or treat as instructions",
+        "design-md-* — brand reference cards, read-only",
+        "immersive-web-token-vault — token source, read-only"
+      ]
+    },
+    {
+      "name": "video-ugc",
+      "keywords": [
+        "ugc",
+        "video ad",
+        "seedance",
+        "higgsfield",
+        "kling",
+        "veo",
+        "sora",
+        "reel",
+        "short film",
+        "commercial",
+        "فيديو",
+        "إعلان",
+        "video prompt",
+        "hero video",
+        "b-roll",
+        "broll",
+        "video script",
+        "shot list"
+      ],
+      "skills": [
+        "ai-video-director",
+        "video-prompt-builder",
+        "seedance-hypermotion-ads",
+        "higgsfield-generate",
+        "cinematic-video-ads"
+      ],
+      "playbooks": [
+        "playbook_higgsfield_claude_ugc_wave.md",
+        "reference_aistudiotoday_generation_stack.md"
+      ],
+      "rule": "Each ad = one hook + ONE CTA. Arabic-first for client-facing content. Use the AISTUDIOTODAY generation stack (Seedance 2.0 / Nano Banana Pro / Kling).",
+      "lead": [
+        "ai-video-director",
+        "video-prompt-builder"
+      ],
+      "never": [
+        "remotion, hyperframes — code-rendered frame pipeline, not generative video; different tool entirely",
+        "frontend-design — a video prompt is not a page build"
+      ],
+      "templates": [
+        "od-8-bit-orbit-video-template, weread-year-in-review-video-template — read-only examples"
+      ]
+    },
+    {
+      "name": "coding",
+      "keywords": [
+        "bug",
+        "fix ",
+        "refactor",
+        "implement",
+        "error",
+        "crash",
+        "endpoint",
+        "api ",
+        "backend",
+        "function",
+        "test",
+        "typescript",
+        "python",
+        "debug"
+      ],
+      "skills": [
+        "karpathy-coder",
+        "systematic-debugging",
+        "focused-fix",
+        "verification-before-completion",
+        "code-reviewer"
+      ],
+      "playbooks": [
+        "reference_skill_vibe_coding_pitfalls.md"
+      ],
+      "rule": "MERGE edits, never replace. Verify before destructive ops. Point to proof (test output, screenshot, curl) before saying done. Fable orchestrates; delegate bulk edits to subagents.",
+      "lead": [
+        "karpathy-coder",
+        "systematic-debugging"
+      ],
+      "never": [
+        "premium-design-laws, frontend-design — the deck-first design gate does not apply to a bug fix",
+        "ultraplan — a focused fix does not need a phased plan"
+      ],
+      "templates": [
+        "jdp-* — Java design-pattern reference cards, read-only; never scaffold from them unasked"
+      ]
+    },
+    {
+      "name": "mobile-app",
+      "keywords": [
+        "mobile app",
+        "react native",
+        "expo",
+        "ios app",
+        "android app",
+        "app store",
+        "eas "
+      ],
+      "skills": [
+        "mobile-app",
+        "react-native-expert",
+        "react-native-architecture",
+        "phased-plan",
+        "expo-eas-ship"
+      ],
+      "playbooks": [
+        "app-building-kit/README.md",
+        "reference_install_2026-07-07_mobile_app_skills.md"
+      ],
+      "rule": "Read the App-Building Kit hub first. Phased plan before code.",
+      "lead": [
+        "mobile-app",
+        "react-native-expert",
+        "react-native-architecture"
+      ],
+      "never": [
+        "gsap*, three, threejs, react-three-fiber, webgl-effect-recipes, lenis-smooth-scroll — DOM/WebGL patterns break React Native; use react-native-motion / reanimated",
+        "frontend-design — writes web DOM, not RN components"
+      ],
+      "templates": [
+        "expo-examples — read-only reference app code"
+      ]
+    },
+    {
+      "name": "research",
+      "keywords": [
+        "research",
+        "find out",
+        "what is the state",
+        "compare ",
+        "news",
+        "trend",
+        "market size",
+        "competitors",
+        "بحث",
+        "scrape",
+        "scraping",
+        "crawl",
+        "firecrawl",
+        "mirror site",
+        "extract from",
+        "download site",
+        "سحب"
+      ],
+      "skills": [
+        "firecrawl",
+        "anthropic-skills:deep-research",
+        "research-summarizer",
+        "competitive-analysis",
+        "last72hours",
+        "firecrawl-search"
+      ],
+      "playbooks": [
+        "reference_website_mirroring.md"
+      ],
+      "rule": "Verification Lock: every claim cites a source; never invent numbers, names, or links.",
+      "lead": [
+        "firecrawl",
+        "anthropic-skills:deep-research"
+      ],
+      "never": [
+        "copywriting, no-ai-slop — research output is sourced findings, not persuasive prose",
+        "read-link for non-social pages — yt-dlp is overkill for a plain article"
+      ],
+      "templates": []
+    },
+    {
+      "name": "marketing-content",
+      "keywords": [
+        "marketing",
+        "copywriting",
+        "cold email",
+        "campaign",
+        "seo",
+        "social post",
+        "content calendar",
+        "instagram post",
+        "tiktok post",
+        "carousel",
+        "محتوى"
+      ],
+      "skills": [
+        "copywriting",
+        "no-ai-slop",
+        "cold-email",
+        "content-strategy",
+        "marketing-psychology",
+        "x-twitter-growth",
+        "ig-tiktok-ad-playbook"
+      ],
+      "playbooks": [
+        "playbook_aistudiotoday_carousel.md"
+      ],
+      "rule": "Content/social/personal output in Arabic first; code/infra in English. AR+EN bilingual layout rules apply.",
+      "lead": [
+        "copywriting",
+        "no-ai-slop",
+        "content-strategy"
+      ],
+      "never": [
+        "frontend-design, premium-design-laws — a copy task does not trigger the colors+fonts deck gate"
+      ],
+      "templates": [
+        "od-tpl-social-*, card-* — post layout examples, read-only"
+      ]
+    },
+    {
+      "name": "presentation",
+      "keywords": [
+        "slides",
+        "deck",
+        "pptx",
+        "presentation",
+        "pitch deck",
+        "keynote"
+      ],
+      "skills": [
+        "slides",
+        "presentation-deck",
+        "pptx",
+        "frontend-slides"
+      ],
+      "playbooks": [],
+      "rule": "Premium-design-laws token sets apply to slides too. No default-font slop.",
+      "lead": [
+        "slides",
+        "presentation-deck"
+      ],
+      "never": [
+        "frontend-design, ui-ux-pro-max — slides are fixed-canvas; responsive-web rules produce broken decks"
+      ],
+      "templates": [
+        "od-tpl-html-ppt-*, deck-* — slide templates, read-only examples"
+      ]
+    },
+    {
+      "name": "saas-fullstack",
+      "keywords": [
+        "supabase",
+        "auth",
+        "login",
+        "stripe",
+        "payments",
+        "subscription",
+        "saas",
+        "multi-tenant",
+        "database schema"
+      ],
+      "skills": [
+        "supabase-build-playbook",
+        "supabase-postgres-best-practices",
+        "auth-implementation",
+        "stripe-sdk",
+        "saas-scaffolder"
+      ],
+      "playbooks": [
+        "reference_auth_implementation.md",
+        "project_aistudiotoday_saas_template_gallery.md"
+      ],
+      "rule": "Auth before Stripe. Pick a stack from the 30-sec decision tree in reference_auth_implementation; don't improvise a fifth option.",
+      "lead": [
+        "supabase-build-playbook",
+        "auth-implementation"
+      ],
+      "never": [
+        "stripe-sdk BEFORE auth-implementation — hard order, auth ships first",
+        "saas-scaffolder on an existing codebase — it scaffolds greenfield only"
+      ],
+      "templates": []
+    },
+    {
+      "name": "skill-management",
+      "keywords": [
+        "install skill",
+        "new skill",
+        "skill from",
+        "github.com",
+        "audit skills",
+        "prune skills",
+        "create a skill"
+      ],
+      "skills": [
+        "skill-creator",
+        "skill-security-auditor",
+        "skill-tester",
+        "find-skills"
+      ],
+      "playbooks": [
+        "playbook_skill_repo_evaluation.md",
+        "feedback_skill_installs.md",
+        "feedback_skill_bloat_audit.md"
+      ],
+      "rule": "Sandbox clone, audit, diff vs keep-list, graduate only gaps. Auto-resolve dup names, mirror to vmi, don't ask. Pruning needs confirmation.",
+      "lead": [
+        "skill-security-auditor",
+        "skill-creator"
+      ],
+      "never": [
+        "skill-swarm — do not fan out mid-audit; audit is sequential and gated"
+      ],
+      "templates": []
+    },
+    {
+      "name": "figma",
+      "keywords": [
+        "figma",
+        "figma motion",
+        "motion in figma",
+        "animate in figma",
+        "figma animation",
+        "figma agent",
+        "figma make",
+        "figma design",
+        "فيجما"
+      ],
+      "skills": [
+        "premium-design-laws",
+        "figma-immersive-premium",
+        "figma-use",
+        "figma-use-motion",
+        "figma-motion-pipeline",
+        "figma-implement-design"
+      ],
+      "playbooks": [
+        "reference_figma_immersive_toolkit_2026-06-26.md",
+        "reference_install_2026-07-07_figma_motion_app_immersive.md",
+        "reference_figma_mcp_webp.md"
+      ],
+      "rule": "MANDATORY load order: premium-design-laws → figma-immersive-premium (the router) → then the job skill. To AUTHOR motion/animation IN Figma: figma-use + figma-use-motion together (needs the metronome_plugin_api feature flag — bail fast if absent). To turn Figma motion INTO code: figma-motion-pipeline routes it (site → figma-implement-motion; app/Expo → react-native-motion). Deck-first, default-fonts ban, cinematic not flat cards, symbol hygiene. WebP fills come in blank → convert to PNG before upload_assets.",
+      "lead": [
+        "premium-design-laws",
+        "figma-immersive-premium",
+        "figma-use"
+      ],
+      "never": [
+        "frontend-design — writes code, not Figma nodes; wrong direction for an authoring job",
+        "figma-implement-motion while AUTHORING — that skill is the Figma-to-code direction"
+      ],
+      "templates": []
+    },
+    {
+      "name": "motion-render",
+      "keywords": [
+        "remotion",
+        "hyperframes",
+        "render video",
+        "mp4 from code",
+        "kinetic typography",
+        "logo animation"
+      ],
+      "skills": [
+        "remotion",
+        "hyperframes",
+        "video-hyperframes",
+        "motion-dev"
+      ],
+      "playbooks": [
+        "reference_hyperframes_video_pipeline.md",
+        "reference_remotion_r3f_glb.md"
+      ],
+      "rule": "GLB/Draco in Remotion needs --gl=angle + pre-decoded assets. Reuse the hyperframes-aist design system.",
+      "lead": [
+        "remotion",
+        "hyperframes"
+      ],
+      "never": [
+        "gsap* — DOM timeline model, incompatible with Remotion's frame-indexed rendering",
+        "ai-video-director — generative video, a different pipeline"
+      ],
+      "templates": [
+        "frame-* — single-shot frame examples, read-only"
+      ]
+    },
+    {
+      "name": "strategy-business",
+      "keywords": [
+        "pricing",
+        "business plan",
+        "revenue",
+        "opportunity",
+        "monetize",
+        "should i build",
+        "gtm",
+        "go to market"
+      ],
+      "skills": [
+        "business-investment-advisor",
+        "ceo-advisor",
+        "cfo-advisor",
+        "opportunity-framework",
+        "pricing-strategy"
+      ],
+      "playbooks": [
+        "reference_opportunity_reports_2026-06-20.md",
+        "reference_fleet_opportunity_convergence.md"
+      ],
+      "rule": "Thesis filter: boring niche + big audience + emotion/women-buyer/recurring. Rank against the $10k thesis before recommending.",
+      "lead": [
+        "business-investment-advisor",
+        "ceo-advisor"
+      ],
+      "never": [
+        "frontend-design, coding skills — strategy output is a decision memo, not a build"
+      ],
+      "templates": []
+    },
+    {
+      "name": "vmi-infra",
+      "keywords": [
+        "vmi",
+        "vps",
+        "hermes",
+        "fleet",
+        "server",
+        "ssh",
+        "docker",
+        "cron",
+        "systemd"
+      ],
+      "skills": [
+        "vmi",
+        "senior-devops",
+        "docker-development"
+      ],
+      "playbooks": [
+        "server_vmi3164498.md",
+        "reference_vmi_agent_map.md",
+        "reference_cv_dispatch.md"
+      ],
+      "rule": "'The agent' is ambiguous on vmi — read the agent map BEFORE editing. Hermes prompts are Markdown jobs, NOT Claude/XML prompts.",
+      "lead": [
+        "vmi",
+        "senior-devops"
+      ],
+      "never": [
+        "Claude/XML prompt formats for Hermes — Hermes jobs are Markdown files",
+        "agents-automation fleet-spawning skills — converge on existing fleets, read the agent map first"
+      ],
+      "templates": []
+    },
+    {
+      "name": "social-media-url",
+      "keywords": [
+        "tiktok.com",
+        "instagram.com",
+        "youtube.com",
+        "youtu.be",
+        "x.com/",
+        "twitter.com",
+        "reddit.com",
+        ".mp4",
+        ".m3u8",
+        "vimeo.com"
+      ],
+      "skills": [
+        "read-link"
+      ],
+      "playbooks": [],
+      "rule": "Invoke read-link BEFORE answering. Full 4-phase Deep Dive (who → transcript → business model → actionable for Karim + revenue estimate). Analysis is the deliverable, not extraction.",
+      "lead": [
+        "read-link"
+      ],
+      "never": [
+        "firecrawl, WebFetch — social platforms serve login walls and JS shells to non-browser clients"
+      ],
+      "templates": []
+    },
+    {
+      "name": "3d-webgl",
+      "keywords": [
+        "three.js",
+        "threejs",
+        "webgl",
+        "shader",
+        "3d scene",
+        "glb",
+        "gltf",
+        "spline",
+        "particle",
+        "fluid sim",
+        "babylon",
+        "image to 3d",
+        "img2threejs",
+        "photo to 3d"
+      ],
+      "skills": [
+        "3d-animation-web-designer",
+        "img2threejs",
+        "react-three-fiber",
+        "shader-dev",
+        "webgl-effect-recipes",
+        "three",
+        "spline-3d",
+        "canvas-ui"
+      ],
+      "playbooks": [
+        "playbook_design_killer_combo.md",
+        "reference_remotion_r3f_glb.md"
+      ],
+      "rule": "Dark-luxury cinematic bar. Performance budget: 60fps on mid hardware, lazy-load heavy assets, reduced-motion fallback. Draco-compress GLBs. Object image on a site build -> img2threejs (code-only procedural model) BEFORE GLB downloads or hand-modeling; its fidelity-stop is a valid outcome.",
+      "lead": [
+        "3d-animation-web-designer",
+        "img2threejs",
+        "react-three-fiber"
+      ],
+      "never": [
+        "react-native-*, expo-* — no DOM WebGL canvas in RN",
+        "spline-3d unless Karim names Spline — hosted scene, not the code-only default"
+      ],
+      "templates": [
+        "webgl-effect-recipes, immersive-web-token-vault — recipe and token sources, read-only"
+      ]
+    },
+    {
+      "name": "image-gen",
+      "keywords": [
+        "generate image",
+        "image of",
+        "midjourney",
+        "nano banana",
+        "flux",
+        "product photo",
+        "photoshoot",
+        "thumbnail",
+        "poster",
+        "logo design",
+        "صورة"
+      ],
+      "skills": [
+        "ai-image-director",
+        "imagegen",
+        "fal-generate",
+        "higgsfield-product-photoshoot",
+        "image-enhancer",
+        "fal-image-edit"
+      ],
+      "playbooks": [
+        "reference_aistudiotoday_generation_stack.md"
+      ],
+      "rule": "Nano Banana Pro default; GPT Image 2 for Arabic text-in-image. Director-grade prompts (subject/lighting/lens/mood), never one-liners. rembg for cutouts.",
+      "lead": [
+        "ai-image-director",
+        "imagegen"
+      ],
+      "never": [
+        "frontend-design — image generation is not a page build",
+        "arabic-ai-lettering for shipping real Arabic text — composite verified text instead"
+      ],
+      "templates": []
+    },
+    {
+      "name": "audio-voice",
+      "keywords": [
+        "voiceover",
+        "voice over",
+        "tts",
+        "text to speech",
+        "elevenlabs",
+        "dubbing",
+        "music",
+        "jingle",
+        "podcast audio",
+        "صوت",
+        "receptionist",
+        "voice agent",
+        "bland ai",
+        "ai phone",
+        "answering service",
+        "استقبال مكالمات"
+      ],
+      "skills": [
+        "speech",
+        "venice-audio-speech",
+        "venice-audio-music",
+        "ai-music-album",
+        "bland-ai-receptionist",
+        "ai-receptionist-business"
+      ],
+      "playbooks": [
+        "reference_elevenlabs_voices.md",
+        "playbook_ai_receptionist_bland.md"
+      ],
+      "rule": "Use Karim's 10 custom ElevenLabs voices (4 EN / 4 AR / 2 SO) by voice_id from the reference — never generic stock voices for his brands. For AI phone receptionists use Bland library voices via the bland-ai-receptionist skill (ElevenLabs rule is for content voiceovers, not phone agents); Arabic on Bland is unverified — test before selling.",
+      "lead": [
+        "speech",
+        "venice-audio-speech"
+      ],
+      "never": [
+        "bland-ai-receptionist for content voiceover — phone agents only",
+        "ElevenLabs custom voices for phone agents — use Bland library voices there"
+      ],
+      "templates": []
+    },
+    {
+      "name": "docs-files",
+      "keywords": [
+        "word doc",
+        "docx",
+        "pdf report",
+        "spreadsheet",
+        "xlsx",
+        "excel",
+        "invoice",
+        "contract",
+        "proposal doc",
+        "cv ",
+        "resume"
+      ],
+      "skills": [
+        "docx",
+        "pdf",
+        "anthropic-skills:xlsx",
+        "resume-modern",
+        "nda-analyser",
+        "contract-review"
+      ],
+      "playbooks": [],
+      "rule": "Premium-design-laws typography applies to documents too. Contracts/NDAs get contract-review pass before sending.",
+      "lead": [
+        "docx",
+        "pdf"
+      ],
+      "never": [
+        "frontend-design, ui-ux-pro-max, canvas-ui — documents are not web pages; web layout rules corrupt them"
+      ],
+      "templates": [
+        "od-tpl-* document variants — read-only examples"
+      ]
+    },
+    {
+      "name": "security",
+      "keywords": [
+        "security audit",
+        "vulnerability",
+        "pentest",
+        "penetration test",
+        "prompt injection",
+        "secrets leak",
+        "cve",
+        "exploit",
+        "hardening"
+      ],
+      "skills": [
+        "senior-security",
+        "ai-security",
+        "red-team",
+        "skill-security-auditor",
+        "env-secrets-manager"
+      ],
+      "playbooks": [],
+      "rule": "Authorized targets only (own infra: vmi, local, own repos). Findings ranked by severity with reproduction steps. Never commit secrets; check .env exposure first.",
+      "lead": [
+        "senior-security",
+        "ai-security"
+      ],
+      "never": [
+        "red-team against third-party targets — authorized infra only (vmi, local, Karim's own repos)"
+      ],
+      "templates": []
+    },
+    {
+      "name": "agents-automation",
+      "keywords": [
+        "subagent",
+        "orchestrat",
+        "workflow automation",
+        "n8n",
+        "mcp server",
+        "build an agent",
+        "cron job",
+        "automate",
+        "hook",
+        "أتمتة"
+      ],
+      "skills": [
+        "dispatching-parallel-agents",
+        "subagent-driven-development",
+        "mcp-builder",
+        "agent-browser",
+        "self-improving-agent"
+      ],
+      "playbooks": [
+        "reference_system_architecture_roadmap.md",
+        "reference_vmi_agent_map.md",
+        "reference_knowledge_layer_pattern.md"
+      ],
+      "rule": "Read the architecture roadmap BEFORE adding a new agent system — converge on existing fleets, don't spawn a 7th. Batch 2-3 agents/round. Backups in _backups/, not /tmp.",
+      "lead": [
+        "dispatching-parallel-agents",
+        "mcp-builder"
+      ],
+      "never": [
+        "spawning a new fleet before reading reference_vmi_agent_map.md — converge, do not add a 7th system"
+      ],
+      "templates": []
+    },
+    {
+      "name": "data-analytics",
+      "keywords": [
+        "analyze data",
+        "csv",
+        "dashboard",
+        "chart",
+        "graph",
+        "sql query",
+        "statistics",
+        "metrics",
+        "kpi",
+        "visualiz"
+      ],
+      "skills": [
+        "data-visualization",
+        "d3-visualization",
+        "sql-database-assistant",
+        "product-analytics",
+        "financial-analyst"
+      ],
+      "playbooks": [],
+      "rule": "Load the dataviz skill before ANY chart code. Verification Lock: numbers come from the actual data, never estimated. State sample size and caveats.",
+      "lead": [
+        "dataviz",
+        "data-visualization"
+      ],
+      "never": [
+        "frontend-design, premium-design-laws — chart color comes from the dataviz palette, not the web deck"
+      ],
+      "templates": []
+    },
+    {
+      "name": "planning-spec",
+      "keywords": [
+        "plan this",
+        "spec out",
+        "architecture",
+        "roadmap",
+        "brainstorm",
+        "prd",
+        "requirements",
+        "phased",
+        "big feature",
+        "from scratch"
+      ],
+      "skills": [
+        "brainstorming",
+        "ultraplan",
+        "writing-plans",
+        "phased-plan",
+        "senior-architect"
+      ],
+      "playbooks": [
+        "app-building-kit/README.md"
+      ],
+      "rule": "Brainstorm before plan, plan before code. Every phase ends with a verify-checkpoint. Lock scope with Karim before building — don't infer full redesigns.",
+      "lead": [
+        "brainstorming",
+        "ultraplan"
+      ],
+      "never": [
+        "implementation skills (focused-fix, frontend-design, saas-scaffolder) — the plan phase produces a plan, not code"
+      ],
+      "templates": []
+    },
+    {
+      "name": "arabic-type",
+      "keywords": [
+        "arabic font",
+        "arabic fonts",
+        "arabic typography",
+        "arabic calligraphy",
+        "خط عربي",
+        "خطوط عربية",
+        "خط الثلث",
+        "الديواني",
+        "الرقعة",
+        "النسخ",
+        "كوفي",
+        "نستعليق",
+        "تشكيل",
+        "naskh",
+        "thuluth",
+        "diwani",
+        "ruqaa",
+        "ruqah",
+        "kufi",
+        "kufic",
+        "nastaliq",
+        "tashkeel",
+        "arabic logo",
+        "arabic headline",
+        "arabic lettering",
+        "ترخيص خط"
+      ],
+      "skills": [
+        "arabic-typography",
+        "arabic-font-licensing",
+        "arabic-ai-lettering",
+        "rtl-arabic-i18n",
+        "premium-design-laws"
+      ],
+      "playbooks": [],
+      "rule": "Separate the three layers: calligraphic tradition (Naskh/Thuluth/Diwani) vs font family (Amiri/Reem Kufi) vs composition preset (seal/vertical/ink). Never call a preset a font. Verify any Google Fonts family name with arabic-typography/scripts/verify_families.py before recommending it. Clear the licence BEFORE download — server-side rendering of user text needs OFL or an explicit SaaS licence. Never ship AI-generated Arabic that no one has read back; composite real text instead. Authentic Thuluth/Diwani usually needs a calligrapher, not a free font.",
+      "lead": [
+        "arabic-typography",
+        "arabic-font-licensing"
+      ],
+      "never": [
+        "google-fonts-* without running verify_families.py — family names are routinely hallucinated",
+        "arabic-ai-lettering for shipped copy — AI Arabic glyphs must never ship unread"
+      ],
+      "templates": []
+    },
+    {
+      "name": "project-blueprint",
+      "keywords": [
+        "planmap",
+        "plan map",
+        "sitemap",
+        "site map",
+        "blueprint",
+        "map this project",
+        "map the project",
+        "plan the whole",
+        "scaffold the project",
+        "what do i need to build",
+        "خريطة المشروع",
+        "خريطة الموقع",
+        "مخطط المشروع"
+      ],
+      "skills": [
+        "planmap",
+        "session-intake",
+        "ultraplan",
+        "senior-architect",
+        "database-designer",
+        "mobbin-design-research",
+        "figma-generate-diagram"
+      ],
+      "playbooks": [
+        "app-building-kit/README.md",
+        "reference_system_architecture_roadmap.md",
+        "feedback_projects_folder_convention.md"
+      ],
+      "rule": "Scaffold with planmap/scripts/planmap_scaffold.py (it reuses topic_workspace.py — never reimplement the folder set). Lock scope with ONE either/or question and STOP before mapping. Every route and every integration gets a row; a gap says 'TBD — needs decision', never silence. Cost figures carry their tokens-per-call assumption. MANUAL-SETUP.md opens with real counts of accounts, keys, blocking steps and waiting days — underselling Apple/Stripe/DUNS paperwork is the failure mode.",
+      "lead": [
+        "planmap",
+        "session-intake"
+      ],
+      "never": [
+        "coding and build skills — the blueprint stops at the map; building is a separate approved job"
+      ],
+      "templates": []
+    }
+  ]
+}

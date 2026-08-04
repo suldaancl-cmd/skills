@@ -1,0 +1,43 @@
+_projects/web-mirrors/
+
+# Whitelist repo: ignore everything, then re-include only the skill library.
+# Rationale: ~/.claude also holds the Obsidian vault (projects/), session
+# transcripts, staged drafts and credentials — none of that belongs on GitHub.
+*
+!.gitignore
+
+# --- skill library ---
+!skills/
+!skills/**
+!skills-extra/
+!skills-extra/**
+
+# --- router + agent config ---
+!SKILL_ROUTER.md
+!CLAUDE.md
+!AGENTS.md
+!skill-routes.json
+!skill_inventory.json
+!skill_clusters.json
+!README.md
+!hooks/
+!hooks/**
+!scripts/
+!scripts/**
+
+# --- never, even inside the includes above ---
+.credentials.json
+*.key
+*.pem
+.env
+.env.*
+**/__pycache__/
+**/node_modules/
+**/.venv/
+**/.stfolder/
+**/*.mp4
+**/*.mov
+**/*.zip
+
+# excluded: upstream npxskillui ships a hardcoded Google Fonts API key
+skills-extra/npxskillui/src/font-resolver.ts

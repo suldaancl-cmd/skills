@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scroll Story Choreographer"
+  short_description: "Design cinematic scroll narratives and pacing"
+  default_prompt: "Use $choreograph-scroll-stories to turn the content into a scene-by-scene scroll narrative with motion and fallback cues."

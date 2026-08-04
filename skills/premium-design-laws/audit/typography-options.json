@@ -1,0 +1,227 @@
+{
+  "note": "Curated premium typography system for Karim/Calaf — quality over volume (NOT 1000 random pairings, by design). Keyed by brief type. Honors the default-fonts ban.",
+  "generated": "design-system-symbol-typography-audit workflow",
+  "count": 20,
+  "pairings": [
+    {
+      "name": "Editorial New + Aktiv Grotesk",
+      "briefType": "AI agency",
+      "heading": "PP Editorial New",
+      "body": "Aktiv Grotesk",
+      "mono": "IBM Plex Mono",
+      "weights": "Display 400/500; Body 400/500; Headings 600/700",
+      "tracking": "Display -0.03em; body 0; eyebrow +0.12em",
+      "leading": "Display 1.05; body 1.55",
+      "notes": "Literary serif display against a neutral Swiss grotesque reads intelligent, not bombastic. Mono scoped to model/version meta labels."
+    },
+    {
+      "name": "Reckless + PP Neue Montreal",
+      "briefType": "AI agency",
+      "heading": "Reckless Neue",
+      "body": "PP Neue Montreal",
+      "mono": "IBM Plex Mono",
+      "weights": "600/700 display; 400/500 body",
+      "tracking": "Display -0.025em; eyebrow +0.14em",
+      "leading": "1.05 / 1.55",
+      "notes": "High-contrast modern serif + clean geometric grotesque; the default-ban-safe alternative to the Cormorant/Inter autopick."
+    },
+    {
+      "name": "Fraunces + Authentic Sans",
+      "briefType": "AI agency",
+      "heading": "Fraunces (variable SOFT/WONK)",
+      "body": "Authentic Sans",
+      "mono": "Geist Mono",
+      "weights": "Display 500/600; body 400/500",
+      "tracking": "Display -0.02em; body 0",
+      "leading": "1.08 / 1.5",
+      "notes": "Fraunces opsz/SOFT axes give warmth without nostalgia; canonical luxury-editorial pick from the ban doc."
+    },
+    {
+      "name": "Bricolage Grotesque + Inter Tight",
+      "briefType": "SaaS dashboard",
+      "heading": "Bricolage Grotesque",
+      "body": "Inter Tight",
+      "mono": "Geist Mono",
+      "weights": "Headings 600/700; body 400/500",
+      "tracking": "Display -0.02em; body 0; label +0.08em",
+      "leading": "1.15 / 1.5",
+      "notes": "Bricolage adds character to product chrome; Inter Tight (NOT plain Inter) keeps dense tables legible. Geist Mono for stats/IDs."
+    },
+    {
+      "name": "Geist + Geist Mono",
+      "briefType": "SaaS dashboard",
+      "heading": "Geist",
+      "body": "Geist",
+      "mono": "Geist Mono",
+      "weights": "600/700 headings; 400/500 body",
+      "tracking": "-0.015em display; 0 body",
+      "leading": "1.2 / 1.5",
+      "notes": "Vercel's single-family system; mono as display accent is sanctioned. Clean, modern, zero banned faces."
+    },
+    {
+      "name": "Switzer + IBM Plex Mono",
+      "briefType": "SaaS dashboard",
+      "heading": "Switzer",
+      "body": "Switzer",
+      "mono": "IBM Plex Mono",
+      "weights": "600/700 / 400/500",
+      "tracking": "-0.015em / 0",
+      "leading": "1.2 / 1.55",
+      "notes": "Switzer is the unbanned geometric workhorse that replaces Outfit/DM Sans; pairs with IBM Plex Mono for code panels."
+    },
+    {
+      "name": "Clash Display + Plus Jakarta Sans",
+      "briefType": "creative-tech",
+      "heading": "Clash Display",
+      "body": "Plus Jakarta Sans",
+      "mono": "Space Mono",
+      "weights": "600/700 display; 400/500 body",
+      "tracking": "Display -0.03em; body 0; eyebrow +0.16em",
+      "leading": "1.0 / 1.55",
+      "notes": "Clash carries expressive hero weight; Space Mono gives telemetry character without the JetBrains cliché. From the soft-skill approved set."
+    },
+    {
+      "name": "Syne + PP Neue Montreal",
+      "briefType": "creative-tech",
+      "heading": "Syne",
+      "body": "PP Neue Montreal",
+      "mono": "Space Mono",
+      "weights": "700/800 display; 400/500 body",
+      "tracking": "Display -0.02em; eyebrow +0.14em",
+      "leading": "1.0 / 1.5",
+      "notes": "Syne's quirky display range suits studio/agency creative-tech; Montreal anchors body. Earns its variety per the ban doc."
+    },
+    {
+      "name": "Migra + Authentic Sans",
+      "briefType": "creative-tech",
+      "heading": "Migra",
+      "body": "Authentic Sans",
+      "mono": "IBM Plex Mono",
+      "weights": "500/700 display; 400/500 body",
+      "tracking": "-0.025em display; 0 body",
+      "leading": "1.05 / 1.5",
+      "notes": "Brutalist/cultural-leaning contrast serif + raw grotesque; scope ALL-CAPS to eyebrows only."
+    },
+    {
+      "name": "Canela + PP Neue Montreal",
+      "briefType": "premium portfolio",
+      "heading": "Canela",
+      "body": "PP Neue Montreal",
+      "mono": "IBM Plex Mono",
+      "weights": "Display 300/400; body 400/500",
+      "tracking": "Display -0.02em (anchor weight ≥300); eyebrow +0.12em",
+      "leading": "1.05 / 1.6",
+      "notes": "The dark-site replacement for Playfair; Canela light needs the -0.02em + ≥300 anchor to avoid spindle, per the orbit-general fix."
+    },
+    {
+      "name": "GT Super + Aktiv Grotesk",
+      "briefType": "premium portfolio",
+      "heading": "GT Super Display",
+      "body": "Aktiv Grotesk",
+      "mono": "Geist Mono",
+      "weights": "500/700 display; 400/500 body",
+      "tracking": "-0.025em / 0",
+      "leading": "1.05 / 1.6",
+      "notes": "GT Super gives gallery-grade display weight; mono used sparingly for captions/credits."
+    },
+    {
+      "name": "Domaine Display + Switzer",
+      "briefType": "premium portfolio",
+      "heading": "Domaine Display",
+      "body": "Switzer",
+      "mono": "IBM Plex Mono",
+      "weights": "400/600 display; 400/500 body",
+      "tracking": "-0.02em / 0",
+      "leading": "1.08 / 1.6",
+      "notes": "Domaine's editorial luxury without Cormorant overexposure; Switzer keeps body modern and ban-safe."
+    },
+    {
+      "name": "Instrument Serif + Inter Tight",
+      "briefType": "editorial",
+      "heading": "Instrument Serif",
+      "body": "Inter Tight",
+      "mono": "IBM Plex Mono",
+      "weights": "Display 400; body 400/500",
+      "tracking": "Display -0.025em; eyebrow +0.18em",
+      "leading": "1.05 / 1.55",
+      "notes": "The promotable taste-editorial triad verbatim: serif display / grotesque body / mono meta. Reference-grade role separation."
+    },
+    {
+      "name": "Newsreader + Switzer",
+      "briefType": "editorial",
+      "heading": "Newsreader",
+      "body": "Switzer",
+      "mono": "IBM Plex Mono",
+      "weights": "500/600 display; 400/500 body",
+      "tracking": "-0.02em / 0; eyebrow +0.14em",
+      "leading": "1.1 / 1.6",
+      "notes": "Newsreader's opsz axis is built for long-form; 55-70 char measure, max-width 65ch. The literary register without Cormorant."
+    },
+    {
+      "name": "Lyon Text + PP Neue Montreal",
+      "briefType": "editorial",
+      "heading": "Lyon Text",
+      "body": "PP Neue Montreal",
+      "mono": "IBM Plex Mono",
+      "weights": "400/600 / 400/500",
+      "tracking": "-0.03em display; 0 body",
+      "leading": "1.1 / 1.6",
+      "notes": "From minimalist-skill: tight -0.02em to -0.04em tracking, 1.1 leading. Premium editorial benchmark."
+    },
+    {
+      "name": "DM Serif Display + Libre Baskerville",
+      "briefType": "editorial (scholarly/literary)",
+      "heading": "DM Serif Display",
+      "body": "Libre Baskerville",
+      "mono": "IBM Plex Mono",
+      "weights": "400 display; 400/700 body",
+      "tracking": "-0.01em display; 0 body",
+      "leading": "1.1 / 1.7",
+      "notes": "The sanctioned replacement for the Cormorant-bearing zhangzara editorial decks. High-contrast literary voice, free, ban-compliant."
+    },
+    {
+      "name": "IBM Plex Sans Arabic + Plus Jakarta Sans",
+      "briefType": "Arabic-first / MENA bilingual",
+      "heading": "Plus Jakarta Sans (Latin) / IBM Plex Sans Arabic",
+      "body": "IBM Plex Sans Arabic",
+      "mono": "IBM Plex Mono",
+      "weights": "600/700 headings; 400/500 body",
+      "tracking": "Latin display -0.015em; Arabic ALWAYS 0; body 0",
+      "leading": "Latin 1.5; Arabic 1.7",
+      "notes": "The rtl-arabic-i18n default pairing. Apply :lang(ar){font-size:1.075em}. Never track Arabic. Never Noto Kufi."
+    },
+    {
+      "name": "El Messiri + Cairo",
+      "briefType": "Arabic-first / MENA display",
+      "heading": "El Messiri",
+      "body": "Cairo",
+      "mono": "IBM Plex Mono",
+      "weights": "600/700 display; 400/500 body",
+      "tracking": "0 (Arabic)",
+      "leading": "Display 1.4; body 1.7",
+      "notes": "El Messiri display Kufi for headlines, Cairo (Karim's existing sites) for body. From the ban doc's MENA pool. Tracking 0 mandatory."
+    },
+    {
+      "name": "Amiri Display + Tajawal",
+      "briefType": "Arabic-first / editorial Naskh",
+      "heading": "Amiri",
+      "body": "Tajawal",
+      "mono": "IBM Plex Mono",
+      "weights": "400/700 display; 400/500 body",
+      "tracking": "0 (Arabic)",
+      "leading": "Display 1.5; body 1.75",
+      "notes": "Amiri Naskh serif for editorial/literary Arabic; Tajawal friendly-marketing body. Min 16px Arabic floor; per-block direction."
+    },
+    {
+      "name": "Druk Wide Bold + IBM Plex Mono",
+      "briefType": "creative-tech (high-energy / motion)",
+      "heading": "Druk Wide Bold",
+      "body": "PP Neue Montreal",
+      "mono": "IBM Plex Mono",
+      "weights": "Display 700; body 400/500",
+      "tracking": "Display 0 to -0.01em (already wide); eyebrow +0.12em",
+      "leading": "1.0 / 1.5",
+      "notes": "The papaya-smoke-hero racing pattern, generalized: compressed/wide display earns ALL-CAPS in-context. Mono scoped to HUD/telemetry only — NOT JetBrains."
+    }
+  ]
+}

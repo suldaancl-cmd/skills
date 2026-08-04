@@ -1,0 +1,30 @@
+# Pairs to bidirectionally mirror between Windows and vmi.
+# Format:  local_path | vmi_path | filter_file | priority
+#   priority = 1 (run first, every trigger), 2 (run on full sync only)
+#   filter_file is relative to ~/.claude/scripts/mirror-filters/
+# Comments and blank lines ignored.
+#
+# The .claude pair drives the level-up loop, so it is priority 1.
+# Project folders are priority 2 — synced on full triggers and the 30-min snapshot,
+# not on every quick PS open (would be slow).
+
+C:\Users\user\.claude                     | /root/.claude-shared            | claude.txt  | 1
+
+# Project folders (Karim's user-created dirs outside ~/.claude)
+C:\Users\user\karim-site                  | /root/karim-site                | project.txt | 2
+C:\Users\user\hyperframes                 | /root/hyperframes               | project.txt | 2
+C:\Users\user\AGENT                       | /root/AGENT                     | project.txt | 2
+C:\Users\user\CALAF                       | /root/CALAF                     | project.txt | 2
+C:\Users\user\andrej-karpathy-skills      | /root/andrej-karpathy-skills    | project.txt | 2
+C:\Users\user\obsidian-local-rest-api     | /root/obsidian-local-rest-api   | project.txt | 2
+C:\Users\user\nexu-open-design            | /root/nexu-open-design          | project.txt | 2
+C:\Users\user\open-design-main            | /root/open-design-main          | project.txt | 2
+C:\Users\user\bin                         | /root/user-bin                  | project.txt | 2
+
+# vmi-originated project folders that Karim wants on Windows too
+C:\Users\user\calaf-app                   | /root/calaf-app                 | project.txt | 2
+C:\Users\user\trading-bot                 | /root/trading-bot               | project.txt | 2
+C:\Users\user\intel-trend-hunter          | /root/intel-trend-hunter        | project.txt | 2
+C:\Users\user\kia                         | /root/kia                       | project.txt | 2
+C:\Users\user\karim-social-autopilot      | /root/karim-social-autopilot    | project.txt | 2
+C:\Users\user\karim-social-autopilot-saas | /root/karim-social-autopilot-saas | project.txt | 2

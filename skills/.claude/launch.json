@@ -1,0 +1,35 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "backend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/user/calaf/calaf-app/backend", "run", "dev"],
+      "port": 4000
+    },
+    {
+      "name": "frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/user/calaf/calaf-app/frontend", "run", "dev"],
+      "port": 3000
+    },
+    {
+      "name": "mobile",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/user/calaf/calaf-app/mobile", "start"],
+      "port": 8081
+    },
+    {
+      "name": "remotion",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/user/my-video", "run", "dev"],
+      "port": 3000
+    },
+    {
+      "name": "xshack",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:/Users/user/xshack-assets/server.mjs"],
+      "port": 5177
+    }
+  ]
+}

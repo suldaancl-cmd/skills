@@ -142,6 +142,11 @@ function Sync-Pair($item) {
     "--transfers", "4",
     "--checkers", "8",
     "--copy-links",
+    # Directory modtimes are a hard abort on Windows: rclone calls chtimes on a dir that
+    # does not exist locally yet (2026-08-05: ~/.claude/todos, present on vmi only) and
+    # bisync treats the failure as critical — "Bisync aborted. Must run --resync to recover."
+    # Dir timestamps carry no value for this mirror; file modtimes are unaffected.
+    "--no-update-dir-modtime",
     "--ignore-errors",
     "--log-file", $LogFile,
     "--log-level", "NOTICE"

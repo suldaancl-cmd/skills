@@ -195,11 +195,15 @@
 
 **Pricing & trial**
 - 14-day trial; yearly primary + monthly + family tiers. Exact $ not pinned to a source this pass → **[unverified]** on the number. [source: https://help.flo.health/hc/en-us/articles/4407228743956-Trying-Flo-Premium]
+- **Screenshot capture, dated 23 Sept 2025** (via @peekly_app's teardown tool, shared on X 2026-08-04): Yearly Plan **`$59.99`/12mo shown as `$5`/mo**, badged "Most Popular" and pre-selected; Family plan **`$79.99`/12mo = `$6.67`/mo** for 1–6 members; trial is a toggle labelled *"Not sure yet? Enable free trial"* — off by default, payment is the pre-selected path, the trial exists to reassure hesitant users rather than be the default choice. Still a third-party capture, not an official Flo price page, but pins the number the July note flagged unverified. [source: X post by @k2_build, 2026-08-04, screenshot credited to @peekly_app]
+- Same capture's analytics overlay: **Estimated MRR `$7.0M`**, `2.0M` downloads/mo, `4.7★` (1.9M ratings). Peekly's own modelled estimate, same caveat class as Sensor Tower/Appfigures numbers elsewhere in this skill — not a disclosed figure.
 
 **Signature psychological tactics**
 1. **Extreme personalization / sunk cost** — ~70 screens make quitting feel wasteful. [source: https://www.retention.blog/p/flo-is-an-amazing-success-story]
 2. **Physical micro-commitment** — the tap-and-hold gesture primes commitment right before price. [source: https://screensdesign.com/showcase/flo-period-pregnancy-tracker]
 3. **Immediate post-purchase upsell** — 33%-off "gift" converts trialists to annual before they cool off. [source: https://screensdesign.com/showcase/flo-period-pregnancy-tracker]
+4. **Trial as opt-in, not default** — payment is the pre-selected state; the free-trial toggle is there to catch hesitaters, not to be the primary path. Pairs with tactic 3: trialists who never toggled it convert to paid immediately. [source: X post by @k2_build, 2026-08-04]
+5. **Monthly-price framing on an annual charge** — `$5`/mo reads far cheaper than the `$59.99` that actually gets charged once a year. Same mechanic as tactic 1 but applied to price, not screen count: reduce what's felt, not what's paid.
 
 **Published conversion/revenue numbers**
 - iOS paywall est. **~$8M/month** from ~2M monthly downloads; **$190M+ ARR**, ~50% of revenue from 1yr+ users. [source: https://www.paywallscreens.com/apps/flo-period-pregnancy-tracker-mobile-paywall-140b · https://www.retention.blog/p/flo-is-an-amazing-success-story] *(estimates from third parties — treat as directional)*

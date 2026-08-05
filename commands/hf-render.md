@@ -4,10 +4,10 @@ description: Render the Calaf Hyperframes composition to MP4. Runs check first; 
 
 Render the Calaf Hyperframes composition to MP4. Steps:
 
-1. **Pre-render check** — run `npm run check` from `C:\Users\user\hyperframes` and abort if any errors are reported (warnings OK). Do not proceed past errors.
+1. **Pre-render check** — run `npm run check` from `C:\Users\user\.claude\_projects\hyperframes` and abort if any errors are reported (warnings OK). Do not proceed past errors.
 2. **Render** — execute:
    ```bash
-   cd /c/Users/user/hyperframes && npm run render
+   cd /c/Users/user/.claude/_projects/hyperframes && npm run render
    ```
    Use a timeout of at least 300000ms (5 min) for the bash call.
 3. **Locate the MP4** — list `dist/` (or whatever output dir hyperframes writes to) and report:

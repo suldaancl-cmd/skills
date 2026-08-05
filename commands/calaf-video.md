@@ -7,13 +7,13 @@ You are generating a Hyperframes V2 composition for the **Calaf brand**.
 
 ## Project location (fixed)
 
-`C:\Users\user\hyperframes\` — overwrite `index.html` in place.
+`C:\Users\user\.claude\_projects\hyperframes\` — overwrite `index.html` in place.
 Fonts are already downloaded in `fonts/`:
 - `ibm-plex-sans-arabic-300.woff2`
 - `ibm-plex-sans-arabic-400.woff2`
 - `ibm-plex-sans-arabic-700.woff2`
 
-If `C:\Users\user\hyperframes\design.md` does not exist, the project is misconfigured — abort and tell the user to run `Skill: hyperframes` setup first.
+If `C:\Users\user\.claude\_projects\hyperframes\design.md` does not exist, the project is misconfigured — abort and tell the user to run `Skill: hyperframes` setup first.
 
 ## Mandatory workflow
 
@@ -52,7 +52,7 @@ If `C:\Users\user\hyperframes\design.md` does not exist, the project is misconfi
    - All Arabic blocks: natural RTL flow, no forced text-align overrides
 7. **Run verification** — execute via Bash from the project:
    ```bash
-   cd /c/Users/user/hyperframes && npm run check
+   cd /c/Users/user/.claude/_projects/hyperframes && npm run check
    ```
    This runs `lint` + `validate` (WCAG AA) + `inspect` (9-sample layout audit).
 8. **Fix any issues surgically** and re-run until clean:
@@ -62,7 +62,7 @@ If `C:\Users\user\hyperframes\design.md` does not exist, the project is misconfi
    - WCAG contrast warnings → bump muted text to fg (`#F4E4C1`) at higher alpha (≥0.65)
 9. **Verify in the live preview** — if a Hyperframes Studio dev server is running on port 5174, navigate the preview iframe and `tl.time(<hero_t>)` to confirm hero frames render with correct palette. If not running, mention the launch command:
    ```bash
-   cd C:\Users\user\hyperframes && npm run dev
+   cd C:\Users\user\.claude\_projects\hyperframes && npm run dev
    ```
 10. **Final report to the user (in Arabic with English technical terms):**
     - 3 scene summary (one line each)

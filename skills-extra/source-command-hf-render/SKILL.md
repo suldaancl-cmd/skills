@@ -11,7 +11,7 @@ Use this skill when the user asks to run the migrated source command `hf-render`
 
 Render the Calaf Hyperframes composition to MP4. Steps:
 
-1. **Pre-render check** — run `npm run check` from `C:\Users\user\hyperframes` and abort if any errors are reported (warnings OK). Do not proceed past errors.
+1. **Pre-render check** — run `npm run check` from `C:\Users\user\.claude\_projects\hyperframes` and abort if any errors are reported (warnings OK). Do not proceed past errors.
 2. **Render** — execute:
    ```bash
    cd /c/Users/user/hyperframes && npm run render

@@ -124,6 +124,27 @@
           }
         ]
       }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "& 'C:\\Users\\user\\.claude\\bin\\dcg.exe'",
+            "shell": "powershell"
+          }
+        ]
+      },
+      {
+        "matcher": "Workflow|Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/user/.claude/hooks/orchestration-gate.py"
+          }
+        ]
+      }
     ]
   },
   "enabledPlugins": {

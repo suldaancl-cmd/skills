@@ -17,8 +17,10 @@ import sys
 
 USAGE_LOG = r"C:/Users/user/.claude/skill-usage.jsonl"
 # Non-Skill tool calls that count as "this turn did real work" (Bash, Edit, WebSearch...).
-# 2+ means the answer came from the repo/web, not from memory — the thing this hook guards.
-MIN_TOOLS_FOR_WORK = 2
+# 1+ means the answer was grounded in something read/run, not recalled — which is the thing
+# this hook guards. Was 2, which blocked legitimate single-command lookups (a one-Bash answer
+# citing its own output is grounded; the real failure mode is ZERO tools plus confident prose).
+MIN_TOOLS_FOR_WORK = 1
 # Session ids used by scripts/check_system.py fixtures — never logged as real turns.
 SYNTHETIC_SESSIONS = {"healthcheck", "chk", "testsess"}
 

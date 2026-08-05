@@ -175,7 +175,8 @@
       ],
       "never": [
         "premium-design-laws, frontend-design — the deck-first design gate does not apply to a bug fix",
-        "ultraplan — a focused fix does not need a phased plan"
+        "ultraplan — a focused fix does not need a phased plan",
+        "never scaffold or `npm install` a project onto D: — the drive (ST1000LM049, 19,168 reallocated sectors) silently drops files mid-extract; build on C: under `_projects/`"
       ],
       "templates": [
         "jdp-* — Java design-pattern reference cards, read-only; never scaffold from them unasked"
@@ -190,28 +191,45 @@
         "ios app",
         "android app",
         "app store",
-        "eas "
+        "eas ",
+        "reanimated",
+        "moti",
+        "skia",
+        "gesture handler",
+        "expo-haptics",
+        "shared value",
+        "animate the app",
+        "app animation",
+        "mobile animation",
+        "worklet"
       ],
       "skills": [
         "mobile-app",
         "react-native-expert",
         "react-native-architecture",
         "phased-plan",
-        "expo-eas-ship"
+        "expo-eas-ship",
+        "react-native-motion",
+        "gesture-patterns",
+        "micro-interaction-spec"
       ],
       "playbooks": [
         "app-building-kit/README.md",
-        "reference_install_2026-07-07_mobile_app_skills.md"
+        "reference_install_2026-07-07_mobile_app_skills.md",
+        "reference_mobile_motion_guide.md"
       ],
-      "rule": "Read the App-Building Kit hub first. Phased plan before code.",
+      "rule": "Read the App-Building Kit hub first. Phased plan before code. MOTION: animate on the UI thread only (Reanimated/Moti worklets), never setState per frame, shared values for scroll/gesture. react-native-reanimated/plugin MUST be LAST in babel.config.js and Metro needs `npx expo start --clear` after any babel change; wrap the app in GestureHandlerRootView. Honor useReducedMotion(). Test on a real mid-range Android — the iOS simulator hides jank. Authority: reference_mobile_motion_guide.md.",
       "lead": [
         "mobile-app",
         "react-native-expert",
         "react-native-architecture"
       ],
       "never": [
-        "gsap*, three, threejs, react-three-fiber, webgl-effect-recipes, lenis-smooth-scroll — DOM/WebGL patterns break React Native; use react-native-motion / reanimated",
-        "frontend-design — writes web DOM, not RN components"
+        "three, threejs, react-three-fiber, webgl-effect-recipes, lenis-smooth-scroll, CSS animations, Web Animations API — no DOM in React Native; these need a WebView fallback",
+        "gsap as a DOM animator — no DOM to animate; GSAP CAN still drive Reanimated shared values, so it is banned as a renderer, not as a tween engine",
+        "LayoutAnimation and the legacy Animated API — deprecated / JS-thread, they jank when JS is busy; use Reanimated layout animations instead",
+        "frontend-design — writes web DOM, not RN components",
+        "never scaffold or `npm install` a project onto D: — the drive (ST1000LM049, 19,168 reallocated sectors) silently drops files mid-extract; build on C: under `_projects/`"
       ],
       "templates": [
         "expo-examples — read-only reference app code"
@@ -360,7 +378,8 @@
       ],
       "never": [
         "stripe-sdk BEFORE auth-implementation — hard order, auth ships first",
-        "saas-scaffolder on an existing codebase — it scaffolds greenfield only"
+        "saas-scaffolder on an existing codebase — it scaffolds greenfield only",
+        "never scaffold or `npm install` a project onto D: — the drive (ST1000LM049, 19,168 reallocated sectors) silently drops files mid-extract; build on C: under `_projects/`"
       ],
       "templates": []
     },
@@ -852,7 +871,8 @@
         "ultraplan"
       ],
       "never": [
-        "implementation skills (focused-fix, frontend-design, saas-scaffolder) — the plan phase produces a plan, not code"
+        "implementation skills (focused-fix, frontend-design, saas-scaffolder) — the plan phase produces a plan, not code",
+        "never scaffold or `npm install` a project onto D: — the drive (ST1000LM049, 19,168 reallocated sectors) silently drops files mid-extract; build on C: under `_projects/`"
       ],
       "templates": []
     },
@@ -942,7 +962,8 @@
         "session-intake"
       ],
       "never": [
-        "coding and build skills — the blueprint stops at the map; building is a separate approved job"
+        "coding and build skills — the blueprint stops at the map; building is a separate approved job",
+        "never scaffold or `npm install` a project onto D: — the drive (ST1000LM049, 19,168 reallocated sectors) silently drops files mid-extract; build on C: under `_projects/`"
       ],
       "templates": []
     }

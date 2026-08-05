@@ -16,7 +16,7 @@ import sys
 
 ROUTES = r"C:/Users/user/.claude/skill-routes.json"
 VAULT_REL = "~/.claude/projects/C--Users-user--claude-skills/memory"
-MAX_CHARS = 5600
+MAX_CHARS = 6400
 TOP_DOMAINS = 2
 
 CONFLICT_LAW = (
@@ -149,6 +149,14 @@ def build(prompt: str) -> str:
         "`python ~/.claude/scripts/skill_find.py \"<keywords>\"` (searches every skill on disk) "
         "or invoke `skill-swarm` for exhaustive coverage. For MCP/connector tools, ToolSearch "
         "with the same keywords before saying a capability is unavailable."
+    )
+    parts.append(
+        "COST — default to the cheap model: Sonnet 5 handles links, lookups, edits and status "
+        "checks; save Opus for judgment (architecture, review, design, synthesis). Subagent "
+        "dispatches carry `model: \"sonnet\"` unless the job IS judgment. Never orchestrate "
+        "unasked: `Workflow`/`Agent` calls hit the orchestration gate and prompt Karim unless he "
+        "used an opt-in word (deep research / workflow / dynamic / swarm / use agents). If the "
+        "gate fires, do the work in-session — don't argue for the fleet."
     )
     parts.append(
         "Before declaring done: point to proof (test output, screenshot, rendered file). "

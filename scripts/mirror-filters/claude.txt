@@ -60,6 +60,7 @@
 - /notebooklm-prompt-styles/**
 
 # --- logs / temp ---
+- /tmp/**
 - *.log
 - *.tmp
 - *.lock
@@ -77,6 +78,13 @@
 
 # --- per-machine session JSONLs (vault Sessions/ already gives cross-machine view) ---
 - /projects/**
+
+# --- project workspaces stay local (2026-08-05) ---
+# The home-dir cleanup moved ~50 loose project folders into _projects/, taking it to
+# ~3.5 GB. vmi has never held a copy (verified: /root/.claude-shared/_projects absent),
+# and Karim's choice is skills-only on the mirror. Without this deny the next priority-1
+# run — which fires on every trigger — would push all of it.
+- /_projects/**
 
 # --- backup suffixes / trash dirs ---
 - *.backup-*

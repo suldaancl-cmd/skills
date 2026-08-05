@@ -4,3 +4,27 @@
 [submodule "agent-native"]
 	path = agent-native
 	url = https://github.com/BuilderIO/agent-native.git
+[submodule "plugins/marketplaces/vercel"]
+	path = plugins/marketplaces/vercel
+	url = https://github.com/vercel/vercel-plugin
+[submodule "skills/gsap-skills"]
+	path = skills/gsap-skills
+	url = https://github.com/greensock/gsap-skills.git
+[submodule "skills/impeccable-src"]
+	path = skills/impeccable-src
+	url = https://github.com/pbakaus/impeccable.git
+[submodule "skills/npxskillui"]
+	path = skills/npxskillui
+	url = https://github.com/amaancoderx/npxskillui.git
+[submodule "skills/playwright-mcp"]
+	path = skills/playwright-mcp
+	url = https://github.com/microsoft/playwright-mcp.git
+[submodule "skills/taste-skill-repo"]
+	path = skills/taste-skill-repo
+	url = https://github.com/Leonxlnx/taste-skill.git
+[submodule "skills/ui-ux-pro-max-skill"]
+	path = skills/ui-ux-pro-max-skill
+	url = https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git
+[submodule "skills/webgpu-claude-skill"]
+	path = skills/webgpu-claude-skill
+	url = https://github.com/dgreenheck/webgpu-claude-skill.git

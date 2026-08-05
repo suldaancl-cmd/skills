@@ -2,10 +2,10 @@
 description: Run lint + validate + inspect on the Calaf Hyperframes project. Reports errors, WCAG contrast, and layout overflow.
 ---
 
-Run the full Hyperframes verification on `C:\Users\user\hyperframes`:
+Run the full Hyperframes verification on `C:\Users\user\.claude\_projects\hyperframes`:
 
 ```bash
-cd /c/Users/user/hyperframes && npm run check
+cd /c/Users/user/.claude/_projects/hyperframes && npm run check
 ```
 
 After the command finishes, summarise in 4 lines:

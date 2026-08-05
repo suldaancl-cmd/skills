@@ -47,7 +47,7 @@ Concretely:
 
 ## Karpathy coding principles (forrestchang/andrej-karpathy-skills)
 
-These 4 principles apply to ALL coding output — writing new code, editing, reviewing, refactoring. The local `karpathy-coder` skill enforces them per-turn; this section makes them load every session at the system-prompt level. Cloned for reference at `C:\Users\user\andrej-karpathy-skills\`. Companion skill at `~/.claude/skills/karpathy-guidelines/`.
+These 4 principles apply to ALL coding output — writing new code, editing, reviewing, refactoring. The local `karpathy-coder` skill enforces them per-turn; this section makes them load every session at the system-prompt level. Cloned for reference at `C:\Users\user\.claude\_projects\andrej-karpathy-skills\`. Companion skill at `~/.claude/skills/karpathy-guidelines/`.
 
 **1. Think before coding.** State assumptions explicitly. If multiple interpretations exist, present them — don't pick silently. If something is unclear, stop and name what's confusing. Push back when warranted.
 
@@ -149,6 +149,27 @@ Whenever Karim shares ANY link (article, video, thread, tool, repo, product), ru
 1. **Knowledge → explain in Arabic.** If the link carries knowledge (tutorial, video, article, thread), the deliverable is a full Arabic explanation (RTL block, layout laws from `feedback_arabic_english_format` bind) alongside the English section — not a one-line summary. Social/video URLs still go through `read-link` first (download + 4-phase Deep Dive).
 2. **Brain check → store it.** Ask "can our brain system benefit from this?" If yes, distill it into a vault note (`reference_*` / `playbook_*` in `~/.claude/projects/C--Users-user--claude-skills/memory/`) linked from MEMORY.md and the matching Brain/ topic hub. This standing rule IS Karim's consent for link-derived notes — write them directly, MERGE never replace. Raw URLs are auto-harvested hourly into vault `Brain/Links/` by `build_second_brain.py`; the manual note is for the *distilled learning*, not the URL.
 3. **Tool → playbook or skill, stored.** If the link is a tool/service our AI stack needs, create a playbook note (usage, pricing, when-to-reach) or install/build a skill via the existing pipeline (`feedback_skill_installs`: security-audit → rename dup frontmatter → mirror to vmi, don't ask), then attach it to its domain in `skill-routes.json` so the router surfaces it.
+
+## Cost discipline — model + orchestration (added 2026-08-05)
+
+Two standing rules from Karim. Both exist because token burn kept surprising him.
+
+**1. Default to the cheap model. Opus is for judgment, not for errands.** Most of what Karim
+sends is a shared link, a lookup, a file edit, a status check — Sonnet 5 handles all of it. Reach
+for the expensive model only when the task genuinely needs it: architecture calls, adversarial
+review, design judgment, synthesis across many sources, or anything he flags as high-stakes.
+- Delegating work to a subagent? Pass `model: "sonnet"` unless the subagent's job is judgment.
+- The session's own model can only be changed by Karim (`/model`, or `model` in `settings.json` —
+  currently `opus[1m]`). A hook cannot switch it mid-session. So when a whole session is routine
+  link-reading or file work, **say so once** and let him downgrade — don't silently burn Opus.
+- Never upgrade effort or model on your own initiative.
+
+**2. Never orchestrate unasked.** Enforced by `hooks/orchestration-gate.py` (PreToolUse on
+`Workflow|Agent`), not by memory: any `Workflow` or `Agent` call surfaces a permission prompt
+unless Karim's own message contains an opt-in word — *deep research · workflow · dynamic ·
+swarm · orchestrate · fleet · use agents · parallel agents · بحث عميق · وكلاء*. When it fires,
+do not argue for the fleet: do the work in-session instead. Single cheap delegations are still
+gated — that is intentional, he wants to see them.
 
 ## Chat intake (added 2026-07-24)
 

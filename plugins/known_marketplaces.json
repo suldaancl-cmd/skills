@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "C:\\Users\\user\\.claude\\plugins\\marketplaces\\claude-plugins-official",
-    "lastUpdated": "2026-07-31T22:39:51.669Z"
+    "lastUpdated": "2026-08-05T16:19:13.216Z"
   },
   "ponytail": {
     "source": {
@@ -21,7 +21,7 @@
       "repo": "supabase-community/supabase-plugin"
     },
     "installLocation": "C:\\Users\\user\\.claude\\plugins\\marketplaces\\supabase-community-supabase-plugin",
-    "lastUpdated": "2026-07-31T22:39:51.235Z",
+    "lastUpdated": "2026-08-05T16:19:12.774Z",
     "autoUpdate": true
   }
 }

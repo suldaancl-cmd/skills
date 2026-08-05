@@ -14,40 +14,40 @@
     "agent-sdk-dev@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\agent-sdk-dev\\305a7d974445",
-        "version": "305a7d974445",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\agent-sdk-dev\\7603a5128f4a",
+        "version": "7603a5128f4a",
         "installedAt": "2026-03-13T07:45:41.446Z",
-        "lastUpdated": "2026-07-28T17:03:33.598Z",
-        "gitCommitSha": "305a7d9744450d7832d422d4b0737105d9c75bd0"
+        "lastUpdated": "2026-08-04T11:33:40.361Z",
+        "gitCommitSha": "7603a5128f4a33e9dc61a5a237ca2f38c13dc2b7"
       }
     ],
     "asana@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\asana\\305a7d974445",
-        "version": "305a7d974445",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\asana\\7603a5128f4a",
+        "version": "7603a5128f4a",
         "installedAt": "2026-03-13T07:45:43.321Z",
-        "lastUpdated": "2026-07-28T17:03:33.669Z",
-        "gitCommitSha": "305a7d9744450d7832d422d4b0737105d9c75bd0"
+        "lastUpdated": "2026-08-04T11:33:40.298Z",
+        "gitCommitSha": "7603a5128f4a33e9dc61a5a237ca2f38c13dc2b7"
       }
     ],
     "figma@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\figma\\2.2.87",
-        "version": "2.2.87",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\figma\\2.2.90",
+        "version": "2.2.90",
         "installedAt": "2026-05-14T05:52:50.831Z",
-        "lastUpdated": "2026-07-31T19:02:25.436Z",
+        "lastUpdated": "2026-08-05T16:19:26.033Z",
         "gitCommitSha": "fabc1ca81d839602ba7c1ca0f445a64246b3870e"
       }
     ],
     "ai-plugins@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\ai-plugins\\3fb6880b0f5d",
-        "version": "3fb6880b0f5d",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\ai-plugins\\adc5aa4a357c",
+        "version": "adc5aa4a357c",
         "installedAt": "2026-05-14T05:54:42.394Z",
-        "lastUpdated": "2026-07-31T19:02:30.401Z",
+        "lastUpdated": "2026-08-05T16:19:30.659Z",
         "gitCommitSha": "975f0ce422b1f2677681ffd085aef34ea1826b70"
       }
     ],

@@ -100,7 +100,8 @@ def main():
         ("2 tools + long text", [tool("Bash"), tool("Edit"), long_text], "allow"),
         ("no tools + long text", [long_text], "BLOCK"),
         ("Skill invoked", [{"type": "tool_use", "name": "Skill", "input": {"skill": "x"}}, long_text], "allow"),
-        ("1 tool + long text", [tool("Read"), long_text], "BLOCK"),
+        # one grounded command + an answer citing it is legitimate work, not recall
+        ("1 tool + long text", [tool("Bash"), long_text], "allow"),
         ("no tools + short text", [{"type": "text", "text": "done"}], "allow"),
     ]
     for label, blocks, want in matrix:

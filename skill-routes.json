@@ -201,7 +201,13 @@
         "animate the app",
         "app animation",
         "mobile animation",
-        "worklet"
+        "worklet",
+        "screen transition",
+        "shared element",
+        "splash",
+        "launch screen",
+        "navigation animation",
+        "jank"
       ],
       "skills": [
         "mobile-app",
@@ -211,7 +217,13 @@
         "expo-eas-ship",
         "react-native-motion",
         "gesture-patterns",
-        "micro-interaction-spec"
+        "micro-interaction-spec",
+        "rn-screen-transitions",
+        "expo-splash-launch",
+        "reanimated",
+        "moti",
+        "react-native-skia",
+        "expo-react-native-performance"
       ],
       "playbooks": [
         "app-building-kit/README.md",

@@ -48,7 +48,14 @@ ARCHIVE = re.compile(
     r"^/(blog|glossary|guides|resources|docs|customers|ebooks|webinars|"
     r"podcast|news|press|events?/\d|tag|category|author|search|\d{4})/", re.I)
 
-ASSET_EXT = r"(?:woff2?|ttf|otf|css|m?js|png|svg|jpe?g|webp|avif|gif|mp4|webm|json|ico)"
+# Every extension a page can request. Keep this list greedy: an extension that
+# is missing here is an asset the repair loop silently declines to fetch, and
+# the mirror then looks complete while a whole subsystem is gone. mont-fort.com
+# lost its entire WebGL layer (13 .glb models, an .exr envmap, the Basis .wasm
+# transcoder) to an allowlist that stopped at images and fonts.
+ASSET_EXT = (r"(?:woff2?|ttf|otf|eot|css|m?js|wasm|png|svg|jpe?g|webp|avif|gif|"
+             r"ico|mp4|webm|mov|mp3|wav|ogg|m4a|glb|gltf|bin|ktx2|basis|exr|hdr|"
+             r"dds|json|vtt|srt|xml|txt|pdf)")
 
 # Path chars include non-ASCII: real sites ship filenames with accented and
 # non-Latin characters written literally, not percent-encoded, in the source.
@@ -79,9 +86,15 @@ def cmd_fingerprint(args):
 
     found = [label for pat, label in STACKS if re.search(pat, html, re.I)]
     hosts = Counter(re.findall(r"https?://([a-zA-Z0-9.-]+\.[a-z]{2,})", html))
+    # Consent, analytics and edge-telemetry hosts must NEVER be recommended as
+    # asset CDNs: spanning the crawl to them mirrors a third-party script that
+    # is correct to leave remote, and verify.mjs then counts it as a first-party
+    # leak. mont-fort.com surfaced cookiebot + cloudflareinsights as "CDNs".
     third_party = re.compile(
         r"google|gtag|gtm|facebook|linkedin|twitter|youtube|hubspot|segment|"
-        r"intercom|hotjar|clarity|marketo|w3\.org|schema\.org", re.I)
+        r"intercom|hotjar|clarity|marketo|w3\.org|schema\.org|cookiebot|"
+        r"cloudflareinsights|cdn-cgi|onetrust|usercentrics|termly|iubenda|"
+        r"sentry|datadog|newrelic|doubleclick|adobedtm|typekit|recaptcha", re.I)
     cdns = [(h, n) for h, n in hosts.most_common(12)
             if h != host and not third_party.search(h)]
 
@@ -249,9 +262,28 @@ def cmd_repair(args):
             return best
 
         got = 0
+        bases = base_dirs()
         for name in missing:
             d = sibling_dir(name)
             if d is None:
+                # No sibling to derive the base from. Fall back to the directory
+                # literals the source itself declares — bounded (a handful of
+                # bases), and it is the exact mechanism a loader uses at runtime:
+                # setTranscoderPath("/libs/basis/") + loadAsync("x.wasm").
+                for base in bases:
+                    url = f"{origin}{base}{name}"
+                    if url in dead_urls:
+                        continue
+                    dest = web / base.strip("/") / name
+                    try:
+                        body = fetch(url, timeout=30)   # fetch before mkdir
+                        dest.parent.mkdir(parents=True, exist_ok=True)
+                        dest.write_bytes(body)
+                        by_name[name] = dest.parent
+                        got += 1
+                        break
+                    except Exception:
+                        dead_urls.add(url)
                 continue
             rel = d.relative_to(web).as_posix()
             prefix = rel.split("/")[0]
@@ -267,6 +299,77 @@ def cmd_repair(args):
             except Exception:
                 dead_urls.add(url)
         return got
+
+    # Relative ES-module specifiers: `import "./chunk.js"`, `from "./lib/x.mjs"`.
+    #
+    # Deliberately `./` only, never `../`. A bundler emits its chunks as
+    # siblings, so every real runtime import is same-dir-or-below. What lives
+    # above is Vite's `import.meta.glob` map — `{"../Chapters/Capital/Hero.js":
+    # qS, ...}` — whose keys are BUILD-TIME source paths already inlined into
+    # the bundle. They are never fetched, they 404 upstream, and following them
+    # once cost 57 dead requests and 57 empty directories per repair run.
+    # The trailing `(?!\s*:)` drops same-dir glob keys too: `Object.assign({
+    # "./Pages/Capital.js": _T, ...})` is a map of already-bundled functions, and
+    # a specifier followed by a colon is an object key, never a live import.
+    module_import = re.compile(
+        r"""["'](\./[A-Za-z0-9_.$/-]+\.m?js)["'](?!\s*:)""")
+
+    def resolve_module_imports():
+        """Fetch ES-module chunks that JS already on disk imports relatively.
+
+        --page-requisites cannot see these: an `import` specifier is not an
+        attribute on a tag it recognises. Miss one and the entry module 404s,
+        the whole module graph dies with no console error, and the page sits at
+        whatever opacity its reveal script was supposed to clear. On
+        mont-fort.com that was five chunks and a blank white homepage.
+
+        Resolution is exact — each specifier against its own importer's
+        directory — so unlike the runtime-literal resolver there is nothing to
+        guess. Loops internally because each recovered chunk imports more.
+        """
+        got = 0
+        pending = True
+        while pending:
+            pending = False
+            for f in [p for p in web.rglob("*")
+                      if p.is_file() and p.suffix.lower() in (".js", ".mjs")]:
+                text = f.read_text(encoding="utf-8", errors="ignore")
+                for spec in sorted(set(module_import.findall(text))):
+                    dest = (f.parent / spec).resolve()
+                    if dest.exists() or web.resolve() not in dest.parents:
+                        continue        # already have it, or it escapes the root
+                    rel = dest.relative_to(web.resolve()).as_posix()
+                    prefix = rel.split("/")[0]
+                    src = _origin_for(prefix, origin, host)
+                    url = f"{src}/{rel.split('/', 1)[1]}" if "." in prefix else f"{src}/{rel}"
+                    if url in dead_urls:
+                        continue
+                    try:
+                        # Fetch BEFORE mkdir: creating the directory first leaves
+                        # an empty tree behind for every ref that 404s, which
+                        # then reads as real site structure in the mirror.
+                        body = fetch(url)
+                        dest.parent.mkdir(parents=True, exist_ok=True)
+                        dest.write_bytes(body)
+                        got += 1
+                        pending = True  # the chunk just landed imports more
+                    except Exception:
+                        dead_urls.add(url)
+        return got
+
+    # Root-absolute DIRECTORY literals, e.g. setTranscoderPath("/libs/basis/").
+    # These are the base half of a base+filename pair whose joined path never
+    # appears as one string anywhere, so no path scan can ever see it. Collect
+    # the bases and the runtime resolver can pair them with the bare filenames.
+    dir_literal = re.compile(r"""["'](/[A-Za-z0-9_][A-Za-z0-9_./-]*/)["']""")
+
+    def base_dirs():
+        found = set()
+        for f in text_files():
+            if f.suffix.lower() in (".js", ".mjs"):
+                found |= set(dir_literal.findall(
+                    f.read_text(encoding="utf-8", errors="ignore")))
+        return sorted(d for d in found if "." not in d.split("/")[1])
 
     total_got = 0
     dead_urls = set()   # unique, not per-round: the same dead ref fails every round
@@ -295,18 +398,26 @@ def cmd_repair(args):
             if url in dead_urls:
                 continue        # already known dead; don't refetch every round
             dest = web / prefix / urllib.parse.unquote(tail)
-            dest.parent.mkdir(parents=True, exist_ok=True)
             try:
-                dest.write_bytes(fetch(url))
+                body = fetch(url)   # fetch before mkdir: a 404 must leave no dir
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes(body)
                 got += 1
             except Exception:
                 dead_urls.add(url)
 
+        # Modules first: a recovered chunk is what reveals the asset paths that
+        # the next two passes then find. Run in the wrong order and a single
+        # repair invocation leaves work behind that a second run would pick up.
+        module_got = resolve_module_imports()
         runtime_got = resolve_runtime_refs()
-        got += runtime_got
+        got += module_got + runtime_got
         total_got += got
-        extra = f" (+{runtime_got} runtime-constructed)" if runtime_got else ""
-        say(f"round {rnd}: rewrote {changed} files, fetched {got}{extra}, "
+        extra = ", ".join(
+            f"{n} {label}" for n, label in
+            ((module_got, "es-module"), (runtime_got, "runtime-constructed")) if n)
+        say(f"round {rnd}: rewrote {changed} files, fetched {got}"
+            f"{' (' + extra + ')' if extra else ''}, "
             f"{len(dead_urls)} unavailable so far")
         if got == 0:
             break

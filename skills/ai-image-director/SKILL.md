@@ -121,6 +121,28 @@ SCENE: [real setting — kitchen counter / bathroom shelf]. SUBJECT: [PRODUCT], 
 SCENE: [environment] — empty, no people. STYLE: [palette + film look]. CAMERA: wide establishing, [lens]. LIGHTING: [named source]. USE CASE: reusable location plate for a film set. CONSTRAINTS: 16:9, consistent for multiple shots, no text.
 ```
 
+## Escaping the default AI look (app assets / illustration)
+
+Source: [[reference_raroque_premium_app_feel]]. The bar that matters for app illustration:
+
+> *"If you can get this result in one or two prompts, that means everybody else can too."*
+
+- **30+ prompts is the floor** for anything meant to differentiate. One-shot output is by definition the same output everyone else gets.
+- **Mix styles, never copy one.** Midjourney **`--sref`** galleries are for *inspiration*, not lifting — pull two or three references and blend until it stops resembling any of them.
+- **Commission the base, generate the derivatives.** A human artist for one mascot or base style (a few hundred dollars buys this) and AI for every variant — original provenance, affordable volume.
+- Benchmark: Duolingo. AI could imitate the asset; it could not have originated the intent.
+
+### Midjourney loop — animating a still without a video model
+
+The cheapest way to animate an app mascot or illustration, and largely unknown:
+
+1. Drop the finished static image into Midjourney.
+2. Hit **loop**.
+3. Describe the motion you want.
+4. It returns **4 variants** — remix and repeat until one lands.
+
+Use this for mascots, onboarding illustrations, and empty-state art where a full video model is overkill and a seamless loop is what you actually need. For character-consistent *shots*, still go still-first through `ai-video-director` — this is for looping assets, not narrative video.
+
 ## Hand-off to video
 
 When the still is locked, pass it to **`ai-video-director`** as the first frame. Carry the SAME character sheet + anchor prop into the video prompt so identity survives the animation. The image you perfected here is the seed of every consistent shot that follows.

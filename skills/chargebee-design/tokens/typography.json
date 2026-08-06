@@ -1,0 +1,114 @@
+{
+  "families": [
+    "Sora",
+    "Inter",
+    "SF Mono"
+  ],
+  "scale": {
+    "heading-1": {
+      "fontFamily": "Sora",
+      "fontSize": "250px",
+      "fontWeight": "700",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "heading-2": {
+      "fontFamily": "Sora",
+      "fontSize": "200px",
+      "fontWeight": "700",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "heading-3": {
+      "fontFamily": "Sora",
+      "fontSize": "190px",
+      "fontWeight": "700",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "body": {
+      "fontFamily": "Inter",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "caption": {
+      "fontFamily": "Inter",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "code": {
+      "fontFamily": "SF Mono",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": null,
+      "source": "css"
+    }
+  },
+  "fontFaces": [
+    {
+      "family": "Inter",
+      "src": "https://www.chargebee.com/_nuxt4/Inter-cyrillic-ext.Cpd2YT5r.woff2",
+      "format": "woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "src": "https://www.chargebee.com/_nuxt4/Inter-cyrillic.C5ekK6td.woff2",
+      "format": "woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "src": "https://www.chargebee.com/_nuxt4/Inter-greek-ext.Ai74Rjx-.woff2",
+      "format": "woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "src": "https://www.chargebee.com/_nuxt4/Inter-greek.BQL42Lnq.woff2",
+      "format": "woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "src": "https://www.chargebee.com/_nuxt4/Inter-vietnamese.YEzCLjIM.woff2",
+      "format": "woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "src": "https://www.chargebee.com/_nuxt4/Inter-latin-ext.B_-bZUTo.woff2",
+      "format": "woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "src": "https://www.chargebee.com/_nuxt4/Inter-latin.8kRkwJBP.woff2",
+      "format": "woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Sora",
+      "src": "https://www.chargebee.com/_nuxt4/Sora-latin-ext.C4beA2JP.woff2",
+      "format": "woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Sora",
+      "src": "https://www.chargebee.com/_nuxt4/Sora-latin.5v9NviDD.woff2",
+      "format": "woff2",
+      "weight": "400"
+    }
+  ],
+  "rules": {
+    "maxSizesPerScreen": 4,
+    "headingWeightRange": "600-700",
+    "bodyWeight": 400,
+    "lineHeightBody": 1.5,
+    "lineHeightHeading": 1.2
+  }
+}

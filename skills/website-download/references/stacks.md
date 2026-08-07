@@ -48,7 +48,47 @@ fixes.
 
 Signature: `astro-` class hashes, `_astro/` directory.
 
-Mirrors cleanly. Standard recipe, no special handling.
+A plain content Astro site mirrors cleanly. **One with a client island does
+not** — and the failure looks identical to a crawl that went fine, because
+Astro ships the full SSR HTML and then hides it behind a reveal script.
+
+mont-fort.com (Astro 5.2 + ClientRouter + Three.js) crawled with zero errors
+and rendered a **blank white page**. The content was all there — `main`
+measured 14,582px — behind an inline `body { opacity: 0 }` that only clears
+when its script adds `body.loaded`. That script never ran: the entry module
+`Layout.astro_...js` imports `./GlobalApp.*.js` and four siblings relatively,
+`--page-requisites` cannot see an `import` specifier, so the module 404'd and
+the whole graph died. **No console error** — a failed module import is silent,
+which is why this reads as a CSS bug and isn't one.
+
+What that site needed, in order (all now automated in `repair`):
+
+1. **5 ES-module chunks**, imported relatively. Recovering them exposed a 6th
+   (`KTX2Loader`) on the next round — a single pass is not enough.
+2. **13 `.glb` models, an `.exr` envmap, an `.mp3`.** Referenced as complete
+   root-absolute literals (`path:"/assets/models/mountains.glb"`) and still
+   missed, because the old `ASSET_EXT` allowlist stopped at images and fonts.
+   An extension missing from that list is a silently declined asset.
+3. **The Basis transcoder** (`.js` + `.wasm`) from `/libs/basis/` — the base is
+   one literal (`setTranscoderPath("/libs/basis/")`) and the filename another
+   (`loadAsync("basis_transcoder.wasm")`), so the joined path exists nowhere in
+   the source. Without it every KTX2-compressed model fails to decode.
+
+**Astro reveal patterns to check before blaming CSS.** Grep the HTML for
+`body { opacity` / `.loaded` / a preloader overlay. If `document.body.className`
+lacks the reveal class, the module graph is broken — not the stylesheet. If the
+class IS there and computed opacity still reads 0, check whether you are
+measuring a **background tab**: Chrome freezes transition timelines in
+non-visible tabs, so a running 400ms fade sits at `currentTime: 0` forever and
+every computed-style read lies. Screenshot to force it visible.
+
+Also expect **scroll-jacked chapter reveals**: lazy `<img>` below the fold stay
+unrequested through dispatched `WheelEvent`s, so `imgLoaded: 0` is not evidence
+of missing files. HEAD-test three of them — 200 means the mirror is fine and the
+images simply never entered a viewport.
+
+Third-party consent (Cookiebot) and `cdn-cgi/` edge scripts stay remote. Do not
+span the crawl to them.
 
 ## Framer
 

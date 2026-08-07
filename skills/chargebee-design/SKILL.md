@@ -7,6 +7,41 @@ description: Design system skill for chargebee. Activate when building UI compon
 
 You are building UI for **chargebee**. Light-themed, warm palette, sans-serif typography (Sora), compact density on a 4px grid, expressive motion.
 
+## Where the images and fonts actually are
+
+`references/` and `tokens/` are here and readable. **Every `screenshots/`, `screens/`
+and `fonts/` path in this file resolves under `$ASSETS` below, not under this skill folder:**
+
+```
+$ASSETS = C:\Users\user\.claude\_projects\site-mirrors\chargebee-mirror\_design-system\chargebee-design
+```
+
+So `screens/scroll/scroll-000.png` → `$ASSETS\screens\scroll\scroll-000.png`. There you will
+find 4 page shots, 10 section shots, the 7-frame scroll journey, 17 button/link state
+captures, and 17 real `.ttf` files (Sora ×8, Inter ×9).
+
+They live there rather than here on purpose: `~/.claude/skills/` is git-tracked and pushed to
+GitHub, and those files are Chargebee's copyrighted screenshots. Studying them locally is
+fine; republishing them is not. Do not copy them into this folder.
+
+The full 33-page mirror is at
+`C:\Users\user\.claude\_projects\site-mirrors\chargebee-mirror\www.chargebee.com` — serve
+**that** folder as web root, never its parent:
+
+```bash
+cd C:/Users/user/.claude/_projects/site-mirrors/chargebee-mirror/www.chargebee.com && python -m http.server 8402
+```
+
+## Two extraction errors — do not propagate them
+
+1. **`tokens/typography.json` heading sizes are wrong.** It reports 250px / 200px / 190px;
+   those are the marquee ticker, not headings. Real scale: h1 `clamp(2.6rem,5.2vw,4.6rem)`,
+   h2 `clamp(2rem,3.6vw,3rem)`, h3 `1.25rem`, body `1rem/1.7`.
+2. **Two of Chargebee's own colors fail WCAG AA and this file repeats them.** White on
+   `#ff5722` is 3.2:1 — Chargebee itself uses `#012a38` on the orange fill (4.78:1). And
+   `#ff5722` as *text* is 3.1:1; use `#d63f11` (4.59:1). `#8a9aa1` for body copy is 3.1:1;
+   use `#62757d` (4.82:1). All measured in headless Chromium, 2026-08-06.
+
 ## Visual Reference
 
 **IMPORTANT**: Study ALL screenshots below before writing any UI. Match colors, typography, spacing, layout, and motion exactly as shown.

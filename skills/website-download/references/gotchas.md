@@ -35,6 +35,22 @@ full of hi-res images even when rendering is fine, and the browser pane cannot
 composite frames when it is not displayed. Fall back to headless Playwright
 for a real screenshot, or to `page.evaluate` measurements.
 
+**A background tab freezes CSS transition timelines.** Chrome does not advance
+animations in a non-visible tab, so a running 400ms fade sits at
+`currentTime: 0` indefinitely and `getComputedStyle(body).opacity` keeps
+reading the start value. On mont-fort.com this reported `opacity: 0` while the
+class that reveals it (`body.loaded`) was correctly applied — and setting
+`opacity: 1 !important` inline still read 0, because the frozen transition
+owns the computed value. The tell is a `getAnimations()` entry with
+`playState: "running"` and `currentTime: 0`. Take a screenshot to force the tab
+visible, then re-measure. Reading a paused timeline as a broken mirror will
+send you hunting a bug that does not exist.
+
+**A screenshot taken too early is a blank page, not a defect.** A WebGL site
+needs its models, textures and envmap decoded before first paint — 7–9 seconds
+on a local server for a 15MB model set. Settle first, then capture; on
+mont-fort.com the same page photographed white at 0s and fully rendered at 9s.
+
 ## "Missing" assets that are not missing
 
 **Check the live site before reporting a gap.** A sizeable share of 404s in

@@ -28,3 +28,45 @@
 [submodule "skills/webgpu-claude-skill"]
 	path = skills/webgpu-claude-skill
 	url = https://github.com/dgreenheck/webgpu-claude-skill.git
+[submodule "skills/img2threejs"]
+	path = skills/img2threejs
+	url = https://github.com/hoainho/img2threejs
+[submodule "skills/prompt-master"]
+	path = skills/prompt-master
+	url = https://github.com/nidhinjs/prompt-master.git
+[submodule "plugins/marketplaces/ponytail"]
+	path = plugins/marketplaces/ponytail
+	url = https://github.com/DietrichGebert/ponytail.git
+[submodule "plugins/marketplaces/supabase-community-supabase-plugin"]
+	path = plugins/marketplaces/supabase-community-supabase-plugin
+	url = https://github.com/supabase-community/supabase-plugin
+[submodule "skills-archive/awesome-design-md"]
+	path = skills-archive/awesome-design-md
+	url = https://github.com/VoltAgent/awesome-design-md.git
+[submodule "skills-archive/frontend-slides"]
+	path = skills-archive/frontend-slides
+	url = https://github.com/zarazhangrui/frontend-slides
+[submodule "skills-archive/gsap-skills"]
+	path = skills-archive/gsap-skills
+	url = https://github.com/greensock/gsap-skills.git
+[submodule "skills-archive/impeccable"]
+	path = skills-archive/impeccable
+	url = https://github.com/pbakaus/impeccable.git
+[submodule "skills-archive/impeccable-src"]
+	path = skills-archive/impeccable-src
+	url = https://github.com/pbakaus/impeccable.git
+[submodule "skills-archive/npxskillui"]
+	path = skills-archive/npxskillui
+	url = https://github.com/amaancoderx/npxskillui.git
+[submodule "skills-archive/playwright-mcp"]
+	path = skills-archive/playwright-mcp
+	url = https://github.com/microsoft/playwright-mcp.git
+[submodule "skills-archive/taste-skill-repo"]
+	path = skills-archive/taste-skill-repo
+	url = https://github.com/Leonxlnx/taste-skill.git
+[submodule "skills-archive/ui-ux-pro-max-skill"]
+	path = skills-archive/ui-ux-pro-max-skill
+	url = https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git
+[submodule "skills-archive/webgpu-claude-skill"]
+	path = skills-archive/webgpu-claude-skill
+	url = https://github.com/dgreenheck/webgpu-claude-skill.git

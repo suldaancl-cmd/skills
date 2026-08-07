@@ -1,0 +1,93 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "core": {
+    "text-primary": {
+      "value": "#012a38",
+      "role": "text-primary",
+      "name": "theme-color"
+    },
+    "background": {
+      "value": "#ffffff",
+      "role": "background",
+      "name": "tw-ring-offset-color"
+    },
+    "text-muted": {
+      "value": "#8a9aa1",
+      "role": "text-muted",
+      "name": "cb-text-subtle"
+    },
+    "surface": {
+      "value": "#e8f4f5",
+      "role": "surface",
+      "name": "tw-ring-offset-color"
+    },
+    "accent": {
+      "value": "#ff5722",
+      "role": "accent"
+    }
+  },
+  "status": {
+    "danger": {
+      "value": "#ff3300",
+      "role": "danger",
+      "name": "tw-ring-color"
+    }
+  },
+  "extended": {
+    "color-e0e0e0": {
+      "value": "#e0e0e0",
+      "role": "unknown"
+    },
+    "color-9ca3af": {
+      "value": "#9ca3af",
+      "role": "unknown"
+    },
+    "color-bff90b": {
+      "value": "#bff90b",
+      "role": "unknown"
+    },
+    "cb-teal-muted": {
+      "value": "#22748b",
+      "role": "info",
+      "name": "cb-teal-muted"
+    },
+    "iti-hover-color": {
+      "value": "#000000",
+      "role": "unknown",
+      "name": "iti-hover-color"
+    },
+    "color-84e4ee": {
+      "value": "#84e4ee",
+      "role": "unknown"
+    },
+    "cb-ticker-muted": {
+      "value": "#d3d9dc",
+      "role": "unknown",
+      "name": "cb-ticker-muted"
+    },
+    "color-d5f4f7": {
+      "value": "#d5f4f7",
+      "role": "unknown"
+    },
+    "color-03779e": {
+      "value": "#03779e",
+      "role": "unknown"
+    },
+    "color-90c2c7": {
+      "value": "#90c2c7",
+      "role": "unknown"
+    },
+    "color-335466": {
+      "value": "#335466",
+      "role": "unknown"
+    },
+    "color-174350": {
+      "value": "#174350",
+      "role": "unknown"
+    }
+  },
+  "meta": {
+    "theme": "light",
+    "extracted": "2026-08-04"
+  }
+}

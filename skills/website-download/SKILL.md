@@ -12,10 +12,19 @@ that renders with **zero first-party network calls**.
 
 The core insight: **`--page-requisites` only follows what's in the HTML as
 `src`/`href` on tags it recognizes.** It does not follow `modulepreload`
-hints, runtime-constructed chunk names, `srcset` variants, lazy `data-*`
-attributes, or `@font-face` URLs buried in a JS bundle. On a modern framework
-that is most of the payload. So: crawl, then find what the crawl missed,
-fetch it, then look again because the files you just fetched reference more.
+hints, **relative `import` specifiers inside a JS file**, runtime-constructed
+chunk names, `srcset` variants, lazy `data-*` attributes, or `@font-face` URLs
+buried in a JS bundle. On a modern framework that is most of the payload. So:
+crawl, then find what the crawl missed, fetch it, then look again because the
+files you just fetched reference more.
+
+**The worst failure mode is the silent one.** A missing ES-module chunk throws
+no console error — the import just fails, the module graph dies, and the page
+sits at whatever `opacity: 0` its reveal script was meant to clear. You get a
+blank white page from a crawl that reported zero errors, and it reads as a CSS
+bug. `repair` resolves those imports exactly (each specifier against its own
+importer's directory), so this class of break is now closed. See the Astro
+section of `references/stacks.md` for the full anatomy.
 
 ## Where mirrors live
 
@@ -81,10 +90,25 @@ minutes and it will kill the crawl mid-flight.
 python scripts/mirror.py repair <mirror-dir> --origin https://example.com
 ```
 
-This is a **loop, not a pass.** It scans every HTML/CSS/JS file for
-root-absolute and origin-absolute asset references, diffs against what is on
-disk, fetches the missing ones, then scans again — because the files it just
-fetched reference more files. It stops when a round finds nothing new.
+This is a **loop, not a pass.** Each round runs three recovery passes, then
+scans again — because the files it just fetched reference more files. It stops
+when a round finds nothing new.
+
+| Pass | Recovers | How it resolves |
+|---|---|---|
+| path scan | root-absolute and origin-absolute refs in HTML/CSS/JS | direct |
+| ES-module | `import "./chunk.js"` inside JS already on disk | exact — specifier against its importer's own directory |
+| runtime literal | bare filenames whose path is built at runtime | a sibling already on disk, else a `/dir/` literal the source declares |
+
+Order is load-bearing: modules first, because a recovered chunk is what
+*reveals* the asset paths the other passes then find. On mont-fort.com the
+`GlobalApp` chunk exposed 13 `.glb` models that nothing referenced until it
+landed, and `mountains.glb` in turn exposed `Homepage.glb`. Four rounds deep.
+
+`ASSET_EXT` in `mirror.py` is the fetch allowlist. **An extension missing from
+it is an asset the loop silently declines** — that list stopping at images and
+fonts is what cost mont-fort.com its entire WebGL layer. Add to it rather than
+hand-fetching around it.
 
 It then moves CDN asset directories inside the web root and rewrites every
 reference to root-absolute, because a mirror served with the site folder as

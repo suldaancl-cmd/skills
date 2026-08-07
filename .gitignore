@@ -28,6 +28,14 @@ _projects/web-mirrors/
 !commands/
 !commands/**
 
+# Plugin cache is machine-local, regenerable runtime state — Claude Code
+# repopulates it on plugin install. It is not config and does not belong in
+# version control: content-hashed dirs churn on every update, and it carried
+# PID lockfiles (.in_use/<pid>), temp shards and orphan markers. Must stay
+# BELOW the `!plugins/**` force-include above, or that rule wins.
+plugins/cache/
+plugins/.last_inuse_sweep
+
 # --- router + agent config ---
 !SKILL_ROUTER.md
 !CLAUDE.md
@@ -64,3 +72,6 @@ skill-usage.jsonl
 
 # excluded: upstream npxskillui ships a hardcoded Google Fonts API key
 skills-extra/npxskillui/src/font-resolver.ts
+
+# Syncthing conflict copies — never commit these; resolve them on disk instead.
+*.conflict_*

@@ -80,6 +80,25 @@ def score(prompt_lc: str, domain: dict) -> int:
     return sum(1 for kw in domain.get("keywords", []) if kw.lower() in prompt_lc)
 
 
+def pick_subroute(prompt_lc: str, domain: dict):
+    """Pick the single best stage inside a domain, or None to fall back to the full chain.
+
+    Returning None on a tie/no-hit is deliberate: guessing a stage is worse than
+    showing the whole chain, because a wrong stage hides the skills that were needed.
+    """
+    subs = domain.get("subroutes")
+    if not subs:
+        return None
+    ranked = sorted(
+        ((sum(1 for kw in s.get("keywords", []) if kw.lower() in prompt_lc), s) for s in subs),
+        key=lambda x: -x[0],
+    )
+    top, second = ranked[0], ranked[1] if len(ranked) > 1 else (0, None)
+    if top[0] == 0 or top[0] == second[0]:
+        return None
+    return top[1]
+
+
 def build(prompt: str) -> str:
     with open(ROUTES, encoding="utf-8") as fh:
         table = json.load(fh)
@@ -96,8 +115,21 @@ def build(prompt: str) -> str:
 
     if matches:
         for i, (_s, d) in enumerate(matches, 1):
-            chain = " -> ".join(d.get("skills", []))
-            parts.append(f"{i}) [{d['name']}] {chain}")
+            # Second-level routing: a big domain narrows to the stage the prompt is about,
+            # so the active-skill cap survives instead of dumping the whole chain.
+            sub = pick_subroute(prompt_lc, d)
+            if sub:
+                parts.append(
+                    f"{i}) [{d['name']} -> {sub['name']}] " + " -> ".join(sub["skills"])
+                )
+                parts.append(
+                    f"   STAGE ROUTING: this domain owns {len(d.get('skills', []))} skills; "
+                    f"the '{sub['name']}' stage above is what this prompt needs. Load those. "
+                    f"Other stages ({', '.join(s['name'] for s in d['subroutes'] if s is not sub)}) "
+                    f"stay unloaded unless the task moves into them."
+                )
+            else:
+                parts.append(f"{i}) [{d['name']}] " + " -> ".join(d.get("skills", [])))
             lead = d.get("lead", [])
             if lead:
                 parts.append(

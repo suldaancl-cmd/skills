@@ -207,7 +207,47 @@
         "splash",
         "launch screen",
         "navigation animation",
-        "jank"
+        "jank",
+        "perfetto",
+        "trace",
+        "frame drop",
+        "profil",
+        "bottom sheet",
+        "swipe",
+        "carousel",
+        "toast",
+        "tab bar",
+        "accordion",
+        "animated icon",
+        "icon animation",
+        "lottie",
+        "rive",
+        "svg animation",
+        "3d",
+        "ar ",
+        "usdz",
+        "model viewer",
+        "expo-gl",
+        "three.js",
+        "testflight",
+        "app review",
+        "submit my app",
+        "app screens",
+        "onboarding screen",
+        "app design",
+        "play store",
+        "ios design",
+        "android design",
+        "app onboarding",
+        "expo app",
+        "my expo",
+        "react native app",
+        "in the app",
+        "offline sync",
+        "async storage",
+        "mmkv",
+        "app navigation",
+        "app state"
       ],
       "skills": [
         "mobile-app",
@@ -223,7 +263,11 @@
         "reanimated",
         "moti",
         "react-native-skia",
-        "expo-react-native-performance"
+        "expo-react-native-performance",
+        "perfetto-trace-analysis",
+        "rn-component-motion",
+        "rn-icon-motion",
+        "expo-3d-ar"
       ],
       "playbooks": [
         "app-building-kit/README.md",
@@ -237,7 +281,8 @@
         "react-native-architecture"
       ],
       "never": [
-        "three, threejs, react-three-fiber, webgl-effect-recipes, lenis-smooth-scroll, CSS animations, Web Animations API — no DOM in React Native; these need a WebView fallback",
+        "webgl-effect-recipes, lenis-smooth-scroll, CSS animations, Web Animations API — these are DOM-only and have no equivalent in RN; they need a WebView fallback",
+        "three / react-three-fiber USING WEB DOM PATTERNS (a <canvas>, window/document, resize listeners) — the libraries themselves DO run in RN via expo-gl (@react-three/fiber 9.x declares expo-gl + react-native peer deps). Use the expo-gl canvas, not a DOM one",
         "gsap as a DOM animator — no DOM to animate; GSAP CAN still drive Reanimated shared values, so it is banned as a renderer, not as a tween engine",
         "LayoutAnimation and the legacy Animated API — deprecated / JS-thread, they jank when JS is busy; use Reanimated layout animations instead",
         "frontend-design — writes web DOM, not RN components",
@@ -245,6 +290,184 @@
       ],
       "templates": [
         "expo-examples — read-only reference app code"
+      ],
+      "subroutes": [
+        {
+          "name": "plan",
+          "keywords": [
+            "plan",
+            "spec",
+            "architecture",
+            "roadmap",
+            "blueprint",
+            "sitemap",
+            "prd",
+            "scope",
+            "idea",
+            "before i build"
+          ],
+          "skills": [
+            "planmap",
+            "phased-plan",
+            "ultraplan",
+            "senior-architect",
+            "product-strategist"
+          ]
+        },
+        {
+          "name": "design",
+          "keywords": [
+            "design",
+            "ui",
+            "ux",
+            "screen design",
+            "onboarding",
+            "navigation",
+            "dark mode",
+            "figma",
+            "layout",
+            "accessibility",
+            "a11y",
+            "rtl",
+            "arabic"
+          ],
+          "skills": [
+            "apple-hig",
+            "ui-ux-pro-max",
+            "onboarding-design",
+            "navigation-patterns",
+            "loading-states",
+            "rtl-arabic-i18n"
+          ]
+        },
+        {
+          "name": "build",
+          "keywords": [
+            "build",
+            "implement",
+            "component",
+            "router",
+            "state",
+            "fetch",
+            "offline",
+            "storage",
+            "native module",
+            "upgrade",
+            "structure"
+          ],
+          "skills": [
+            "react-native-expert",
+            "expo-router",
+            "expo-project-structure",
+            "expo-data-fetching",
+            "react-native-best-practices",
+            "react-native-mmkv"
+          ]
+        },
+        {
+          "name": "motion",
+          "keywords": [
+            "anim",
+            "motion",
+            "transition",
+            "gesture",
+            "swipe",
+            "splash",
+            "icon anim",
+            "3d",
+            "shader",
+            "lottie",
+            "rive",
+            "bottom sheet",
+            "carousel",
+            "tab bar",
+            "3d model",
+            "model from image",
+            "product photo",
+            "photo to 3d"
+          ],
+          "skills": [
+            "reanimated",
+            "moti",
+            "rn-screen-transitions",
+            "rn-component-motion",
+            "rn-icon-motion",
+            "react-native-skia",
+            "expo-splash-launch",
+            "expo-3d-ar",
+            "img2threejs"
+          ]
+        },
+        {
+          "name": "perf",
+          "keywords": [
+            "slow",
+            "jank",
+            "frame",
+            "lag",
+            "profil",
+            "perfetto",
+            "memory",
+            "crash",
+            "bundle size",
+            "optimi",
+            "test"
+          ],
+          "skills": [
+            "expo-react-native-performance",
+            "perfetto-trace-analysis",
+            "maestro-mobile-testing",
+            "react-native-mmkv"
+          ]
+        },
+        {
+          "name": "ship",
+          "keywords": [
+            "ship",
+            "release",
+            "submit",
+            "testflight",
+            "eas",
+            "build number",
+            "store listing",
+            "screenshot",
+            "app icon",
+            "rejected",
+            "review"
+          ],
+          "skills": [
+            "expo-eas-ship",
+            "app-icon",
+            "screenshots-marketing",
+            "app-rejection-recovery",
+            "local-build"
+          ]
+        },
+        {
+          "name": "grow",
+          "keywords": [
+            "aso",
+            "keyword",
+            "rank",
+            "download",
+            "install",
+            "paywall",
+            "subscription",
+            "price",
+            "churn",
+            "retention",
+            "ads",
+            "monetiz",
+            "revenue"
+          ],
+          "skills": [
+            "aso-audit",
+            "apple-search-ads",
+            "paywall-strategy-planner",
+            "app-growth-monetization",
+            "churn-prevention"
+          ]
+        }
       ]
     },
     {
@@ -608,7 +831,12 @@
         "babylon",
         "image to 3d",
         "img2threejs",
-        "photo to 3d"
+        "photo to 3d",
+        "spline scene",
+        "spline.design",
+        "3d landing",
+        "webgl landing",
+        "3d hero"
       ],
       "skills": [
         "3d-animation-web-designer",
@@ -631,8 +859,8 @@
         "react-three-fiber"
       ],
       "never": [
-        "react-native-*, expo-* — no DOM WebGL canvas in RN",
-        "spline-3d unless Karim names Spline — hosted scene, not the code-only default"
+        "react-native-* / expo-* skills INSIDE A WEB BUILD — wrong platform for a DOM canvas. (The reverse is NOT true: three.js and R3F do run in React Native via expo-gl — that job belongs to the mobile-app domain's `expo-3d-ar` skill, not here)",
+        "spline-3d unless Karim names Spline — hosted scene, not the code-only default. On MOBILE the Spline player is web-only (@splinetool/react-spline peers on react-dom); export GLB instead"
       ],
       "templates": [
         "webgl-effect-recipes, immersive-web-token-vault — recipe and token sources, read-only"
@@ -651,11 +879,16 @@
         "thumbnail",
         "poster",
         "logo design",
-        "صورة"
+        "صورة",
+        "--sref",
+        "sref",
+        "style code",
+        "mj prompt"
       ],
       "skills": [
         "ai-image-director",
         "imagegen",
+        "midjourney-prompt-engineering",
         "fal-generate",
         "higgsfield-product-photoshoot",
         "image-enhancer",

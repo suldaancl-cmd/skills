@@ -28,6 +28,14 @@ _projects/web-mirrors/
 !commands/
 !commands/**
 
+# Plugin cache is machine-local runtime state, not config. These re-exclude the
+# per-process junk that `!plugins/**` above would otherwise sweep in: PID
+# lockfiles, temp shards and orphan markers. They must stay BELOW that rule.
+plugins/cache/**/.in_use/
+plugins/cache/**/.in_use/**
+plugins/cache/**/*.tmp.*
+plugins/cache/**/.orphaned_at
+
 # --- router + agent config ---
 !SKILL_ROUTER.md
 !CLAUDE.md
@@ -64,3 +72,6 @@ skill-usage.jsonl
 
 # excluded: upstream npxskillui ships a hardcoded Google Fonts API key
 skills-extra/npxskillui/src/font-resolver.ts
+
+# Syncthing conflict copies — never commit these; resolve them on disk instead.
+*.conflict_*

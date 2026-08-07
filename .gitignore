@@ -28,13 +28,13 @@ _projects/web-mirrors/
 !commands/
 !commands/**
 
-# Plugin cache is machine-local runtime state, not config. These re-exclude the
-# per-process junk that `!plugins/**` above would otherwise sweep in: PID
-# lockfiles, temp shards and orphan markers. They must stay BELOW that rule.
-plugins/cache/**/.in_use/
-plugins/cache/**/.in_use/**
-plugins/cache/**/*.tmp.*
-plugins/cache/**/.orphaned_at
+# Plugin cache is machine-local, regenerable runtime state — Claude Code
+# repopulates it on plugin install. It is not config and does not belong in
+# version control: content-hashed dirs churn on every update, and it carried
+# PID lockfiles (.in_use/<pid>), temp shards and orphan markers. Must stay
+# BELOW the `!plugins/**` force-include above, or that rule wins.
+plugins/cache/
+plugins/.last_inuse_sweep
 
 # --- router + agent config ---
 !SKILL_ROUTER.md

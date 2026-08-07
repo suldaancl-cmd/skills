@@ -14,30 +14,30 @@
     "agent-sdk-dev@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\agent-sdk-dev\\ef515edd2894",
-        "version": "ef515edd2894",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\agent-sdk-dev\\064712bfe288",
+        "version": "064712bfe288",
         "installedAt": "2026-03-13T07:45:41.446Z",
-        "lastUpdated": "2026-08-05T23:22:55.839Z",
-        "gitCommitSha": "ef515edd289469549fffafa23216f38a755feddd"
+        "lastUpdated": "2026-08-07T17:58:36.748Z",
+        "gitCommitSha": "064712bfe288bce72aaca1a6a0a83b3b260ae58f"
       }
     ],
     "asana@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\asana\\ef515edd2894",
-        "version": "ef515edd2894",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\asana\\064712bfe288",
+        "version": "064712bfe288",
         "installedAt": "2026-03-13T07:45:43.321Z",
-        "lastUpdated": "2026-08-05T23:22:55.867Z",
-        "gitCommitSha": "ef515edd289469549fffafa23216f38a755feddd"
+        "lastUpdated": "2026-08-07T17:58:36.517Z",
+        "gitCommitSha": "064712bfe288bce72aaca1a6a0a83b3b260ae58f"
       }
     ],
     "figma@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\figma\\2.2.90",
-        "version": "2.2.90",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\figma\\2.2.91",
+        "version": "2.2.91",
         "installedAt": "2026-05-14T05:52:50.831Z",
-        "lastUpdated": "2026-08-05T16:19:26.033Z",
+        "lastUpdated": "2026-08-07T17:59:15.896Z",
         "gitCommitSha": "fabc1ca81d839602ba7c1ca0f445a64246b3870e"
       }
     ],

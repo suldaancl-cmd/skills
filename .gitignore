@@ -39,6 +39,10 @@ _projects/web-mirrors/
 # BELOW the `!plugins/**` force-include above, or that rule wins.
 plugins/cache/
 plugins/.last_inuse_sweep
+plugins/installed_plugins.json
+plugins/known_marketplaces.json
+plugins/marketplaces/*/.claude-plugin/marketplace.json
+plugins/marketplaces/*/.gcs-sha
 
 # --- router + agent config ---
 !SKILL_ROUTER.md

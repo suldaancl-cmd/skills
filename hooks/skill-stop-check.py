@@ -92,7 +92,12 @@ def main() -> None:
                 )
             # Skill-launch echoes come back as user-role messages; they are
             # not the human prompt — keep walking back to the real one.
-            if last_user_text.lstrip().startswith("Base directory for this skill:"):
+            # Both forms seen in the wild: the first load prints the skill's base
+            # directory, a repeat load prints "is already loaded above". Missing the
+            # second form made the hook block 9 turns on its own re-injection message.
+            _head = last_user_text.lstrip()
+            if (_head.startswith("Base directory for this skill:")
+                    or (_head.startswith("Skill /") and "already loaded" in _head[:120])):
                 last_user_text = ""
                 continue
             break
@@ -108,7 +113,8 @@ def main() -> None:
     # Background-task notifications and hook feedback are harness events, not
     # user prompts — a brief status reply to them needs no skill invocation.
     head = last_user_text.lstrip()
-    if head.startswith(("[SYSTEM NOTIFICATION", "<task-notification>", "Stop hook feedback:")):
+    if head.startswith(("[SYSTEM NOTIFICATION", "<task-notification>", "Stop hook feedback:",
+                        "<ci-monitor-event>", "<system-reminder>")):
         sys.exit(0)
 
     used_skill = False

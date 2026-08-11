@@ -1,0 +1,1954 @@
+{
+ "parked": {
+  "ad-creative-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of ad-creative"
+  },
+  "antd-changelog-collect": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-commit-msg": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-affix": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-alert": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-anchor": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-app": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-auto-complete": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-avatar": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-back-top": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-badge": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-border-beam": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-breadcrumb": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-button": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-calendar": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-card": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-carousel": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-cascader": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-checkbox": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-col": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-collapse": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-color-picker": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-config-provider": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-date-picker": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-descriptions": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-divider": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-drawer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-dropdown": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-empty": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-flex": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-float-button": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-form": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-grid": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-icon": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-image": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-input": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-input-number": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-layout": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-list": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-locale": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-lookup": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-masonry": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-mentions": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-menu": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-message": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-modal": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-notification": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-pagination": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-popconfirm": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-popover": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-progress": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-qr-code": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-qrcode": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-radio": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-rate": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-result": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-row": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-segmented": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-select": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-skeleton": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-slider": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-space": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-spin": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-splitter": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-statistic": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-steps": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-switch": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-table": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-tabs": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-tag": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-theme": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-time-picker": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-timeline": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-tooltip": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-tour": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-transfer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-tree": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-tree-select": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-typography": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-upload": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-component-watermark": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-create-pr": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-issue-reply": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-migration": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-test-review": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-theme-customization": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "antd-version-release": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family antd-*"
+  },
+  "brainstorming-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of brainstorming"
+  },
+  "canvas-design-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of canvas-design"
+  },
+  "copywriting-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of copywriting"
+  },
+  "design-brief-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of design-brief"
+  },
+  "design-md-airbnb": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-airtable": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-apple": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-binance": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-bmw": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-bmw-m": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-bugatti": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-cal": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-claude": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-clay": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-clickhouse": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-cohere": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-coinbase": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-composio": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-cursor": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-elevenlabs": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-expo": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-ferrari": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-figma": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-framer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-hashicorp": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-ibm": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-intercom": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-kraken": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-lamborghini": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-linear-app": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-lovable": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-mastercard": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-meta": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-minimax": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-mintlify": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-miro": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-mistral-ai": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-mongodb": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-nike": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-notion": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-nvidia": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-ollama": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-opencode-ai": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-pinterest": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-playstation": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-posthog": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-raycast": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-renault": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-replicate": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-resend": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-revolut": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-runwayml": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-sanity": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-sentry": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-shopify": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-slack": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-spacex": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-spotify": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-starbucks": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-stripe": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-supabase": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-superhuman": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-tesla": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-theverge": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-together-ai": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-uber": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-vercel": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-vodafone": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-voltagent": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-warp": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-webflow": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-wired": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-wise": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-x-ai": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "design-md-zapier": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family design-md-*"
+  },
+  "figma-implement-design-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of figma-implement-design"
+  },
+  "frontend-design-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of frontend-design"
+  },
+  "gsap-core-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of gsap-core"
+  },
+  "gsap-react-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of gsap-react"
+  },
+  "gsap-scrolltrigger-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of gsap-scrolltrigger"
+  },
+  "gsap-timeline-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of gsap-timeline"
+  },
+  "jdp-abstract-document": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-abstract-factory": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-active-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-actor-model": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-acyclic-visitor": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-adapter": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-ambassador": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-anti-corruption-layer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-arrange-act-assert": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-async-method-invocation": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-backpressure": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-balking": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-bloc": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-bridge": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-builder": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-business-delegate": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-bytecode": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-caching": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-callback": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-chain-of-responsibility": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-circuit-breaker": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-clean-architecture": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-client-session": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-collecting-parameter": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-collection-pipeline": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-combinator": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-command": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-command-query-responsibility-segregation": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-commander": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-component": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-composite": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-composite-entity": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-composite-view": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-context-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-converter": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-curiously-recurring-template-pattern": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-currying": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-dao-factory": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-data-access-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-data-bus": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-data-locality": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-data-mapper": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-data-transfer-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-decorator": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-delegation": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-dependency-injection": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-dirty-flag": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-domain-model": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-double-buffer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-double-checked-locking": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-double-dispatch": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-dynamic-proxy": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-event-aggregator": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-event-based-asynchronous": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-event-driven-architecture": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-event-queue": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-event-sourcing": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-execute-around": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-extension-objects": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-facade": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-factory": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-factory-kit": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-factory-method": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-fanout-fanin": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-feature-toggle": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-filterer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-fluent-interface": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-flux": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-flyweight": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-front-controller": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-function-composition": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-game-loop": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-gateway": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-guarded-suspension": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-half-sync-half-async": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-health-check": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-hexagonal-architecture": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-identity-map": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-intercepting-filter": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-interpreter": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-iterator": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-layered-architecture": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-lazy-loading": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-leader-election": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-leader-followers": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-lockable-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-map-reduce": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-marker-interface": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-master-worker": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-mediator": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-memento": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-metadata-mapping": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-microservices-aggregrator": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-microservices-api-gateway": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-microservices-client-side-ui-composition": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-microservices-distributed-tracing": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-microservices-idempotent-consumer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-microservices-log-aggregation": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-microservices-self-registration": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-model-view-controller": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-model-view-intent": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-model-view-presenter": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-model-view-viewmodel": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-monad": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-money": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-monitor": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-monolithic-architecture": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-monostate": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-multiton": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-mute-idiom": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-naked-objects": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-notification": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-null-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-object-mother": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-object-pool": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-observer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-optimistic-offline-lock": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-page-controller": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-page-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-parameter-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-partial-response": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-pipeline": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-poison-pill": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-presentation-model": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-private-class-data": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-producer-consumer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-promise": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-property": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-prototype": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-proxy": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-publish-subscribe": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-queue-based-load-leveling": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-rate-limiting-pattern": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-reactor": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-registry": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-repository": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-resource-acquisition-is-initialization": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-retry": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-role-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-saga": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-separated-interface": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-serialized-entity": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-serialized-lob": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-servant": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-server-session": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-service-layer": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-service-locator": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-service-stub": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-service-to-worker": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-session-facade": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-sharding": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-single-table-inheritance": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-singleton": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-spatial-partition": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-special-case": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-specification": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-state": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-step-builder": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-strangler": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-strategy": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-subclass-sandbox": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-table-inheritance": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-table-module": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-template-method": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-templateview": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-thread-pool-executor": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-throttling": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-tolerant-reader": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-trampoline": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-transaction-script": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-twin": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-type-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-unit-of-work": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-update-method": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-value-object": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-version-number": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-view-helper": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-virtual-proxy": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "jdp-visitor": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "bulk family jdp-*"
+  },
+  "marketing-psychology-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of marketing-psychology"
+  },
+  "od-8-bit-orbit-video-template": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of 8-bit-orbit-video-template"
+  },
+  "od-after-hours-editorial-template": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of after-hours-editorial-template"
+  },
+  "od-agent-browser": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of agent-browser"
+  },
+  "od-article-magazine": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of article-magazine"
+  },
+  "od-card-twitter": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of card-twitter"
+  },
+  "od-card-xiaohongshu": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of card-xiaohongshu"
+  },
+  "od-data-report": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of data-report"
+  },
+  "od-deck-guizang-editorial": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of deck-guizang-editorial"
+  },
+  "od-deck-open-slide-canvas": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of deck-open-slide-canvas"
+  },
+  "od-deck-swiss-international": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of deck-swiss-international"
+  },
+  "od-design-brief": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of design-brief"
+  },
+  "od-digits-fintech-swiss-template": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of digits-fintech-swiss-template"
+  },
+  "od-doc-kami-parchment": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of doc-kami-parchment"
+  },
+  "od-editorial-burgundy-principles-template": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of editorial-burgundy-principles-template"
+  },
+  "od-faq-page": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of faq-page"
+  },
+  "od-field-notes-editorial-template": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of field-notes-editorial-template"
+  },
+  "od-frame-data-chart-nyt": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of frame-data-chart-nyt"
+  },
+  "od-frame-flowchart-sticky": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of frame-flowchart-sticky"
+  },
+  "od-frame-glitch-title": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of frame-glitch-title"
+  },
+  "od-frame-light-leak-cinema": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of frame-light-leak-cinema"
+  },
+  "od-frame-liquid-bg-hero": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of frame-liquid-bg-hero"
+  },
+  "od-frame-logo-outro": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of frame-logo-outro"
+  },
+  "od-frame-macos-notification": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of frame-macos-notification"
+  },
+  "od-hatch-pet": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of hatch-pet"
+  },
+  "od-html-ppt-retro-quarterly-review": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of html-ppt-retro-quarterly-review"
+  },
+  "od-login-flow": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of login-flow"
+  },
+  "od-mockup-device-3d": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of mockup-device-3d"
+  },
+  "od-poster-hero": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of poster-hero"
+  },
+  "od-ppt-keynote": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of ppt-keynote"
+  },
+  "od-pptx-html-fidelity-audit": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of pptx-html-fidelity-audit"
+  },
+  "od-release-notes-one-pager": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of release-notes-one-pager"
+  },
+  "od-resume-modern": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of resume-modern"
+  },
+  "od-social-reddit-card": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of social-reddit-card"
+  },
+  "od-social-spotify-card": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of social-spotify-card"
+  },
+  "od-social-x-post-card": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of social-x-post-card"
+  },
+  "od-swiss-creative-mode-template": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of swiss-creative-mode-template"
+  },
+  "od-swiss-user-research-video-template": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of swiss-user-research-video-template"
+  },
+  "od-vfx-text-cursor": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of vfx-text-cursor"
+  },
+  "od-video-hyperframes": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of video-hyperframes"
+  },
+  "od-weread-year-in-review-video-template": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of weread-year-in-review-video-template"
+  },
+  "slides-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of slides"
+  },
+  "ui-ux-pro-max-od": {
+   "from": "skills/",
+   "parked_at": "2026-08-11T08:42:14",
+   "reason": "duplicate of ui-ux-pro-max"
+  }
+ }
+}

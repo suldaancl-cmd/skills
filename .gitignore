@@ -9,6 +9,10 @@ _projects/web-mirrors/
 # --- skill library ---
 !skills/
 !skills/**
+# Parked skills stay in the repo at their new path — moving a skill out of the
+# listing must never remove it from the backup that git provides.
+!_skills-coldstore/
+!_skills-coldstore/**
 !skills-extra/
 !skills-extra/**
 !skills-adal/
@@ -35,6 +39,10 @@ _projects/web-mirrors/
 # BELOW the `!plugins/**` force-include above, or that rule wins.
 plugins/cache/
 plugins/.last_inuse_sweep
+plugins/installed_plugins.json
+plugins/known_marketplaces.json
+plugins/marketplaces/*/.claude-plugin/marketplace.json
+plugins/marketplaces/*/.gcs-sha
 
 # --- router + agent config ---
 !SKILL_ROUTER.md

@@ -1,4 +1,7 @@
 {
+  "env": {
+    "MCP_TIMEOUT": "60000"
+  },
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
@@ -55,10 +58,7 @@
       "C:\\Users\\user\\calaf\\calaf-app"
     ]
   },
-  "model": "opus[1m]",
-  "env": {
-    "MCP_TIMEOUT": "60000"
-  },
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -104,6 +104,11 @@
           {
             "type": "command",
             "command": "python C:/Users/user/.claude/hooks/skill-quality-gate.py",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/user/.claude/scripts/skill_census.py --sync-docs --quiet",
             "timeout": 30
           },
           {
@@ -155,7 +160,8 @@
     "ai-plugins@claude-plugins-official": true,
     "vercel@claude-plugins-official": true,
     "ponytail@ponytail": true,
-    "supabase@supabase-community-supabase-plugin": true
+    "supabase@supabase-community-supabase-plugin": true,
+    "context7@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "ponytail": {
@@ -165,6 +171,7 @@
       }
     }
   },
+  "effortLevel": "xhigh",
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "autoMemoryEnabled": true,
@@ -174,6 +181,5 @@
   "switchModelsOnFlag": true,
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
-  "effortLevel": "xhigh"
+  "skipAutoPermissionPrompt": true
 }

@@ -247,7 +247,17 @@
         "async storage",
         "mmkv",
         "app navigation",
-        "app state"
+        "app state",
+        "app subscription",
+        "subscription in my app",
+        "stripe in my app",
+        "stripe in app",
+        "in-app purchase",
+        "in app purchase",
+        "iap",
+        "revenuecat",
+        "storekit",
+        "play billing"
       ],
       "skills": [
         "mobile-app",
@@ -329,10 +339,14 @@
             "accessibility",
             "a11y",
             "rtl",
-            "arabic"
+            "arabic",
+            "hig",
+            "liquid glass",
+            "ios design",
+            "visionos"
           ],
           "skills": [
-            "apple-hig",
+            "apple-hig-expert",
             "ui-ux-pro-max",
             "onboarding-design",
             "navigation-patterns",
@@ -458,12 +472,21 @@
             "retention",
             "ads",
             "monetiz",
-            "revenue"
+            "revenue",
+            "in-app purchase",
+            "iap",
+            "revenuecat",
+            "storekit",
+            "play billing",
+            "restore purchase",
+            "premium unlock",
+            "subscription in my app"
           ],
           "skills": [
             "aso-audit",
             "apple-search-ads",
             "paywall-strategy-planner",
+            "expo-iap",
             "app-growth-monetization",
             "churn-prevention"
           ]
@@ -612,6 +635,7 @@
         "auth-implementation"
       ],
       "never": [
+        "stripe-sdk for digital goods sold INSIDE an iOS/Android app — Apple 3.1.1 and Play Billing require in-app purchase; that is a rejection, not a preference. Hand off to `expo-iap`. Stripe stays correct for web checkout and for physical goods/real-world services",
         "stripe-sdk BEFORE auth-implementation — hard order, auth ships first",
         "saas-scaffolder on an existing codebase — it scaffolds greenfield only",
         "never scaffold or `npm install` a project onto D: — the drive (ST1000LM049, 19,168 reallocated sectors) silently drops files mid-extract; build on C: under `_projects/`"
@@ -1098,22 +1122,31 @@
         "requirements",
         "phased",
         "big feature",
-        "from scratch"
+        "from scratch",
+        "project plan",
+        "context files",
+        "set up the project",
+        "scaffold the project",
+        "new project",
+        "start a build"
       ],
       "skills": [
         "brainstorming",
         "ultraplan",
+        "project-context",
         "writing-plans",
         "phased-plan",
         "senior-architect"
       ],
       "playbooks": [
-        "app-building-kit/README.md"
+        "app-building-kit/README.md",
+        "reference_jsmastery_agentic_workflow.md"
       ],
-      "rule": "Brainstorm before plan, plan before code. Every phase ends with a verify-checkpoint. Lock scope with Karim before building — don't infer full redesigns.",
+      "rule": "Brainstorm before plan, plan before code. The plan is not done until it is written into the project's nine context files (`project-context`) — a plan that lives only in chat is lost by the next session. Every phase ends with a verify-checkpoint. Lock scope with Karim before building — don't infer full redesigns.",
       "lead": [
         "brainstorming",
-        "ultraplan"
+        "ultraplan",
+        "project-context"
       ],
       "never": [
         "implementation skills (focused-fix, frontend-design, saas-scaffolder) — the plan phase produces a plan, not code",

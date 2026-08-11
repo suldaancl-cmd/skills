@@ -14,21 +14,21 @@
     "agent-sdk-dev@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\agent-sdk-dev\\064712bfe288",
-        "version": "064712bfe288",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\agent-sdk-dev\\6cc3c6e3854d",
+        "version": "6cc3c6e3854d",
         "installedAt": "2026-03-13T07:45:41.446Z",
-        "lastUpdated": "2026-08-07T17:58:36.748Z",
-        "gitCommitSha": "064712bfe288bce72aaca1a6a0a83b3b260ae58f"
+        "lastUpdated": "2026-08-11T01:01:23.024Z",
+        "gitCommitSha": "6cc3c6e3854d7260cae56ebe780cbf7b7e3f583a"
       }
     ],
     "asana@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\asana\\064712bfe288",
-        "version": "064712bfe288",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\asana\\6cc3c6e3854d",
+        "version": "6cc3c6e3854d",
         "installedAt": "2026-03-13T07:45:43.321Z",
-        "lastUpdated": "2026-08-07T17:58:36.517Z",
-        "gitCommitSha": "064712bfe288bce72aaca1a6a0a83b3b260ae58f"
+        "lastUpdated": "2026-08-11T01:01:22.991Z",
+        "gitCommitSha": "6cc3c6e3854d7260cae56ebe780cbf7b7e3f583a"
       }
     ],
     "figma@claude-plugins-official": [
@@ -79,6 +79,16 @@
         "installedAt": "2026-07-25T12:37:57.394Z",
         "lastUpdated": "2026-07-31T19:02:12.138Z",
         "gitCommitSha": "36c3b08575f34ca7360806c6274661231aa70fd4"
+      }
+    ],
+    "context7@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\context7\\6cc3c6e3854d",
+        "version": "6cc3c6e3854d",
+        "installedAt": "2026-08-11T06:08:57.380Z",
+        "lastUpdated": "2026-08-11T06:08:57.380Z",
+        "gitCommitSha": "6cc3c6e3854d7260cae56ebe780cbf7b7e3f583a"
       }
     ]
   }

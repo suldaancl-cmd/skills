@@ -9,6 +9,10 @@ _projects/web-mirrors/
 # --- skill library ---
 !skills/
 !skills/**
+# Parked skills stay in the repo at their new path — moving a skill out of the
+# listing must never remove it from the backup that git provides.
+!_skills-coldstore/
+!_skills-coldstore/**
 !skills-extra/
 !skills-extra/**
 !skills-adal/

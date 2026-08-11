@@ -47,12 +47,21 @@ export default function Hero() {
 That's it. The scene loads, lights, cameras, materials all in one URL.
 
 ### Next.js App Router
+Two entries, two rules — mixing them renders NOTHING (verified 2026-08-11):
+
 ```jsx
-'use client';
-import Spline from '@splinetool/react-spline/next';     // ← Next-specific entry
+// Server Component (no 'use client') — SSR + auto blur placeholder, but NO event props
+import Spline from '@splinetool/react-spline/next';
+
+// Client Component ('use client') — needed for onLoad/onSpline* events
+import Spline from '@splinetool/react-spline';
 ```
 
-The Next variant lazy-loads + handles SSR correctly.
+**Gotcha:** the `/next` entry is an async Server Component. Putting it inside a
+`'use client'` file fails silently — empty scene, console says
+"is an async Client Component. Only Server Components can be async". If you need
+`onLoad` (e.g. reduced-motion `app.stop()`), use the classic entry in a client
+component and accept losing the SSR blur placeholder.
 
 ### Vanilla JS
 ```bash

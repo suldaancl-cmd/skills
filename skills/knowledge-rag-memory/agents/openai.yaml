@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge, RAG, and Memory"
+  short_description: "Build grounded knowledge and agent memory"
+  default_prompt: "Use $knowledge-rag-memory to design or audit this RAG knowledge and memory system."

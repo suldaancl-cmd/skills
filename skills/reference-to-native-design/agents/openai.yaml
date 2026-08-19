@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reference to Native Design"
+  short_description: "Turn screenshots or Figma into native UI"
+  default_prompt: "Use $reference-to-native-design to reconstruct these references as editable design and production React Native UI."

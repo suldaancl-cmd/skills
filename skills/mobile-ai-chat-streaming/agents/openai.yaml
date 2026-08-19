@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile AI Chat Streaming"
+  short_description: "Build resilient streaming AI chat"
+  default_prompt: "Use $mobile-ai-chat-streaming to build or review this Expo AI chat experience."

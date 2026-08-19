@@ -1,0 +1,59 @@
+schema_version: 1
+project:
+  name: ""
+  owner: ""
+  task_scope: "full-pipeline" # audit | figma | motion | code | qa | full-pipeline
+
+references:
+  primary: []
+  secondary_style: []
+  content_sources: []
+  behavior_sources: []
+  excluded_regions: []
+  conflicts: []
+
+rights_and_safety:
+  assets_authorized: null
+  brand_assets_verified: false
+  sensitive_content: []
+
+target:
+  platforms: [] # expo-react-native | web | ios | android
+  viewport:
+    width: null
+    height: null
+  responsive_range: []
+  devices: []
+  locales: [ar, en]
+  default_locale: ar
+  supports_rtl: true
+  accessibility_level: "production"
+
+figma:
+  file_url: ""
+  target_page: ""
+  write_mode: "duplicate-page" # duplicate-file | duplicate-page | new-section | in-place
+  existing_library: ""
+
+code:
+  repository: ""
+  package_path: ""
+  framework: ""
+  styling: "existing-project-convention"
+  navigation: ""
+  localization: ""
+
+golden_screen:
+  name: ""
+  reason: ""
+  approval_required_before_batch: true
+
+fidelity:
+  exact: []
+  may_adapt: []
+  image_difference_threshold_percent: null
+  blocking_criteria: []
+
+assumptions: []
+open_questions: []
+

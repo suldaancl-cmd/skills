@@ -1,0 +1,4 @@
+interface:
+  display_name: "Durable Agent Worker"
+  short_description: "Build resumable and safe agent workers"
+  default_prompt: "Use $durable-agent-worker to design this long-running AI workflow with durable jobs and approvals."

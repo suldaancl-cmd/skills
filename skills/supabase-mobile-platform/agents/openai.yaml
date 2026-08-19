@@ -1,0 +1,4 @@
+interface:
+  display_name: "Supabase Mobile Platform"
+  short_description: "Secure Supabase for mobile and agents"
+  default_prompt: "Use $supabase-mobile-platform to design or audit this app's Supabase platform."

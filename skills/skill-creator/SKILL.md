@@ -7,6 +7,54 @@ description: Create new skills, modify and improve existing skills, and measure 
 
 A skill for creating new skills and iteratively improving them.
 
+## Step 0 — load the second brain before you write a word (Karim's machine only)
+
+Karim's vault holds ~3600 notes: 23 standing rules, 100+ playbooks and references, project
+histories, past chats. A skill written without them is generic advice wearing his file paths —
+it will contradict rules he has already stated and duplicate skills already on disk. So the
+first action of this skill, every time, before the intent interview:
+
+```bash
+python ~/.claude/scripts/skill_brief.py "<what the skill should do, in plain words>"
+```
+
+It prints four sections. Work through them in order:
+
+1. **Standing rules (all 23).** Read every one — they are short. These bind the skill you are
+   about to write, not just its topic. Then ask the sharper question: *which of these could this
+   particular skill violate?* A content skill can violate Arabic-first; a web skill can violate
+   deck-first and the default-fonts ban; a research skill can violate the Verification Lock; any
+   skill that edits files can violate MERGE-never-replace. Write those specific rules into the
+   new skill's body as instructions it must follow — a skill that silently relies on Karim's
+   global `CLAUDE.md` breaks the moment it runs in a subagent, which does not inherit it.
+2. **Topic knowledge.** Read the top-scoring notes before drafting. The brain outranks your
+   general knowledge — when a note contradicts what you were about to write, the note wins, and
+   you tell Karim that it did. The whole point of a skill is to make hard-won knowledge
+   repeatable; if the vault already learned something, the skill should encode it rather than
+   rediscover it. Cite the note path in the skill body so the next reader can trace the claim.
+3. **Existing skills.** The brief searches live skills, `~/.agents/skills/`, `skills-archive/`
+   and `_skills-coldstore/`. If something close already exists, the honest default is to
+   **improve or extend it**, not add a sibling — his standing rule is to fix weak skills rather
+   than work around them, and the library is already large enough that duplicates cost more than
+   they add. Say plainly which existing skill you considered and why a new one is or is not
+   warranted. Restoring beats reinstalling: `python ~/.claude/scripts/skill_park.py --restore <name>`.
+4. **Router domain.** Note the domain now; you will wire the finished skill into it in Step 8.
+
+Report what you found in two or three lines before moving on — which rules apply, which notes you
+read, which existing skill was closest. That summary is also the evidence that Step 0 actually
+happened, which matters because everything downstream is built on it.
+
+**Step 8 — after the skill is finished and Karim is happy:** add it to its domain's `skills`
+chain in `~/.claude/skill-routes.json` so the router surfaces it automatically on every future
+matching prompt. A skill nobody routes to is a skill nobody uses. If no domain fits, say so and
+propose one rather than silently skipping this. Then write a short vault note only if the skill
+encodes genuinely new knowledge — MERGE into an existing note when one covers the ground.
+
+Skip Step 0 only when the request is a pure mechanical edit to an existing skill (fixing a typo,
+renaming a field). Anything that changes what a skill *does* gets the brief.
+
+---
+
 At a high level, the process of creating a skill goes like this:
 
 - Decide what you want the skill to do and roughly how it should do it

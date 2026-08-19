@@ -1,0 +1,4 @@
+interface:
+  display_name: "Expo Production Architecture"
+  short_description: "Build production-ready Expo architecture"
+  default_prompt: "Use $expo-production-architecture to design or review this Expo app for production."

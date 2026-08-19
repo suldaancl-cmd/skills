@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trigger.dev Workflows"
+  short_description: "Build reliable Trigger.dev background tasks"
+  default_prompt: "Use $trigger-dev-workflows to design or audit these long-running Trigger.dev tasks."

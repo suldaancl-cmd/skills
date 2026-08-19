@@ -1,0 +1,4 @@
+interface:
+  display_name: "Durable Queue Architecture"
+  short_description: "Design queues, retries, leases, and backpressure"
+  default_prompt: "Use $durable-queue-architecture to design or audit this queue and worker transport."

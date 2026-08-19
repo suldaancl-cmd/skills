@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agentic App Orchestrator"
+  short_description: "Coordinate an agentic app from idea to release"
+  default_prompt: "Use $agentic-app-orchestrator to plan and coordinate this agentic mobile app from its current stage."

@@ -23,7 +23,7 @@
 ## Skill usage — be proactive
 
 <!-- SKILL-CENSUS:START -->
-**Skill library (generated 2026-08-11 by `scripts/skill_census.py` — do not hand-edit these numbers):** **944** skills listed to Claude · **1654** reachable via `skill_find.py` · **390** parked in `_skills-coldstore/` (restorable) · **15** dirs without a `SKILL.md`.
+**Skill library (generated 2026-08-19 by `scripts/skill_census.py` — do not hand-edit these numbers):** **986** skills listed to Claude · **1696** reachable via `skill_find.py` · **390** parked in `_skills-coldstore/` (restorable) · **15** dirs without a `SKILL.md`.
 <!-- SKILL-CENSUS:END -->
 
 Plus plugin-namespaced skills and standalone tools. They want every skill to pull its weight.
@@ -152,6 +152,19 @@ When the user asks for design / web / landing / UI / animation work, **default t
 - `figma-implement-design` is inert until the Figma MCP is connected (the Figma Claude plugin bundles both).
 - For future trims prefer `skillOverrides: name-only`/`off` in settings over archiving folders; run `/doctor` to check skill-listing budget overflow.
 
+## Three bundles installed 2026-08-16 — security · mobile-agent · visual-to-production
+
+33 skills from three zips Karim supplied (`~/Downloads/{powerful-security-skills,mobile-agent-skills-suite,visual-to-production-complete-v1.0.0}.zip`). Security-audited clean before install: zero network egress, zero credential access, no injection across 172 markdown files; the only executables are two `execFileSync` build scripts, defensive `install.sh`/`install.ps1`, and a pure-Pillow `visual_diff.py`. Sandbox + audit trail: `~/.claude/_sandbox/zips-2026-08-16/`. Full note: vault `memory/reference_install_2026-08-16_three_bundles.md`.
+
+- **Security (16)** — `security-orchestrator` (start here; dispatches the rest and keeps one risk register) → `security-architect`, `secure-code-reviewer`, `api-security-guardian`, `supabase-security-auditor`, `secrets-iam-guardian`, `payment-fraud-defense`, `ai-agent-security`, `infrastructure-container-security`, `mobile-security`, `web-security`, `supply-chain-security`, `security-testing`, `fraud-anomaly-sentinel`, `incident-response-forensics` → `security-release-gate` (issues PASS / CONDITIONAL PASS / BLOCK). Shipped as `00-`…`15-` prefixed dirs; **de-numbered on install** and all 16 descriptions rewritten — the originals were 50–90 chars with no trigger keywords, four to six times thinner than the other bundles, so Claude would never have selected them. Bodies untouched. Each is 26 lines with 12 lines of shared boilerplate, so the unique content is ~60 words of Workflow apiece: these are routing contracts, not deep references.
+- **Mobile agent suite (19 — updated to v2 on 2026-08-17)** — the original 12: `agentic-app-orchestrator`, `product-first-app-blueprint`, `expo-production-architecture`, `supabase-mobile-platform`, `mobile-ai-chat-streaming`, `durable-agent-worker`, `premium-mobile-experience`, `mobile-quality-observability`, `app-store-release-operations`, `reference-to-native-design`, `ai-provider-security`, `agentic-coding-project-setup`. Expo/RN-native, so unlike `vibe-aso` these **do** apply to ATHAR. **v2 added 7 agent-infrastructure skills** — `langchain-agent-tooling`, `langgraph-agent-orchestration`, `trigger-dev-workflows`, `durable-queue-architecture`, `knowledge-rag-memory`, `neon-postgres-platform`, `tanstack-query-mobile` — and additively updated 4 of the original 12 with routing rows pointing at them (`agentic-app-orchestrator`, `durable-agent-worker`, `expo-production-architecture`, `supabase-mobile-platform`); the other 8 were byte-identical. v1 copies of the 4 are in `_backups/mobile-suite-v1-20260817-152845/`. The suite carries its own `AGENTS.md` maintenance contract: keep `SKILL.md` concise with procedures in `references/`, Codex-only metadata in `agents/openai.yaml`, and **update the orchestrator's routing table whenever a skill is added or renamed**.
+  - The 7 new ones are **not** routed into `mobile-app` — that chain was already 31 skills. Only `tanstack-query-mobile` is genuinely mobile (it also joins the `mobile-app -> build` subroute). The agent-infra five went to `agents-automation` (which now leads `dispatching-parallel-agents` > `langgraph-agent-orchestration` > `mcp-builder`), and `neon-postgres-platform` to `saas-fullstack`. Their own guidance is explicit that Neon is **not** an automatic Supabase replacement, and that a job must have exactly one execution owner — never the same job running in both Trigger.dev and a Contabo worker.
+- **Visual-to-production (5)** — `visual-to-production` (umbrella) → `reference-image-to-figma` → `figma-to-production-code` → `figma-motion-to-runtime` → `visual-fidelity-qa`. Installed from `source/` only; `dist/` held five duplicate repackagings for other clients. Ships `visual_diff.py` (Pillow) for real pixel-diff evidence — overlay, heatmap, MAE/RMSE JSON — which is the piece the old image-to-code chain never had.
+
+**Router wiring:** all 33 added to `skill-routes.json` (`security` +16, `mobile-app` +13, `visual-input` +5) with matching keywords. Two lead changes worth knowing: `security-orchestrator` now leads the `security` domain ahead of `senior-security`, and **`visual-to-production` now leads `visual-input` ahead of `image-to-code-skill`** because it covers the full screenshot → editable Figma → code → fidelity-QA loop rather than jumping straight to code. Flip either back in `skill-routes.json` if that ordering proves wrong.
+
+**Gotcha for future installs:** a skill description containing `: ` must be a quoted YAML scalar. Unquoted, the frontmatter fails to parse and Claude silently falls back to the `#` H1 as the description — the skill still "loads" but becomes unselectable. Fifteen of these sixteen hit it. Validate with `yaml.safe_load` on the frontmatter, not a length check.
+
 ## Karim standing rules (added 2026-07-18)
 
 Four rules Karim stated on 2026-07-18. They EXTEND existing rules (never replace); full note with verbatim source: vault `memory/feedback_standing_rules_2026-07-18.md`.
@@ -189,6 +202,24 @@ unless Karim's own message contains an opt-in word — *deep research · workflo
 swarm · orchestrate · fleet · use agents · parallel agents · بحث عميق · وكلاء*. When it fires,
 do not argue for the fleet: do the work in-session instead. Single cheap delegations are still
 gated — that is intentional, he wants to see them.
+
+**3. Context window stays at 1M — compaction is a judgment call, not a threshold.** Karim set the
+window deliberately (`claude-fable-5[1m]`); do NOT add `autoCompactWindow` or any hook that compacts
+on a token count — he rejected that on 2026-08-19. Claude Code's own auto-compact still catches the
+hard ceiling. The job in between is to notice **focus loss** and say so.
+
+**Claude cannot run `/compact` on itself** — slash commands are user-side, and no hook fires on a
+token count. So naming the moment IS the deliverable: stop, say plainly "context is drifting, run
+`/compact`", and wait. Never silently push through a session you have lost the thread of.
+
+Call it when you notice any of these, not on a number:
+- re-reading a file you already read this session, or re-deriving a fact already established
+- contradicting something you confirmed earlier, or losing track of what was already verified
+- the task has changed topic since the session started, and the early context no longer informs it
+- you are guessing at state (which files changed, what the user chose) instead of knowing it
+- the `% until auto-compact` footer is low AND the current task still has real work left
+
+One line is enough — no essay about context management. Say what drifted, then hand him the command.
 
 ## Chat intake (added 2026-07-24)
 

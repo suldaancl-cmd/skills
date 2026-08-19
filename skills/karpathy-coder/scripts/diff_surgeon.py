@@ -51,7 +51,8 @@ def get_diff(args):
     diff_range = args.diff or "--staged"
     cmd = ["git", "diff", diff_range] if diff_range != "--staged" else ["git", "diff", "--staged"]
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30,
+                                encoding="utf-8", errors="replace")
         return result.stdout
     except (subprocess.TimeoutExpired, FileNotFoundError) as e:
         print(f"[error] git diff failed: {e}", file=sys.stderr)
@@ -139,6 +140,9 @@ def analyze_file_diff(file_data):
 
 
 def main():
+    # Diffs carry arrows, em-dashes and Arabic; Windows stdout defaults to cp1252 and dies on them.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     p = argparse.ArgumentParser(
         description="Detect diff noise — changes that don't trace to the stated goal (Karpathy Principle #3).",
         epilog="Run before committing to catch drive-by refactors and style drift.",

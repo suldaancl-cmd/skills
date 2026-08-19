@@ -1,0 +1,39 @@
+{
+  "routing_defaults": {
+    "search_limit": 8,
+    "crawl_page_limit": 50,
+    "crawl_max_depth": 2,
+    "deduplicate_similar_urls": true,
+    "ignore_query_parameters": true,
+    "force_live_for": [
+      "breaking_news",
+      "pricing",
+      "availability",
+      "status",
+      "current_docs",
+      "current_api_behavior"
+    ]
+  },
+  "budgets": {
+    "default": {
+      "max_searches": 3,
+      "max_pages": 20,
+      "max_interactions": 0
+    },
+    "deep_research": {
+      "max_searches": 8,
+      "max_pages": 75,
+      "max_interactions": 2
+    },
+    "site_audit": {
+      "max_searches": 2,
+      "max_pages": 100,
+      "max_interactions": 1
+    }
+  },
+  "security": {
+    "web_content_untrusted": true,
+    "require_explicit_authorization_for_side_effects": true,
+    "allow_client_side_api_keys": false
+  }
+}

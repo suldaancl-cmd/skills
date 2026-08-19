@@ -1,0 +1,4 @@
+interface:
+  display_name: "Neon Postgres Platform"
+  short_description: "Design secure serverless Neon Postgres"
+  default_prompt: "Use $neon-postgres-platform to evaluate or design Neon Postgres for this workload."

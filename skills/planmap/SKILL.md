@@ -19,6 +19,16 @@ the App Store in 14 days. His framing, verbatim from the transcript: the prompt 
 AI *"never guesses anything but instead asks us everything, right, so we are on the same page."*
 Everything else here is Karim's own stack and rules.
 
+## Read this first — Karim's rules
+
+`references/karim-rules.md` is binding on every phase below. Eight rules: plan every angle ·
+create `.env.local` and hand it over · count the manual steps · state the risks before he
+commits · give choices in Arabic · plain language on first use of any term · verified tutorial
+links only · read the vault playbook first.
+
+It ends in a handover checklist. A plan that fails one of those boxes is not done, however good
+the map looks.
+
 ## The seven phases
 
 Do them in order. Phase 1 is the one that makes the difference — skipping it produces a plan
@@ -44,6 +54,9 @@ Rules of the interview:
   twenty at once. Use AskUserQuestion so he clicks instead of typing.
 - **Every question is multiple choice** with concrete options, and exactly one marked
   `(recommended)` with a half-line reason. He overrides with free text whenever he wants.
+- **Every question and option is written in Arabic as well as English** (rule 5), and any
+  technical term gets a one-sentence plain-language definition the first time it appears
+  (rule 6). A question he cannot fully read is a question he cannot answer.
 - **Keep going in batches** until no material unknown is left. Six to ten batches is normal.
   Do not shortcut to the plan because the picture feels clear — feeling clear is the bug.
 - **Two questions are mandatory** and are the ones people skip:
@@ -64,6 +77,13 @@ So the moment the stack is decided (usually batch 5), write the first cut of
 `MANUAL-SETUP.md` and hand it to Karim mid-interview. He works down it while you keep asking.
 It gets finalised with real counts in phase 5.
 
+**Write the env files in the same breath** (rule 2) — `.env.example` committed with every
+variable name and a where-to-get-it comment, `.env.local` empty and added to `.gitignore`
+*before* the first commit. Tell him the full path, how many values it needs, and which ones
+block the first deploy. Never ask him to paste a secret into the chat; the file is the channel.
+Mark every `EXPO_PUBLIC_` / `NEXT_PUBLIC_` / `VITE_` line as publicly visible on the line
+itself — a secret behind a public prefix is a leak, not a config.
+
 ## Phase 3 — write PLANMAP.md
 
 Fill every section of `templates/PLANMAP.template.md` from the interview answers. Rules:
@@ -78,6 +98,10 @@ Fill every section of `templates/PLANMAP.template.md` from the interview answers
 - **Integrations table carries the env-var name for every service.** It is the input to phase 5.
 - **Section 11 is a checkbox task list**, one line per feature. This is the file the build loop
   ticks through.
+- **Every angle from rule 1 has a row** — first launch, offline, payment failure, refund, AI
+  failure, account deletion, permissions per table, free vs paid, secret storage, vendor
+  disappearing. Undecided is written `TBD — needs decision: <the exact question>`, never
+  omitted. A plan covering the happy path only is a demo script.
 - No invented numbers. Unverified means write `unverified`.
 
 ## Phase 4 — references and diagrams
@@ -112,6 +136,16 @@ Your hands-on time:             ~N minutes (+ N days waiting on someone else)
 Split into blocking now / later / waiting-on-someone-else. Every row: what, where, which env
 var, does it block, how long.
 
+**Open the file with the risks section** (rule 4), answering four questions plainly: what can go
+wrong · what it costs monthly at zero users and at working scale · what he is locking himself
+into and the exit cost · what is irreversible. Lead with a recommendation, not a menu — he asked
+to be guided, so "I'd do X because Y" comes before the alternatives.
+
+**Attach a tutorial to every hands-on row** (rule 7) — but only links verified in this session
+or already in the vault. No verified link means write the exact search phrase and label it
+`unverified`. Check `index_video_lessons.md` first; a note he already owns beats a stranger's
+video. A fabricated URL is worse than none.
+
 Then append the **launch gate** from `references/build-loop.md` — the store-rejection list.
 Privacy policy, terms, delete-account, Apple Sign-In whenever Google Sign-In is present. Those
 are not polish; they are rejections.
@@ -142,9 +176,18 @@ Point at proof before saying done:
 - the Figma URL, or the `.mmd` fallback and the reason
 - the Google Doc link
 - the counts in `MANUAL-SETUP.md`, matching the integrations table row count
+- **the `.env.example` / `.env.local` paths, the variable count, and proof `.env.local` is
+  gitignored** (`git check-ignore .env.local` — if it prints the path, it is ignored)
+- **the eight-box handover checklist at the end of `references/karim-rules.md`**, each box
+  ticked or named as failed
 
 Anything missing gets named and labelled `unverified` or `blocked`, never skipped quietly.
 
 ## Output to Karim
 
 Bilingual: English, then Arabic RTL. Lead with the counts and the links. No phase narration.
+
+Plain language throughout (rule 6) — every technical term gets a one-sentence definition the
+first time it appears. Then, in this order: **the risks**, **what he must do with his own hands
+and roughly how long**, **the `.env.local` path and how many values it needs**, and **what to
+watch first** if there is a verified tutorial.

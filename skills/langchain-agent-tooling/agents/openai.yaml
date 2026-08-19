@@ -1,0 +1,4 @@
+interface:
+  display_name: "LangChain Agent Tooling"
+  short_description: "Build safe model-and-tool agent harnesses"
+  default_prompt: "Use $langchain-agent-tooling to design or audit this LangChain model-and-tools agent."

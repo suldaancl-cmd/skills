@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile Quality and Observability"
+  short_description: "Verify mobile quality and diagnose failures"
+  default_prompt: "Use $mobile-quality-observability to create evidence-based quality gates for this mobile app."

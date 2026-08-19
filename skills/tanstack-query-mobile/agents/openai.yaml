@@ -1,0 +1,4 @@
+interface:
+  display_name: "TanStack Query Mobile"
+  short_description: "Manage reliable mobile server-state caching"
+  default_prompt: "Use $tanstack-query-mobile to design or debug this Expo app's TanStack Query data layer."

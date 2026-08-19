@@ -102,5 +102,14 @@ Full descriptions are in `templates/README.md` — read it if you need the detai
 
 ## Standing rules that override anything here
 
+`~/.claude/skills/planmap/references/karim-rules.md` is binding here too — read it before
+filling anything. The ones that bite this skill hardest: **give choices in Arabic**, **plain
+language on first use of any technical term**, **state the risks before he commits**, and
+**verified tutorial links only** (a fabricated URL is worse than none).
+
+`02-architecture.md` names the env vars; `planmap` phase 2 owns creating the actual
+`.env.example` / `.env.local` pair. If this skill runs without planmap, create them here
+instead — never leave Karim to guess which keys the project wants or where to put them.
+
 `premium-design-laws` tokens beat any hex written into `06`. The default-fonts ban applies.
 No UI code before the deck is picked. Done means pointing at the artifact that proves it.

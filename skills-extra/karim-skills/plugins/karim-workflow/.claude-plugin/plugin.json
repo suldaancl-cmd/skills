@@ -1,0 +1,18 @@
+{
+  "name": "karim-workflow",
+  "version": "0.1.0",
+  "description": "Delivery discipline for agent-assisted builds. A gate that runs before any non-trivial code so assumptions are stated first; a nine-file project context scaffold so an agent starts a session already knowing the codebase; a Figma-first contract that refuses to write screen code without a frame and a motion spec; a licence-tracked asset pipeline so nothing ships on an unclear licence; and a delivery factory that turns an idea into shipped assets.",
+  "author": {
+    "name": "Karim"
+  },
+  "keywords": [
+    "workflow",
+    "planning",
+    "project-context",
+    "figma",
+    "design-to-code",
+    "licensing",
+    "assets",
+    "delivery"
+  ]
+}

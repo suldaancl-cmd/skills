@@ -23,7 +23,8 @@
 ## Skill usage — be proactive
 
 <!-- SKILL-CENSUS:START -->
-**Skill library (generated 2026-08-21 by `scripts/skill_census.py` — do not hand-edit these numbers):** **986** skills listed to Claude · **1696** reachable via `skill_find.py` · **390** parked in `_skills-coldstore/` (restorable) · **15** dirs without a `SKILL.md`.
+**Skill library (generated 2026-08-21 by `scripts/skill_census.py` — do not hand-edit these numbers):** **1002** skills listed to Claude · **1712** reachable via `skill_find.py` · **390** parked in `_skills-coldstore/` (restorable) · **15** dirs without a `SKILL.md`.
+**Added since the last census (9):** `agent-device`, `dogfood`, `enable-worklets-bundle-mode`, `expo-animation`, `expo-design-system`, `expo-overview`, `pulsar-haptics`, `react-native-testing`, `upgrading-react-native`
 <!-- SKILL-CENSUS:END -->
 
 Plus plugin-namespaced skills and standalone tools. They want every skill to pull its weight.

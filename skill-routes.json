@@ -94,7 +94,14 @@
         "like this reel",
         "design then build",
         "figma first",
-        "screen sequence"
+        "screen sequence",
+        "core web vitals",
+        "inp",
+        "lcp",
+        "cls",
+        "motion budget",
+        "lighthouse",
+        "jank"
       ],
       "skills": [
         "figma-first-app-pipeline",
@@ -103,7 +110,9 @@
         "frontend-design",
         "impeccable",
         "canvas-ui",
-        "antalik-ui"
+        "antalik-ui",
+        "motion-performance-budget",
+        "motion-spec-bridge"
       ],
       "playbooks": [
         "playbook_design_killer_combo.md",
@@ -314,9 +323,33 @@
         "like this reel",
         "design then build",
         "figma first",
-        "screen sequence"
+        "screen sequence",
+        "google play",
+        "play console",
+        "aab",
+        "app bundle",
+        "data safety",
+        "staged rollout",
+        "target api",
+        "closed testing",
+        "play integrity",
+        "android vitals",
+        "anr",
+        "maestro",
+        "detox",
+        "e2e test",
+        "app rejection",
+        "pre-registration",
+        "listing experiment",
+        "dogfood",
+        "qa",
+        "exploratory test",
+        "bug hunt",
+        "navigation",
+        "device automation"
       ],
       "skills": [
+        "expo-overview",
         "figma-first-app-pipeline",
         "mobile-app",
         "react-native-expert",
@@ -426,7 +459,8 @@
             "onboarding-design",
             "navigation-patterns",
             "loading-states",
-            "rtl-arabic-i18n"
+            "rtl-arabic-i18n",
+            "expo-design-system"
           ]
         },
         {
@@ -447,7 +481,11 @@
             "cache",
             "tanstack",
             "react query",
-            "optimistic"
+            "optimistic",
+            "expo sdk",
+            "upgrade react native",
+            "sdk upgrade",
+            "new expo app"
           ],
           "skills": [
             "figma-first-app-pipeline",
@@ -459,7 +497,9 @@
             "react-native-mmkv",
             "tanstack-query-mobile",
             "expo-production-architecture",
-            "supabase-mobile-platform"
+            "supabase-mobile-platform",
+            "expo-overview",
+            "upgrading-react-native"
           ]
         },
         {
@@ -482,7 +522,14 @@
             "3d model",
             "model from image",
             "product photo",
-            "photo to 3d"
+            "photo to 3d",
+            "android jank",
+            "material motion",
+            "frame pacing",
+            "predictive back",
+            "haptics",
+            "worklet",
+            "bundle mode"
           ],
           "skills": [
             "reanimated",
@@ -493,7 +540,12 @@
             "react-native-skia",
             "expo-splash-launch",
             "expo-3d-ar",
-            "img2threejs"
+            "img2threejs",
+            "android-motion-system",
+            "motion-spec-bridge",
+            "expo-animation",
+            "pulsar-haptics",
+            "enable-worklets-bundle-mode"
           ]
         },
         {
@@ -509,14 +561,33 @@
             "crash",
             "bundle size",
             "optimi",
-            "test"
+            "test",
+            "maestro",
+            "detox",
+            "e2e",
+            "end to end test",
+            "anr",
+            "android vitals",
+            "flaky",
+            "rntl",
+            "testing library",
+            "component test",
+            "dogfood",
+            "qa",
+            "exploratory test",
+            "bug hunt"
           ],
           "skills": [
             "expo-react-native-performance",
             "perfetto-trace-analysis",
             "maestro-mobile-testing",
             "react-native-mmkv",
-            "mobile-quality-observability"
+            "mobile-quality-observability",
+            "mobile-e2e-testing",
+            "android-motion-system",
+            "react-native-testing",
+            "dogfood",
+            "agent-device"
           ]
         },
         {
@@ -532,7 +603,18 @@
             "screenshot",
             "app icon",
             "rejected",
-            "review"
+            "review",
+            "play console",
+            "google play",
+            "aab",
+            "app bundle",
+            "data safety",
+            "staged rollout",
+            "target api",
+            "closed testing",
+            "play integrity",
+            "submit to review",
+            "pre-submission"
           ],
           "skills": [
             "expo-eas-ship",
@@ -541,7 +623,9 @@
             "app-rejection-recovery",
             "local-build",
             "app-store-release-operations",
-            "mobile-security"
+            "mobile-security",
+            "play-console-mastery",
+            "store-submission-gate"
           ]
         },
         {
@@ -567,7 +651,13 @@
             "play billing",
             "restore purchase",
             "premium unlock",
-            "subscription in my app"
+            "subscription in my app",
+            "play store",
+            "listing experiment",
+            "custom store listing",
+            "pre-registration",
+            "liveops",
+            "store listing"
           ],
           "skills": [
             "aso-audit",
@@ -575,7 +665,8 @@
             "paywall-strategy-planner",
             "expo-iap",
             "app-growth-monetization",
-            "churn-prevention"
+            "churn-prevention",
+            "play-store-growth"
           ]
         }
       ]

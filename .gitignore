@@ -60,6 +60,11 @@ plugins/marketplaces/*/.gcs-sha
 # --- machine config (system won't run elsewhere without it) ---
 !settings.json
 
+# --- distilled notes written from cloud sessions that can't reach the vault ---
+# Curated notes only (playbook_*/reference_*/feedback_*). See notes/README.md.
+!notes/
+!notes/**
+
 # --- never, even inside the includes above ---
 # .mcp.json stays out: it carries a live API key in plaintext.
 # skill-usage.jsonl stays out: it holds prompt text, same rule as transcripts.

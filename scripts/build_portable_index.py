@@ -29,12 +29,66 @@ REPO = "https://raw.githubusercontent.com/suldaancl-cmd/skills/main"
 
 # Roots whose skills are committed to the public repo, so any surface can fetch
 # the body over https. Anything else is local-only and marked as such.
-FETCHABLE = {"": "skills", "extra": "skills-extra", "archived": "skills-archive"}
+FETCHABLE = {"skills", "skills-extra", "skills-archive"}
+
+
+def submodule_paths():
+    """Repo-relative submodule paths from .gitmodules (empty set if unreadable)."""
+    out = set()
+    gm = os.path.join(CLAUDE, ".gitmodules")
+    if not os.path.isfile(gm):
+        return out
+    for line in open(gm, encoding="utf-8", errors="ignore"):
+        m = re.match(r"\s*path\s*=\s*(.+?)\s*$", line)
+        if m:
+            out.add(m.group(1).replace(os.sep, "/"))
+    return out
 
 
 def load_rows():
-    """(name, description, label) for every skill on disk, plus plugin skills."""
-    rows = [(n, (d or ""), lb) for n, (d, lb) in tw.load_skills().items()]
+    """(name, description, label, repo_relpath) for every skill on disk.
+
+    The repo path is captured from the ACTUAL file location, never rebuilt from
+    the skill name: skills-archive nests under dated folders
+    (skills-archive/2026-05-24-.../<name>/SKILL.md), so a reconstructed
+    <root>/<name>/SKILL.md 404s.
+    """
+    submods = submodule_paths()
+    rows = []
+    seen_names = set()
+    # Committed roots FIRST. tw.SKILL_ROOTS puts ~/.agents ahead of skills-extra,
+    # so a skill present in both would be claimed by the local-only copy and lose
+    # its fetch URL. Order here is about fetchability, not routing priority.
+    def committed(root):
+        # Must be UNDER ~/.claude, not merely named "skills" -- ~/.agents/skills
+        # and ~/.adal/skills share that basename and are not in the repo.
+        return (root.lower().startswith(CLAUDE.lower())
+                and os.path.basename(root) in FETCHABLE)
+
+    order = sorted(
+        [r for r in tw.SKILL_ROOTS if os.path.isdir(r[0])],
+        key=lambda r: 0 if committed(r[0]) else 1)
+    for root, label in order:
+        for dirpath, _dirs, filenames in os.walk(root):
+            if "SKILL.md" not in filenames:
+                continue
+            name = os.path.basename(dirpath)
+            if name in seen_names:
+                continue
+            seen_names.add(name)
+            smd = os.path.join(dirpath, "SKILL.md")
+            try:
+                head = open(smd, encoding="utf-8", errors="ignore").read(2500)
+            except OSError:
+                continue
+            rel = ""
+            if smd.lower().startswith(CLAUDE.lower()):
+                rel = os.path.relpath(smd, CLAUDE).replace(os.sep, "/")
+                # Submodule contents live in another repository, so raw.github
+                # serves nothing for them even though the path looks committed.
+                if any(rel == sm or rel.startswith(sm + "/") for sm in submods):
+                    rel = ""
+            rows.append((name, tw.parse_description(head), label, rel))
     import glob
     seen = set()
     pats = ["plugins/marketplaces/*/plugins/*/skills/*/SKILL.md",
@@ -54,7 +108,7 @@ def load_rows():
                 head = open(p, encoding="utf-8", errors="ignore").read(2500)
             except OSError:
                 continue
-            rows.append((name, tw.parse_description(head), "plugin:" + mkt))
+            rows.append((name, tw.parse_description(head), "plugin:" + mkt, ""))
     return rows
 
 
@@ -62,20 +116,25 @@ def assign_domains(rows, domains):
     """Best-matching routing domain per skill, by keyword overlap."""
     kw = [(d["name"], set(w.lower() for w in d.get("keywords", []))) for d in domains]
     out = {}
-    for name, desc, label in rows:
+    for name, desc, label, rel in rows:
         text = set(re.findall(r"[a-z0-9]{3,}", (name + " " + desc).lower()))
         best, score = "other", 0
         for dname, words in kw:
             s = len(text & words)
             if s > score:
                 best, score = dname, s
-        out.setdefault(best, []).append((name, desc, label))
+        out.setdefault(best, []).append((name, desc, label, rel))
     return out
 
 
-def fetch_hint(label, name):
-    if label in FETCHABLE:
-        return "%s/%s/%s/SKILL.md" % (REPO, FETCHABLE[label], name)
+def fetch_hint(rel):
+    """URL for a skill body, or "" when it is not in the public repo.
+
+    Only the whitelisted roots are committed (see .gitignore), so a path outside
+    them would 404 even though the file exists locally.
+    """
+    if rel and rel.split("/", 1)[0] in FETCHABLE:
+        return "%s/%s" % (REPO, rel)
     return ""
 
 
@@ -106,8 +165,8 @@ def main():
             if part and len(parts) > 1:
                 span = " (%s to %s)" % (part[0][0], part[-1][0])
             lines = ["# %s -- %d skills%s\n" % (dom, len(part), span)]
-            for name, desc, label in part:
-                url = fetch_hint(label, name)
+            for name, desc, label, rel in part:
+                url = fetch_hint(rel)
                 src = label or "skills"
                 loc = "[body](%s)" % url if url else "_local only (%s)_" % src
                 lines.append("- **%s** (%s) %s\n  %s" % (name, src, loc, desc[:200]))
@@ -117,7 +176,7 @@ def main():
             files.setdefault(dom, []).append((fname, len(part), span))
 
     # Flat name list for exact-match lookup.
-    allnames = sorted(n for n, _d, _l in rows)
+    allnames = sorted(n for n, _d, _l, _r in rows)
     with open(os.path.join(OUT, "references", "all-names.md"), "w",
               encoding="utf-8") as fh:
         fh.write("# Every skill name (%d)\n\n" % len(allnames))

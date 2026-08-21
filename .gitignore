@@ -5,6 +5,11 @@ _projects/web-mirrors/
 # transcripts, staged drafts and credentials — none of that belongs on GitHub.
 *
 !.gitignore
+!skills-keep.txt
+
+# skills-keep.txt is the prune-protection list for 200+ curated skills.
+# It lived only on the Windows box, so a disk failure would have taken the
+# protection with it. Committed deliberately -- it holds names, not secrets.
 
 # --- skill library ---
 !skills/

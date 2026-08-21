@@ -1,0 +1,10 @@
+{
+  "pluginId": "mcp-tunnels@claude-plugins-official",
+  "createdAt": "2026-08-21T06:37:49.228Z",
+  "files": {
+    ".claude-plugin\\plugin.json": "90ec77db16dbafeb4a9d16687b93eb7af24abe12569f1473916af074717d4091",
+    "commands\\create-docker-mcp-tunnel.md": "78ff0c77ee6c42c45146d951304b49019a7ceedc2b77d0484151cff47ddec979",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "README.md": "bac4f61829749ffbd896bd9a5cf56725f5cabd751a38890fae25788d462e2fe0"
+  }
+}

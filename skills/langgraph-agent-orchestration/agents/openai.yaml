@@ -1,0 +1,4 @@
+interface:
+  display_name: "LangGraph Agent Orchestration"
+  short_description: "Build resumable stateful LangGraph agents"
+  default_prompt: "Use $langgraph-agent-orchestration to design or audit this resumable LangGraph workflow."

@@ -1,0 +1,3 @@
+layer_id,name,classification,bounds_x,bounds_y,bounds_width,bounds_height,z_index,asset_source,editable,interactive,data_binding,motion_owner,rtl_behavior,responsive_behavior,uncertainty,notes
+L001,Background environment,ART_RASTER,0,0,390,844,0,reference-crop,false,false,none,none,crop-anchor,cover,low,Example row; replace it
+

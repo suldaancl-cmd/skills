@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agentic Coding Project Setup"
+  short_description: "Prepare a repo for reliable coding agents"
+  default_prompt: "Use $agentic-coding-project-setup to prepare this repository for reliable Codex and Claude Code work."

@@ -1,0 +1,12 @@
+{
+  "pluginId": "project-artifact@claude-plugins-official",
+  "createdAt": "2026-08-21T06:39:36.181Z",
+  "files": {
+    ".claude-plugin\\plugin.json": "d695cb3444282368eea77028e515bea52883b7353764379fa3162f52e6f5accf",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "README.md": "c21901aaf896e7faa66873d930d6f0dea9a9b6ffb616cc755f8f8e544347aaa7",
+    "skills\\project-artifact\\SKILL.md": "34e13249dba8a066f33c5f723dbb7b9cb6174b80cc490dd866fbfd1736f0577f",
+    "skills\\project-artifact\\swe.md": "396b7cfa9c99b78b44326cf4add4f7ac8e07d07d76c56697b84b44197c77b4ce",
+    "skills\\project-artifact\\template.html": "467b8ec1ad799591e099012711e072352395c0b897029200661e852374be9764"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "App-Store Release Operations"
+  short_description: "Prepare Expo apps for store release"
+  default_prompt: "Use $app-store-release-operations to audit and prepare this Expo app for Apple and Google submission."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Premium Mobile Experience"
+  short_description: "Add purposeful motion and mobile polish"
+  default_prompt: "Use $premium-mobile-experience to audit and improve the interaction quality of this mobile app."

@@ -1,0 +1,12 @@
+{
+  "pluginId": "cwc-makers@claude-plugins-official",
+  "createdAt": "2026-08-21T06:35:55.952Z",
+  "files": {
+    ".claude-plugin\\plugin.json": "daea51ab5138181571bf207637ff431b4abc439110a0466ac016381f112a33b7",
+    "commands\\maker-setup.md": "326e604a0501b9ebda7d140fff0fb8a09fc75db1d0ec68802eff260def1b2243",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "README.md": "347e0845ba4d568fa60270576e3547d9050bf5dc5d5ce71acf3f916fbd24daed",
+    "skills\\cardputer-buddy\\SKILL.md": "dae31d1459c8ee7b4a03d04bf55485f4ece04bdd4f5a2650ad39eb3d07d9be10",
+    "skills\\m5-onboard\\SKILL.md": "c6ba88fd06f59a3e902fead2bb863b6834f189672cfcc75248941c23ae39bd2d"
+  }
+}

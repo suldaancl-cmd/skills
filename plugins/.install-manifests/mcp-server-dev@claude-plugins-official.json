@@ -1,0 +1,28 @@
+{
+  "pluginId": "mcp-server-dev@claude-plugins-official",
+  "createdAt": "2026-08-21T06:37:01.462Z",
+  "files": {
+    ".claude-plugin\\plugin.json": "1c99fc6e35a0716a5b0adab482d13235feff3cf5e398497235bd7c250a1c19fe",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "README.md": "ce84eef3190f84cf46a49fe23a46981be892c935cf43231f9d55dd7a0a09a095",
+    "skills\\build-mcp-app\\references\\abuse-protection.md": "103711d50f6c0c46fc3c2ecbe684f4397b0e048b7b7289ecd22f562c3214a700",
+    "skills\\build-mcp-app\\references\\apps-sdk-messages.md": "df8857d98dc9b186a670ebce006ec7ef5a983338808a0dfca8ff1a2f326876dc",
+    "skills\\build-mcp-app\\references\\directory-checklist.md": "9f6113638f1ba15691462093945d283c86323b0f648f23c6602453c05e2fc3b9",
+    "skills\\build-mcp-app\\references\\iframe-sandbox.md": "d4c4a303f6e63840b3e4c1b0d943b24555efc88cc944261ec43c94bd9fd018ba",
+    "skills\\build-mcp-app\\references\\payload-budgeting.md": "0dc6d9bfa24d2ffe314de631d3f552cf3b5c86b2afcf25e902d1898069d58625",
+    "skills\\build-mcp-app\\references\\widget-templates.md": "d165f546ed7f91ece474d7605abc91e54e410ecebd3b649829687282c4887386",
+    "skills\\build-mcp-app\\SKILL.md": "d2fd94f0096506469ec855c581e48293d35480e58e6405b2bfcdba0486a0c218",
+    "skills\\build-mcp-server\\references\\auth.md": "83869c9c5ff0aee69ad88589e88c3a6888a7cc4a7843e9ea85185e11ac369e0f",
+    "skills\\build-mcp-server\\references\\deploy-cloudflare-workers.md": "b72abb420638510187da33b3e5348c6e8b5f319821b339d646517efbb3c8084c",
+    "skills\\build-mcp-server\\references\\elicitation.md": "d8f19b01b1bd3a8bad0fdb22e1898bb43110343db1d321e6c472f603d288f856",
+    "skills\\build-mcp-server\\references\\remote-http-scaffold.md": "bd5d49e1f4caa895221b7e539bd7cd23ad2c7e2dff5e7cf0bf4b976ebbb178e4",
+    "skills\\build-mcp-server\\references\\resources-and-prompts.md": "90537efcaf329ead6cabe42ab197412d39eb8401b6d1d734bf329f8a78cf8a60",
+    "skills\\build-mcp-server\\references\\server-capabilities.md": "a4d76934e9fb386a5026c44a1888ea1338ca8f128314547a765827d60a1aaff0",
+    "skills\\build-mcp-server\\references\\tool-design.md": "fd3747e5abf5d2aa584fb94936a879fe57e46203e0f896dad2a2e22a69f0a3fa",
+    "skills\\build-mcp-server\\references\\versions.md": "f7592e72c5c357153c3e031c7c768e32f670a654b146509cbeaf6d8d4f2e3752",
+    "skills\\build-mcp-server\\SKILL.md": "088cd04be7f03ebbdfd24973cbcbf93c7a2e09117c4bba7b2b06bcc3e0a556f6",
+    "skills\\build-mcpb\\references\\local-security.md": "7813aae1084e050537241956ba835adceb710804871894b53a9adcdeb3736241",
+    "skills\\build-mcpb\\references\\manifest-schema.md": "6a97f9481107ebdbe8a75f06a5e126ba28021e1e8652677109e53d63a5793c72",
+    "skills\\build-mcpb\\SKILL.md": "6bb90afd0415754e13f353ee5982d13857c14826edbcbdf5f1481fa5563cd56b"
+  }
+}

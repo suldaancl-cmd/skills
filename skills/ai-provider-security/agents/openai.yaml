@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Provider Security"
+  short_description: "Protect AI keys, tools, and webhooks"
+  default_prompt: "Use $ai-provider-security to audit the client, backend, and AI provider security boundaries."

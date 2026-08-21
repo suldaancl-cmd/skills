@@ -1,0 +1,3 @@
+asset_id,name,classification,source,rights_status,source_dimensions,output_format,output_sizes,color_space,alpha,locale_specific,runtime_owner,optimization,notes
+A001,Background environment,ART_RASTER,reference-image,verify,390x844,webp,"1x;2x",sRGB,false,false,app,quality-validated,Example row; replace it
+

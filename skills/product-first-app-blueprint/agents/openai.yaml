@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product-First App Blueprint"
+  short_description: "Validate an app and define a focused MVP"
+  default_prompt: "Use $product-first-app-blueprint to turn my app idea into a validated PRD and focused MVP."

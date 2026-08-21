@@ -1,0 +1,8 @@
+interface:
+  display_name: "Visual to Production"
+  short_description: "Turn reference UI images into editable Figma, motion, and production code"
+  brand_color: "#064E3B"
+  default_prompt: "Use the reference images as visual truth, rebuild one golden screen semantically in Figma, specify motion, implement it in the target runtime, and verify fidelity before scaling."
+policy:
+  allow_implicit_invocation: true
+

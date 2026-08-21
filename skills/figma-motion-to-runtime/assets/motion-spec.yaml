@@ -1,0 +1,52 @@
+schema_version: 1
+motion:
+  id: "motion.feature.element.event"
+  name: ""
+  purpose: ""
+  classification: "STATE" # ROUTE | STATE | GESTURE | SCROLL | SENSOR | AUDIO | DATA | DECORATIVE | INTERACTIVE_VECTOR | THREE_D | VIDEO
+  source_of_truth:
+    type: "proposed" # figma-keyframes | figma-prototype | video-reference | proposed
+    reference: ""
+  target:
+    figma_node_id: ""
+    runtime_component: ""
+  trigger:
+    type: ""
+    conditions: []
+  states:
+    from: ""
+    to: ""
+  timing:
+    delay_ms: 0
+    duration_ms: 220
+    easing: "standard"
+    spring: null
+    stagger_ms: 0
+  properties: []
+  coordination_group: ""
+  continuous_binding:
+    source: null # gesture | sensor | audio | scroll | data
+    input_range: []
+    output_range: []
+    clamp: true
+    smoothing: null
+  loop:
+    enabled: false
+    stop_condition: ""
+  interruption:
+    cancellable: true
+    reversible: true
+    retarget_policy: "latest-input-wins"
+  accessibility:
+    reduced_motion: "crossfade-or-static-state"
+    focus_behavior: "preserve"
+  runtime:
+    owner: "" # reanimated | rive | lottie | canvas | css | motion | gsap | three | remotion
+    asset: ""
+    fallback: ""
+  platform_differences: []
+  acceptance:
+    evidence: []
+    thresholds: []
+  open_questions: []
+

@@ -1,0 +1,3 @@
+figma_node_id,figma_name,runtime_component,source_path,props_or_variants,token_mapping,asset_mapping,state_owner,data_owner,motion_owner,accessibility,rtl_behavior,responsive_behavior,status,notes
+TBD,Action/Primary,PrimaryButton,TBD,"state;size;label;icon",Semantic/ActionPrimary,none,component,none,reanimated,"button;label;disabled",auto-layout,fill-container,planned,Example row; replace it
+

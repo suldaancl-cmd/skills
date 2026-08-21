@@ -22,6 +22,20 @@ If the URL is a plain article (no embedded video, no anti-bot wall), prefer `Web
 
 Installed via `winget install yt-dlp.yt-dlp`. Binary at `C:\Users\user\AppData\Local\Microsoft\WinGet\Links\yt-dlp.exe`.
 
+**ffmpeg is NOT on PATH — resolve it before every frame extraction.** Two copies exist on this box
+(`Gyan.FFmpeg` and the one bundled with `yt-dlp.FFmpeg`), both inside version-stamped winget package
+folders, and winget did NOT create a shim in `WinGet\Links\`. Never hardcode either path: the version
+string changes on update. Use this resolver — it prefers PATH and falls back to a version-agnostic
+glob across both packages:
+
+```bash
+FFMPEG=$(command -v ffmpeg 2>/dev/null || ls /c/Users/user/AppData/Local/Microsoft/WinGet/Packages/*FFmpeg*/*/bin/ffmpeg.exe 2>/dev/null | head -1)
+[ -z "$FFMPEG" ] && echo "ffmpeg not found - frame extraction unavailable"
+```
+
+If `$FFMPEG` is empty, say plainly that frames could not be extracted. Do NOT describe motion you have
+not seen — the thumbnail is one poster frame, not the animation.
+
 Use plain `yt-dlp` in commands. If PATH hasn't refreshed yet (fresh install, current shell), use the absolute path. Both forms work — pick whichever doesn't 127.
 
 **JS runtime warning:** YouTube extraction prefers a JS runtime. Node is already installed (`node --version`), so add `--js-runtimes "node:C:/Program Files/nodejs/node.exe"` to YouTube commands if a `No supported JavaScript runtime` warning blocks a format. For TikTok/IG/X this isn't needed.
@@ -81,7 +95,8 @@ After Tier 1 or 2 succeeds:
 
 ```bash
 VIDEO=$(ls "$DIR"/*.mp4 "$DIR"/*.webm "$DIR"/*.mov 2>/dev/null | head -1)
-ffmpeg -y -i "$VIDEO" -vf "fps=1/2,scale=720:-1" "$DIR/frame_%03d.jpg" 2>&1 | tail -3
+FFMPEG=$(command -v ffmpeg 2>/dev/null || ls /c/Users/user/AppData/Local/Microsoft/WinGet/Packages/*FFmpeg*/*/bin/ffmpeg.exe 2>/dev/null | head -1)
+"$FFMPEG" -y -i "$VIDEO" -vf "fps=1/2,scale=720:-1" "$DIR/frame_%03d.jpg" 2>&1 | tail -3
 ```
 
 This yields ~1 frame every 2 seconds at 720p — small enough to read fast, dense enough to follow what's happening.

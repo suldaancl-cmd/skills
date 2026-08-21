@@ -83,3 +83,4 @@ skills-extra/npxskillui/src/font-resolver.ts
 
 # Syncthing conflict copies — never commit these; resolve them on disk instead.
 *.conflict_*
+plugins/marketplaces/temp_*

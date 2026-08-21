@@ -124,6 +124,11 @@
         "hooks": [
           {
             "type": "command",
+            "command": "python C:/Users/user/.claude/scripts/build_portable_index.py --quiet",
+            "timeout": 60
+          },
+          {
+            "type": "command",
             "command": "python C:/Users/user/.claude/hooks/session-end-stage.py",
             "timeout": 15
           }
@@ -182,13 +187,20 @@
     "pr-review-toolkit@claude-plugins-official": true,
     "project-artifact@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
-    "ralph-loop@claude-plugins-official": true
+    "ralph-loop@claude-plugins-official": true,
+    "karim-rn-motion@karim-skills": false
   },
   "extraKnownMarketplaces": {
     "ponytail": {
       "source": {
         "source": "github",
         "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "karim-skills": {
+      "source": {
+        "source": "github",
+        "repo": "suldaancl-cmd/skills"
       }
     }
   },

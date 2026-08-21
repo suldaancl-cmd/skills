@@ -28,6 +28,7 @@ SKILL_ROOTS = [
     (os.path.join(CLAUDE, "skills"), ""),
     (os.path.join(HOME, ".agents", "skills"), "agents"),
     (os.path.join(HOME, ".adal", "skills"), "adal"),
+    (os.path.join(CLAUDE, "skills-extra"), "extra"),
     (os.path.join(CLAUDE, "skills-archive"), "archived"),
 ]
 VAULT = "~/.claude/projects/C--Users-user--claude-skills/memory"

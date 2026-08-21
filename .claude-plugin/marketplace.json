@@ -1,0 +1,63 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "karim-skills",
+  "description": "Karim's own Claude Code skills — React Native and Expo motion, Expo platform integrations, and delivery-workflow gates for agent-assisted builds",
+  "owner": {
+    "name": "Karim"
+  },
+  "plugins": [
+    {
+      "name": "karim-rn-motion",
+      "description": "Motion for React Native and Expo: Reanimated worklets and springs, Moti's declarative layer, Skia canvas and shaders, plus component, icon and screen-transition choreography",
+      "author": {
+        "name": "Karim"
+      },
+      "source": "./skills-extra/karim-skills/plugins/karim-rn-motion",
+      "category": "development",
+      "keywords": [
+        "react-native",
+        "expo",
+        "animation",
+        "reanimated",
+        "moti",
+        "skia",
+        "motion"
+      ]
+    },
+    {
+      "name": "karim-expo",
+      "description": "Expo platform integrations: in-app purchases via RevenueCat / StoreKit 2 / Google Play, animated splash and launch continuity, and 3D/AR on expo-gl with three.js and React Three Fiber",
+      "author": {
+        "name": "Karim"
+      },
+      "source": "./skills-extra/karim-skills/plugins/karim-expo",
+      "category": "development",
+      "keywords": [
+        "expo",
+        "react-native",
+        "iap",
+        "revenuecat",
+        "splash-screen",
+        "3d",
+        "ar"
+      ]
+    },
+    {
+      "name": "karim-workflow",
+      "description": "Delivery discipline: a gate before any non-trivial code, a nine-file project context scaffold, a Figma-first contract for app UI and animated screens, a licence-tracked asset pipeline, and a build factory",
+      "author": {
+        "name": "Karim"
+      },
+      "source": "./skills-extra/karim-skills/plugins/karim-workflow",
+      "category": "productivity",
+      "keywords": [
+        "workflow",
+        "planning",
+        "figma",
+        "project-context",
+        "licensing",
+        "delivery"
+      ]
+    }
+  ]
+}

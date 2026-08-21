@@ -1,0 +1,19 @@
+{
+  "name": "karim-rn-motion",
+  "version": "0.1.0",
+  "description": "Motion for React Native and Expo. Reanimated 3/4 worklets, shared values and springs; Moti's declarative Framer-Motion-style layer on top; Skia for hardware-accelerated canvas and shaders; plus the choreography that ties them together across the components users touch (bottom sheets, swipeable rows, pull-to-refresh), animated icons (SF Symbols, Lottie), and screen transitions in expo-router and react-navigation.",
+  "author": {
+    "name": "Karim"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "animation",
+    "motion",
+    "reanimated",
+    "moti",
+    "skia",
+    "transitions",
+    "gestures"
+  ]
+}

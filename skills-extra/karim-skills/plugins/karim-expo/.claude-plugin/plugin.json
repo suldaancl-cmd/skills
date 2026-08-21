@@ -1,0 +1,20 @@
+{
+  "name": "karim-expo",
+  "version": "0.1.0",
+  "description": "Expo platform integrations that are easy to get wrong. In-app purchases and subscriptions across RevenueCat, StoreKit 2 and Google Play Billing; animated splash screens with real launch-to-first-screen continuity via expo-splash-screen; and 3D/AR on the expo-gl canvas with three.js and React Three Fiber, including the native gotchas that do not appear in web tutorials.",
+  "author": {
+    "name": "Karim"
+  },
+  "keywords": [
+    "expo",
+    "react-native",
+    "iap",
+    "revenuecat",
+    "storekit",
+    "subscriptions",
+    "splash-screen",
+    "3d",
+    "ar",
+    "three-js"
+  ]
+}
